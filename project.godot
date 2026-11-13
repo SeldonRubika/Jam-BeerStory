@@ -11,6 +11,8 @@ config_version=5
 [application]
 
 config/name="BeerStory"
+config/version="V0.1"
+run/main_scene="uid://ctfg71sm4eect"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -18,6 +20,18 @@ config/icon="res://icon.svg"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "red",
+"res://Resources/": "green",
+"res://Scenes/": "yellow"
+}
+
+[gui]
+
+theme/custom_font="uid://bo3val3uwb500"
 
 [physics]
 
