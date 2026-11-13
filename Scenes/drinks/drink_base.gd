@@ -68,6 +68,7 @@ func _ready() -> void:
 
 func _on_mouse_entered() -> void:
 	hover.show()
+	set_hover_ui()
 
 func _on_mouse_exited() -> void:
 	hover.hide()
@@ -75,6 +76,7 @@ func _on_mouse_exited() -> void:
 
 func _on_focus_entered() -> void:
 	focus.show()
+	set_focus_ui()
 
 
 func _on_focus_exited() -> void:
