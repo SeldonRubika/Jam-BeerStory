@@ -31,6 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 flat = true
 script = ExtResource("1_k53du")
+resource = null
 name_label = NodePath("Panel/NameLabel")
 drink_icon = NodePath("DrinkIcon")
 hover = NodePath("Hover")
@@ -98,7 +99,6 @@ max_font_size = 64
 metadata/_custom_type_script = "uid://leehmvr1x5lu"
 
 [node name="Hover" type="Panel" parent="." unique_id=408262248]
-visible = false
 top_level = true
 visibility_layer = 2
 z_index = 1
@@ -278,7 +278,6 @@ max_font_size = 64
 metadata/_custom_type_script = "uid://leehmvr1x5lu"
 
 [node name="Focus" type="Panel" parent="." unique_id=1564406953]
-visible = false
 top_level = true
 visibility_layer = 2
 layout_mode = 1

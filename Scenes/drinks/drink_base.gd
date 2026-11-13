@@ -42,7 +42,7 @@ func set_focus_ui():
 	bitternessFocus.text =": "+str(resource.bitterness)
 	focus_name_label.do_resize_text()
 	description.text = resource.desc
-	focus_icon.texture = Global.GetDrinkTypeTexture()
+	focus_icon.texture = Global.GetDrinkTypeTexture(resource.types)
 	if (resource.fruity and resource.gazeous):
 		booleansFocus.text = "fruité | pétillant"
 	else:
@@ -58,7 +58,7 @@ func set_hover_ui():
 	degreesHover.text =": "+str(resource.degrees)
 	bitternessHover.text =": "+str(resource.bitterness)
 	sweetnessHover.text =": "+str(resource.sweetness)
-	hover_icon.texture = Global.GetDrinkTypeTexture()
+	hover_icon.texture = Global.GetDrinkTypeTexture(resource.types)
 	if (resource.fruity and resource.gazeous):
 		booleansHover.text = "fruité | pétillant"
 	else:
