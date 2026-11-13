@@ -10,6 +10,7 @@ extends Control
 @export var sweetnessHover: AutoSizeRichTextLabel
 @export var hover_name_label: AutoSizeRichTextLabel
 @export var booleansHover: AutoSizeRichTextLabel
+@export var hover_icon: TextureRect
 
 #focus
 @export var focus: Panel
@@ -19,6 +20,7 @@ extends Control
 @export var sweetnessFocus: AutoSizeRichTextLabel
 @export var booleansFocus: AutoSizeRichTextLabel
 @export var description: AutoSizeRichTextLabel
+@export var focus_icon: TextureRect
 
 func set_self_ui():
 	name_label.text = resource.drink_name
@@ -40,6 +42,7 @@ func set_focus_ui():
 	bitternessFocus.text =": "+str(resource.bitterness)
 	focus_name_label.do_resize_text()
 	description.text = resource.desc
+	focus_icon.texture = Global.GetDrinkTypeTexture()
 	if (resource.fruity and resource.gazeous):
 		booleansFocus.text = "fruité | pétillant"
 	else:
@@ -55,6 +58,7 @@ func set_hover_ui():
 	degreesHover.text =": "+str(resource.degrees)
 	bitternessHover.text =": "+str(resource.bitterness)
 	sweetnessHover.text =": "+str(resource.sweetness)
+	hover_icon.texture = Global.GetDrinkTypeTexture()
 	if (resource.fruity and resource.gazeous):
 		booleansHover.text = "fruité | pétillant"
 	else:
