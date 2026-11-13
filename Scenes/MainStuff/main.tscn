@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ctfg71sm4eect"]
 
 [ext_resource type="PackedScene" uid="uid://c4spjnychilog" path="res://Scenes/Menu/main_menu.tscn" id="1_r0vd8"]
+[ext_resource type="PackedScene" uid="uid://dkggdakosi2hr" path="res://Scenes/drinks/drink_base.tscn" id="2_ayn3u"]
 
 [node name="Main" type="Control" unique_id=1026774502]
 layout_mode = 3
@@ -11,4 +12,247 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MainMenu" parent="." unique_id=210427808 instance=ExtResource("1_r0vd8")]
+visible = false
+z_index = 3
 layout_mode = 1
+
+[node name="Book" type="Control" parent="." unique_id=204703665]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="Book" unique_id=1822726919]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9999997, 0.80183095, 0.5247078, 1)
+
+[node name="InventoryPage" type="Control" parent="Book" unique_id=1081312756]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BigDesc" type="Panel" parent="Book/InventoryPage" unique_id=2016212382]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.05
+anchor_right = 0.46
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Grid" type="Panel" parent="Book/InventoryPage" unique_id=726826764]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47395834
+anchor_top = 0.050925925
+anchor_right = 0.95600003
+anchor_bottom = 0.95183957
+offset_right = -0.31201172
+offset_bottom = 0.20794678
+grow_horizontal = 0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Book/InventoryPage/Grid" unique_id=1601354172]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+vertical_scroll_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Book/InventoryPage/Grid/ScrollContainer" unique_id=502783372]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="DrinkBase" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1570953057 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase36" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=423572397 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase50" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1053930589 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase51" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=908054529 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase52" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1089397340 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase53" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=513159379 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase54" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1420065161 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase55" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=12598663 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase56" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1968350940 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase57" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1178144671 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase37" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=861195717 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase38" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1931926252 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase39" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=551485668 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase40" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=945025653 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase41" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1969566523 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase42" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1718950878 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase43" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=2020596129 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase44" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1446707098 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase45" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=349472396 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase46" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1352637207 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase47" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1849413677 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase48" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1007144809 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase49" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=833479902 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase2" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=21114184 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase3" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1225280128 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase4" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1586086112 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase5" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1202836270 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase6" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1633110272 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase7" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=439504474 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase8" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=504211555 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase9" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1626601539 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase10" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=910022240 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase11" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=453598605 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase12" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1373431000 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase13" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=904018752 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase14" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=794784756 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase15" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1077023875 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase16" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=2015715227 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase17" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=736691674 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase18" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=2106062601 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase19" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1913410090 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase20" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=893682080 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase21" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1282421215 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase22" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=462682198 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase23" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=90279996 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase24" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1674796420 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase25" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=534171489 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase26" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=730628156 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase27" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1661282962 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase28" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=961854280 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase29" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1048718701 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase30" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1975020890 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase31" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=459286442 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase32" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1093469247 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase33" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1103694130 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase34" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=1143807425 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase35" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=862824475 instance=ExtResource("2_ayn3u")]
+layout_mode = 2

@@ -1,0 +1,457 @@
+[gd_scene format=3 uid="uid://dkggdakosi2hr"]
+
+[ext_resource type="Script" uid="uid://barqahepc4cy8" path="res://Scenes/drinks/drink_base.gd" id="1_k53du"]
+[ext_resource type="Script" uid="uid://leehmvr1x5lu" path="res://addons/AutoSizeText/ui/AutoSizeRichTextLabel.gd" id="2_5okn3"]
+[ext_resource type="Texture2D" uid="uid://c1e1wbdl6lm6v" path="res://Assets/PlaceHolders/drink.png" id="2_454oq"]
+[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="4_v4xni"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_454oq"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_454oq"]
+color = Color(0.60784316, 0.16078432, 0.08235294, 1)
+thickness = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ayn3u"]
+bg_color = Color(0.65882355, 0, 0.11372549, 0.4745098)
+
+[node name="DrinkBase" type="Button" unique_id=1564469009 node_paths=PackedStringArray("name_label", "drink_icon", "hover", "degreesHover", "bitternessHover", "sweetnessHover", "hover_name_label", "booleansHover", "focus", "focus_name_label", "degreesFocus", "bitternessFocus", "sweetnessFocus", "booleansFocus", "description")]
+custom_minimum_size = Vector2(96, 96)
+custom_maximum_size = Vector2(128, 128)
+anchors_preset = -1
+anchor_left = 0.44400004
+anchor_top = 0.40100002
+anchor_right = 0.55600005
+anchor_bottom = 0.59900004
+offset_left = 0.5119629
+offset_top = 0.15197754
+offset_right = -0.51208496
+offset_bottom = -0.15203857
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("1_k53du")
+name_label = NodePath("Panel/NameLabel")
+drink_icon = NodePath("DrinkIcon")
+hover = NodePath("Hover")
+degreesHover = NodePath("Hover/VBoxContainer/AllStatsHolder/StatContainer/Degrees")
+bitternessHover = NodePath("Hover/VBoxContainer/AllStatsHolder/StatContainer2/Bitterness")
+sweetnessHover = NodePath("Hover/VBoxContainer/AllStatsHolder/StatContainer3/Sweetness")
+hover_name_label = NodePath("Hover/VBoxContainer/HoverNameLabel")
+booleansHover = NodePath("Hover/VBoxContainer/Booleans")
+focus = NodePath("Focus")
+focus_name_label = NodePath("Focus/stuff/FocusNameLabel")
+degreesFocus = NodePath("Focus/stuff/AllStatsHolder/StatContainer/Degrees")
+bitternessFocus = NodePath("Focus/stuff/AllStatsHolder/StatContainer2/Bitterness")
+sweetnessFocus = NodePath("Focus/stuff/AllStatsHolder/StatContainer3/Sweetness")
+booleansFocus = NodePath("Focus/stuff/Booleans")
+description = NodePath("Focus/stuff/Description")
+
+[node name="DrinkIcon" type="TextureRect" parent="." unique_id=350251625]
+modulate = Color(0.32941177, 1, 1, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_454oq")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Panel" type="Panel" parent="." unique_id=1904190005]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2061459
+anchor_top = 0.79293835
+anchor_right = 0.79385424
+anchor_bottom = 1.0
+offset_left = -0.480011
+offset_top = 0.17596436
+offset_right = 0.47991943
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="NameLabel" type="RichTextLabel" parent="Panel" unique_id=373169934]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 27
+theme_override_font_sizes/bold_font_size = 27
+theme_override_font_sizes/bold_italics_font_size = 27
+theme_override_font_sizes/italics_font_size = 27
+theme_override_font_sizes/mono_font_size = 27
+bbcode_enabled = true
+text = "[color=yellow]Classic Beer"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_5okn3")
+min_font_size = 6
+max_font_size = 64
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+
+[node name="Hover" type="Panel" parent="." unique_id=408262248]
+visible = false
+visibility_layer = 2
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.1
+anchor_right = 0.25
+anchor_bottom = 0.45
+theme_override_styles/panel = SubResource("StyleBoxFlat_454oq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Hover" unique_id=1270044616]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 3.199997
+offset_right = -5.0
+offset_bottom = -3.199997
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HoverNameLabel" type="RichTextLabel" parent="Hover/VBoxContainer" unique_id=768445923]
+custom_maximum_size = Vector2(-1, 64)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 45
+theme_override_font_sizes/bold_font_size = 45
+theme_override_font_sizes/bold_italics_font_size = 45
+theme_override_font_sizes/italics_font_size = 45
+theme_override_font_sizes/mono_font_size = 45
+bbcode_enabled = true
+text = "[color=yellow]Classic Beer"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_5okn3")
+min_font_size = 6
+max_font_size = 64
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+
+[node name="HSeparator" type="HSeparator" parent="Hover/VBoxContainer" unique_id=241070523]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_454oq")
+
+[node name="AllStatsHolder" type="VBoxContainer" parent="Hover/VBoxContainer" unique_id=734867550]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StatContainer" type="HBoxContainer" parent="Hover/VBoxContainer/AllStatsHolder" unique_id=1397377221]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="icône" type="TextureRect" parent="Hover/VBoxContainer/AllStatsHolder/StatContainer" unique_id=41402390]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_v4xni")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Degrees" type="RichTextLabel" parent="Hover/VBoxContainer/AllStatsHolder/StatContainer" unique_id=767699022]
+custom_maximum_size = Vector2(-1, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 28
+theme_override_font_sizes/bold_font_size = 28
+theme_override_font_sizes/bold_italics_font_size = 28
+theme_override_font_sizes/italics_font_size = 28
+theme_override_font_sizes/mono_font_size = 28
+bbcode_enabled = true
+text = ": 5"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_5okn3")
+min_font_size = 6
+max_font_size = 64
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+
+[node name="StatContainer2" type="HBoxContainer" parent="Hover/VBoxContainer/AllStatsHolder" unique_id=447599017]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="icône" type="TextureRect" parent="Hover/VBoxContainer/AllStatsHolder/StatContainer2" unique_id=2105240331]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_v4xni")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Bitterness" type="RichTextLabel" parent="Hover/VBoxContainer/AllStatsHolder/StatContainer2" unique_id=940472231]
+custom_maximum_size = Vector2(-1, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 28
+theme_override_font_sizes/bold_font_size = 28
+theme_override_font_sizes/bold_italics_font_size = 28
+theme_override_font_sizes/italics_font_size = 28
+theme_override_font_sizes/mono_font_size = 28
+bbcode_enabled = true
+text = ": 5"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_5okn3")
+min_font_size = 6
+max_font_size = 64
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+
+[node name="StatContainer3" type="HBoxContainer" parent="Hover/VBoxContainer/AllStatsHolder" unique_id=1824652270]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="icône" type="TextureRect" parent="Hover/VBoxContainer/AllStatsHolder/StatContainer3" unique_id=1356333952]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_v4xni")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Sweetness" type="RichTextLabel" parent="Hover/VBoxContainer/AllStatsHolder/StatContainer3" unique_id=339241276]
+custom_maximum_size = Vector2(-1, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 28
+theme_override_font_sizes/bold_font_size = 28
+theme_override_font_sizes/bold_italics_font_size = 28
+theme_override_font_sizes/italics_font_size = 28
+theme_override_font_sizes/mono_font_size = 28
+bbcode_enabled = true
+text = ": 5"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_5okn3")
+min_font_size = 6
+max_font_size = 64
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+
+[node name="HSeparator2" type="HSeparator" parent="Hover/VBoxContainer" unique_id=1948123033]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_454oq")
+
+[node name="Booleans" type="RichTextLabel" parent="Hover/VBoxContainer" unique_id=1869100633]
+custom_maximum_size = Vector2(-1, 40)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 35
+theme_override_font_sizes/bold_font_size = 35
+theme_override_font_sizes/bold_italics_font_size = 35
+theme_override_font_sizes/italics_font_size = 35
+theme_override_font_sizes/mono_font_size = 35
+bbcode_enabled = true
+text = "|"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_5okn3")
+min_font_size = 6
+max_font_size = 64
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+
+[node name="Focus" type="Panel" parent="." unique_id=1564406953]
+top_level = true
+visibility_layer = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.05
+anchor_right = 0.46
+anchor_bottom = 0.95
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ayn3u")
+
+[node name="stuff" type="VBoxContainer" parent="Focus" unique_id=1203593363]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 3.199997
+offset_right = -5.0
+offset_bottom = -3.199997
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FocusNameLabel" type="RichTextLabel" parent="Focus/stuff" unique_id=1987831546]
+custom_maximum_size = Vector2(-1, 64)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/bold_font_size = 64
+theme_override_font_sizes/bold_italics_font_size = 64
+theme_override_font_sizes/italics_font_size = 64
+theme_override_font_sizes/mono_font_size = 64
+bbcode_enabled = true
+text = "[color=yellow]Classic Beer"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_5okn3")
+min_font_size = 6
+max_font_size = 64
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+
+[node name="HSeparator" type="HSeparator" parent="Focus/stuff" unique_id=2076179651]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_454oq")
+
+[node name="AllStatsHolder" type="VBoxContainer" parent="Focus/stuff" unique_id=215322292]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="StatContainer" type="HBoxContainer" parent="Focus/stuff/AllStatsHolder" unique_id=1133211951]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="icône" type="TextureRect" parent="Focus/stuff/AllStatsHolder/StatContainer" unique_id=849457473]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_v4xni")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Degrees" type="RichTextLabel" parent="Focus/stuff/AllStatsHolder/StatContainer" unique_id=734816695]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/bold_font_size = 64
+theme_override_font_sizes/bold_italics_font_size = 64
+theme_override_font_sizes/italics_font_size = 64
+theme_override_font_sizes/mono_font_size = 64
+bbcode_enabled = true
+text = ": 5"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_5okn3")
+min_font_size = 6
+max_font_size = 64
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+
+[node name="StatContainer2" type="HBoxContainer" parent="Focus/stuff/AllStatsHolder" unique_id=1861909747]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="icône" type="TextureRect" parent="Focus/stuff/AllStatsHolder/StatContainer2" unique_id=1326999592]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_v4xni")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Bitterness" type="RichTextLabel" parent="Focus/stuff/AllStatsHolder/StatContainer2" unique_id=1604497310]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/bold_font_size = 64
+theme_override_font_sizes/bold_italics_font_size = 64
+theme_override_font_sizes/italics_font_size = 64
+theme_override_font_sizes/mono_font_size = 64
+bbcode_enabled = true
+text = ": 5"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_5okn3")
+min_font_size = 6
+max_font_size = 64
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+
+[node name="StatContainer3" type="HBoxContainer" parent="Focus/stuff/AllStatsHolder" unique_id=1716637755]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="icône" type="TextureRect" parent="Focus/stuff/AllStatsHolder/StatContainer3" unique_id=716580672]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_v4xni")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Sweetness" type="RichTextLabel" parent="Focus/stuff/AllStatsHolder/StatContainer3" unique_id=1514405731]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/bold_font_size = 64
+theme_override_font_sizes/bold_italics_font_size = 64
+theme_override_font_sizes/italics_font_size = 64
+theme_override_font_sizes/mono_font_size = 64
+bbcode_enabled = true
+text = ": 5"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_5okn3")
+min_font_size = 6
+max_font_size = 64
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+
+[node name="HSeparator2" type="HSeparator" parent="Focus/stuff" unique_id=1310190381]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_454oq")
+
+[node name="Booleans" type="RichTextLabel" parent="Focus/stuff" unique_id=2092032613]
+custom_maximum_size = Vector2(-1, 40)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 41
+theme_override_font_sizes/bold_font_size = 41
+theme_override_font_sizes/bold_italics_font_size = 41
+theme_override_font_sizes/italics_font_size = 41
+theme_override_font_sizes/mono_font_size = 41
+bbcode_enabled = true
+text = "|"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_5okn3")
+min_font_size = 6
+max_font_size = 64
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+
+[node name="HSeparator3" type="HSeparator" parent="Focus/stuff" unique_id=1548905058]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_454oq")
+
+[node name="Description" type="RichTextLabel" parent="Focus/stuff" unique_id=1568982462]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/bold_font_size = 64
+theme_override_font_sizes/bold_italics_font_size = 64
+theme_override_font_sizes/italics_font_size = 64
+theme_override_font_sizes/mono_font_size = 64
+text = "Shitty ahh description"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_5okn3")
+max_font_size = 64
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
