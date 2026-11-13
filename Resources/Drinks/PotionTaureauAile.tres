@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DrinkResource" format=3 uid="uid://2hqik8uq36wc"]
+
+[ext_resource type="Script" uid="uid://dhefokc82kmno" path="res://Resources/Drinks/AADrinksBase.gd" id="1_wqm7c"]
+
+[resource]
+script = ExtResource("1_wqm7c")
+drink_name = "Potion du Tigre Fou"
+desc = "Placeholder"
+types = 4
+bitterness = 2
+sweetness = 6
+fruity = true
+gazeous = true
+metadata/_custom_type_script = "uid://dhefokc82kmno"
