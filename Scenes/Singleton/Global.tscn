@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://j3dwttx762ev"]
+
+[ext_resource type="Script" uid="uid://wd6u01numcgx" path="res://Scenes/Singleton/global.gd" id="1_pebid"]
+
+[node name="Global" type="Node2D" unique_id=1704842470]
+script = ExtResource("1_pebid")

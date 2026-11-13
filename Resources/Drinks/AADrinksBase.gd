@@ -8,6 +8,7 @@ class_name DrinkResource
 var text_color : Color = [Color.YELLOW,Color.RED,Color.SKY_BLUE,Color.GREEN_YELLOW,Color.ORANGE].pick_random()
 
 @export_group("Stats")
+@export var types : Global.DrinkTypes = Global.DrinkTypes.Fermented
 ##0-3, mixing a tier 3 makes it shitty
 @export var shitty := false
 @export_range(0,3) var mix_level := 0

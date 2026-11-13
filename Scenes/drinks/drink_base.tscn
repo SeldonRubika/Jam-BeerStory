@@ -37,7 +37,7 @@ hover = NodePath("Hover")
 degreesHover = NodePath("Hover/VBoxContainer/AllStatsHolder/StatContainer/Degrees")
 bitternessHover = NodePath("Hover/VBoxContainer/AllStatsHolder/StatContainer2/Bitterness")
 sweetnessHover = NodePath("Hover/VBoxContainer/AllStatsHolder/StatContainer3/Sweetness")
-hover_name_label = NodePath("Hover/VBoxContainer/HoverNameLabel")
+hover_name_label = NodePath("Hover/VBoxContainer/HBoxContainer/HoverNameLabel")
 booleansHover = NodePath("Hover/VBoxContainer/Booleans")
 focus = NodePath("Focus")
 focus_name_label = NodePath("Focus/stuff/FocusNameLabel")
@@ -80,11 +80,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 27
-theme_override_font_sizes/bold_font_size = 27
-theme_override_font_sizes/bold_italics_font_size = 27
-theme_override_font_sizes/italics_font_size = 27
-theme_override_font_sizes/mono_font_size = 27
+theme_override_font_sizes/normal_font_size = 15
+theme_override_font_sizes/bold_font_size = 15
+theme_override_font_sizes/bold_italics_font_size = 15
+theme_override_font_sizes/italics_font_size = 15
+theme_override_font_sizes/mono_font_size = 15
 bbcode_enabled = true
 text = "[color=yellow]Classic Beer"
 scroll_active = false
@@ -96,7 +96,6 @@ max_font_size = 64
 metadata/_custom_type_script = "uid://leehmvr1x5lu"
 
 [node name="Hover" type="Panel" parent="." unique_id=408262248]
-visible = false
 top_level = true
 visibility_layer = 2
 z_index = 1
@@ -120,15 +119,20 @@ offset_bottom = -3.199997
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HoverNameLabel" type="RichTextLabel" parent="Hover/VBoxContainer" unique_id=768445923]
+[node name="HBoxContainer" type="HBoxContainer" parent="Hover/VBoxContainer" unique_id=1763018204]
 custom_maximum_size = Vector2(-1, 64)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 45
-theme_override_font_sizes/bold_font_size = 45
-theme_override_font_sizes/bold_italics_font_size = 45
-theme_override_font_sizes/italics_font_size = 45
-theme_override_font_sizes/mono_font_size = 45
+
+[node name="HoverNameLabel" type="RichTextLabel" parent="Hover/VBoxContainer/HBoxContainer" unique_id=768445923]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 34
+theme_override_font_sizes/bold_font_size = 34
+theme_override_font_sizes/bold_italics_font_size = 34
+theme_override_font_sizes/italics_font_size = 34
+theme_override_font_sizes/mono_font_size = 34
 bbcode_enabled = true
 text = "[color=yellow]Classic Beer"
 scroll_active = false
@@ -138,6 +142,13 @@ script = ExtResource("2_5okn3")
 min_font_size = 6
 max_font_size = 64
 metadata/_custom_type_script = "uid://leehmvr1x5lu"
+
+[node name="TextureRect" type="TextureRect" parent="Hover/VBoxContainer/HBoxContainer" unique_id=1092797177]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+texture = ExtResource("2_454oq")
+expand_mode = 5
+stretch_mode = 5
 
 [node name="HSeparator" type="HSeparator" parent="Hover/VBoxContainer" unique_id=241070523]
 layout_mode = 2
@@ -248,11 +259,11 @@ theme_override_styles/separator = SubResource("StyleBoxLine_454oq")
 custom_maximum_size = Vector2(-1, 40)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 35
-theme_override_font_sizes/bold_font_size = 35
-theme_override_font_sizes/bold_italics_font_size = 35
-theme_override_font_sizes/italics_font_size = 35
-theme_override_font_sizes/mono_font_size = 35
+theme_override_font_sizes/normal_font_size = 41
+theme_override_font_sizes/bold_font_size = 41
+theme_override_font_sizes/bold_italics_font_size = 41
+theme_override_font_sizes/italics_font_size = 41
+theme_override_font_sizes/mono_font_size = 41
 bbcode_enabled = true
 text = "|"
 scroll_active = false
@@ -264,7 +275,6 @@ max_font_size = 64
 metadata/_custom_type_script = "uid://leehmvr1x5lu"
 
 [node name="Focus" type="Panel" parent="." unique_id=1564406953]
-visible = false
 top_level = true
 visibility_layer = 2
 layout_mode = 1
@@ -445,7 +455,6 @@ theme_override_font_sizes/bold_italics_font_size = 64
 theme_override_font_sizes/italics_font_size = 64
 theme_override_font_sizes/mono_font_size = 64
 text = "Shitty ahh description"
-fit_content = true
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
