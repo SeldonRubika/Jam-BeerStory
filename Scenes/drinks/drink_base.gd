@@ -22,32 +22,46 @@ extends Control
 
 func set_self_ui():
 	name_label.text = resource.drink_name
-	hover_name_label.text = resource.drink_name
-	focus_name_label.text = resource.drink_name
 	name_label.add_theme_color_override("default_color",resource.text_color)
-	hover_name_label.add_theme_color_override("default_color",resource.text_color)
-	focus_name_label.add_theme_color_override("default_color",resource.text_color)
 	drink_icon.texture = resource.icon
 	name_label.do_resize_text()
-	hover_name_label.do_resize_text()
-	focus_name_label.do_resize_text()
-	degreesHover.text =": "+str(resource.degrees)
+
+	if (focus.visible):
+		set_focus_ui()
+	if hover.visible:
+		set_hover_ui()
+
+
+func set_focus_ui():
 	degreesFocus.text =": "+str(resource.degrees)
-	bitternessHover.text =": "+str(resource.bitterness)
-	bitternessFocus.text =": "+str(resource.bitterness)
-	sweetnessHover.text =": "+str(resource.sweetness)
+	focus_name_label.add_theme_color_override("default_color",resource.text_color)
+	focus_name_label.text = resource.drink_name
 	sweetnessFocus.text =": "+str(resource.sweetness)
+	bitternessFocus.text =": "+str(resource.bitterness)
+	focus_name_label.do_resize_text()
+	description.text = resource.desc
 	if (resource.fruity and resource.gazeous):
-		booleansHover.text = "fruité | pétillant"
 		booleansFocus.text = "fruité | pétillant"
 	else:
 		if (resource.fruity):
-			booleansHover.text = "fruité"
 			booleansFocus.text = "fruité"
 		if (resource.gazeous):
-			booleansHover.text = "pétillant"
 			booleansFocus.text = "pétillant"
-	description.text = resource.desc
+
+func set_hover_ui():
+	hover_name_label.text = resource.drink_name
+	hover_name_label.add_theme_color_override("default_color",resource.text_color)
+	hover_name_label.do_resize_text()
+	degreesHover.text =": "+str(resource.degrees)
+	bitternessHover.text =": "+str(resource.bitterness)
+	sweetnessHover.text =": "+str(resource.sweetness)
+	if (resource.fruity and resource.gazeous):
+		booleansHover.text = "fruité | pétillant"
+	else:
+		if (resource.fruity):
+			booleansHover.text = "fruité"
+		if (resource.gazeous):
+			booleansHover.text = "pétillant"
 
 func _ready() -> void:
 	set_self_ui()
