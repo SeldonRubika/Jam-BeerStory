@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://b3qoivlaioq8x"]
+
+[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_lq2vg"]
+[ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_808uh"]
+
+[resource]
+script = ExtResource("2_808uh")
+metadata/_custom_type_script = "uid://renlxgu8rtkv"
