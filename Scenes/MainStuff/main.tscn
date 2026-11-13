@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c4spjnychilog" path="res://Scenes/Menu/main_menu.tscn" id="1_r0vd8"]
 [ext_resource type="PackedScene" uid="uid://fkjn5x638hlm" path="res://Scenes/ingredients/ingredient_base.tscn" id="2_ayn3u"]
+[ext_resource type="PackedScene" uid="uid://dkggdakosi2hr" path="res://Scenes/drinks/drink_base.tscn" id="3_5xgcf"]
 
 [node name="Main" type="Control" unique_id=1026774502]
 layout_mode = 3
@@ -99,4 +100,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="IngredientBase5" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=751933579 instance=ExtResource("2_ayn3u")]
+layout_mode = 2
+
+[node name="DrinkBase" parent="Book/InventoryPage/Grid/ScrollContainer/GridContainer" unique_id=840213197 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
