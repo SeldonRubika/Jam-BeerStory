@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://fkjn5x638hlm"]
 
 [ext_resource type="Script" uid="uid://f0jjyj8321bm" path="res://Scenes/ingredients/ingredient_base.gd" id="1_kwxqb"]
+[ext_resource type="Texture2D" uid="uid://cwvxvc8qi5f40" path="res://Assets/Slots/Slot_empty.png" id="2_f6dkj"]
 [ext_resource type="Texture2D" uid="uid://c1e1wbdl6lm6v" path="res://Assets/PlaceHolders/drink.png" id="2_tt3kx"]
 [ext_resource type="Script" uid="uid://leehmvr1x5lu" path="res://addons/AutoSizeText/ui/AutoSizeRichTextLabel.gd" id="3_f6dkj"]
 [ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="4_l26ep"]
@@ -46,6 +47,17 @@ sweetnessFocus = NodePath("Focus/stuff/AllStatsHolder/StatContainer3/Sweetness")
 booleansFocus = NodePath("Focus/stuff/Booleans")
 description = NodePath("Focus/stuff/Description")
 focus_icon = NodePath("Focus/stuff/HBoxContainer/FocusIcon")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1182245460]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_f6dkj")
+expand_mode = 3
+stretch_mode = 5
 
 [node name="IngredientsIcon" type="TextureRect" parent="." unique_id=350251625]
 modulate = Color(0.32941177, 1, 1, 1)
@@ -419,3 +431,4 @@ metadata/_custom_type_script = "uid://leehmvr1x5lu"
 [connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

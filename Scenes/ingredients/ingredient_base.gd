@@ -25,9 +25,10 @@ func set_self_ui():
 	if (!resource):
 		disabled = true
 		name_label.get_parent().hide()
-		ingredient_icon.texture = preload("res://icon.svg")
+		ingredient_icon.hide()
 		return
 	disabled = false
+	ingredient_icon.show()
 	name_label.get_parent().show()
 	name_label.text = resource.ingredient_name
 	name_label.add_theme_color_override("default_color",resource.text_color)
@@ -106,4 +107,7 @@ func _on_pressed() -> void:
 	if !Global.active_drink_submenu:
 		return
 	match(Global.active_drink_submenu.id):
-		"Fermentation":print("nice")
+		"Fermentation": 
+			Global.selected_ingredients = self
+			Global.active_drink_submenu.ingredient_selected()
+			

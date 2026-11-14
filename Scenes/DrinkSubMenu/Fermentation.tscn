@@ -6,13 +6,16 @@
 
 [sub_resource type="DrawableTexture2D" id="DrawableTexture2D_5q66j"]
 
-[node name="Fermentation" type="Control" unique_id=912534386]
+[node name="Fermentation" type="Control" unique_id=912534386 node_paths=PackedStringArray("tonneau", "tonneau_2", "tonneau_3")]
 layout_mode = 3
 anchor_left = 0.025
 anchor_top = 0.05
 anchor_right = 0.46
 anchor_bottom = 0.95000005
 script = ExtResource("1_jgvjj")
+tonneau = NodePath("HBoxContainer/tonneau")
+tonneau_2 = NodePath("HBoxContainer/tonneau2")
+tonneau_3 = NodePath("HBoxContainer/tonneau3")
 metadata/_custom_type_script = "uid://et742jqp0c57"
 
 [node name="background" type="TextureRect" parent="." unique_id=923223262]
@@ -44,30 +47,133 @@ clip_text = true
 text_overrun_behavior = 3
 script = ExtResource("2_rxjry")
 metadata/_custom_type_script = "uid://d11kfgsd6jgt"
-metadata/_edit_use_anchors_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=270089603]
+[node name="HBoxContainer" type="Control" parent="." unique_id=1179704318]
 layout_mode = 1
-anchors_preset = -1
 anchor_left = 0.07822477
 anchor_top = 0.19478737
 anchor_right = 0.9217752
 anchor_bottom = 0.92352533
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=2109550289]
-layout_mode = 2
+[node name="tonneau" type="TextureButton" parent="HBoxContainer" unique_id=1363454366]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.569
+anchor_right = 0.326
+anchor_bottom = 0.906
+offset_top = 0.17501831
+offset_right = 0.19328308
+offset_bottom = -0.049987793
+size_flags_horizontal = 3
+disabled = true
+stretch_mode = 5
 
-[node name="IngredientBase" parent="HBoxContainer/VBoxContainer" unique_id=1564469009 instance=ExtResource("3_qnoag")]
-layout_mode = 2
+[node name="IngredientBase" parent="HBoxContainer/tonneau" unique_id=1564469009 instance=ExtResource("3_qnoag")]
+layout_mode = 1
+anchor_left = 0.036000002
+anchor_top = 0.052
+anchor_right = 0.96400005
+anchor_bottom = 0.9480001
+offset_left = -4.9680004
+offset_top = -7.4360003
+offset_right = 4.967987
+offset_bottom = 7.4359894
+mouse_filter = 2
 resource = null
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer" unique_id=1343695129]
-layout_mode = 2
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/tonneau" unique_id=1343695129]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0289855
+anchor_right = 1.4347826
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_vertical = 3
+mouse_filter = 2
 
-[node name="IngredientBase2" parent="HBoxContainer/VBoxContainer" unique_id=1859194575 instance=ExtResource("3_qnoag")]
-layout_mode = 2
+[node name="tonneau2" type="TextureButton" parent="HBoxContainer" unique_id=1021442863]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5890424
+anchor_top = 0.572
+anchor_right = 0.915
+anchor_bottom = 0.90800005
+offset_top = -0.099990845
+offset_right = 0.21121216
+offset_bottom = 0.1000061
+size_flags_horizontal = 3
+disabled = true
+stretch_mode = 5
+
+[node name="IngredientBase" parent="HBoxContainer/tonneau2" unique_id=1140041615 instance=ExtResource("3_qnoag")]
+layout_mode = 1
+anchor_left = 0.036000002
+anchor_top = 0.052
+anchor_right = 0.96400005
+anchor_bottom = 0.9480001
+offset_left = -4.9680004
+offset_top = -7.4360003
+offset_right = 4.967987
+offset_bottom = 7.4359894
+mouse_filter = 2
 resource = null
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/tonneau2" unique_id=549411931]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0289855
+anchor_right = 1.4347826
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="tonneau3" type="TextureButton" parent="HBoxContainer" unique_id=976862074]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.29097277
+anchor_top = 0.11317646
+anchor_right = 0.61693037
+anchor_bottom = 0.4491765
+offset_top = -0.099990845
+offset_right = 0.21121216
+offset_bottom = 0.1000061
+size_flags_horizontal = 3
+disabled = true
+stretch_mode = 5
+
+[node name="IngredientBase" parent="HBoxContainer/tonneau3" unique_id=103853650 instance=ExtResource("3_qnoag")]
+layout_mode = 1
+anchor_left = 0.036000002
+anchor_top = 0.052
+anchor_right = 0.96400005
+anchor_bottom = 0.9480001
+offset_left = -4.9680004
+offset_top = -7.4360003
+offset_right = 4.967987
+offset_bottom = 7.4359894
+mouse_filter = 2
+resource = null
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/tonneau3" unique_id=417178198]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0289855
+anchor_right = 1.4347826
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="HBoxContainer/tonneau" to="." method="_on_tonneau_pressed"]
+[connection signal="pressed" from="HBoxContainer/tonneau2" to="." method="_on_tonneau_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/tonneau3" to="." method="_on_tonneau_3_pressed"]

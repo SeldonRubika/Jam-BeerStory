@@ -4,9 +4,6 @@ extends IngredientBase
 
 @export var degreesFocus: AutoSizeRichTextLabel
 
-
-
-
 func set_focus_ui():
 	super()
 	degreesFocus.text =": "+str(resource.degrees)
