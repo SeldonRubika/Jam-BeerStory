@@ -5,4 +5,9 @@
 
 [resource]
 script = ExtResource("2_gj7ed")
+ingredient_name = "Piment"
+desc = "AAAAAAAH ÇA BRULE AAAAAAAAH"
+type = 3
+bitterness = 2
+sweetness = 2
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

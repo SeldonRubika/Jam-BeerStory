@@ -5,4 +5,10 @@
 
 [resource]
 script = ExtResource("2_808uh")
+ingredient_name = "Noix"
+desc = "C'est boring une noix frère, qu'est-ce tu veux savoir sur une noix toi aussi ? Tu sais pas ce que sait ou quoi ? Trop la honte."
+type = 1
+bitterness = 7
+sweetness = 4
+fruity = true
 metadata/_custom_type_script = "uid://renlxgu8rtkv"
