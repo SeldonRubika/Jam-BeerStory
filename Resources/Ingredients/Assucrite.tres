@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://fbgjbmepeafv"]
+
+[ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="1_a7du7"]
+
+[resource]
+script = ExtResource("1_a7du7")
+ingredient_name = "Assucrite"
+desc = "Pierre magique supprimant le sucre d'une mixture."
+type = 4
+metadata/_custom_type_script = "uid://renlxgu8rtkv"

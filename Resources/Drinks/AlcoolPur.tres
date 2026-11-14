@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="DrinkResource" format=3 uid="uid://c1wsgln1jh5kw"]
 
 [ext_resource type="Script" uid="uid://dhefokc82kmno" path="res://Resources/Drinks/AADrinksBase.gd" id="1_0hs12"]
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_41ahs"]
 
 [resource]
 script = ExtResource("1_0hs12")
 shitty = true
 degrees = 96
 ingredient_name = "Alcool pur"
+base = "Alcool pur"
 desc = "Ca pique."
 type = 2
 metadata/_custom_type_script = "uid://dhefokc82kmno"

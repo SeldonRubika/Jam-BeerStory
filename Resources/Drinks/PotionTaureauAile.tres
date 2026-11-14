@@ -1,15 +1,16 @@
 [gd_resource type="Resource" script_class="DrinkResource" format=3 uid="uid://2hqik8uq36wc"]
 
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_n7lmw"]
 [ext_resource type="Script" uid="uid://dhefokc82kmno" path="res://Resources/Drinks/AADrinksBase.gd" id="1_wqm7c"]
 
 [resource]
 script = ExtResource("1_wqm7c")
 types = 4
 ingredient_name = "Potion du Taureau ailé"
+base = "Eau"
 desc = "La potion qui donne des ailes."
 type = 2
-sweetness = 6
+bitterness = 10
+sweetness = 60
 fruity = true
 gazeous = true
 metadata/_custom_type_script = "uid://dhefokc82kmno"
