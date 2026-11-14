@@ -1,4 +1,5 @@
-extends Control
+extends Button
+class_name IngredientBase
 
 @export var resource : IngredientResource = preload("uid://b8ars7q4rr4bi")
 @export var name_label: AutoSizeRichTextLabel
@@ -21,6 +22,13 @@ extends Control
 @export var focus_icon: TextureRect
 
 func set_self_ui():
+	if (!resource):
+		disabled = true
+		name_label.get_parent().hide()
+		ingredient_icon.texture = preload("res://icon.svg")
+		return
+	disabled = false
+	name_label.get_parent().show()
 	name_label.text = resource.ingredient_name
 	name_label.add_theme_color_override("default_color",resource.text_color)
 	ingredient_icon.texture = resource.icon
@@ -33,6 +41,8 @@ func set_self_ui():
 
 
 func set_focus_ui():
+	if (!resource):
+		return
 	focus_name_label.add_theme_color_override("default_color",resource.text_color)
 	focus_name_label.text = resource.ingredient_name
 	sweetnessFocus.text =": "+str(resource.sweetness)
@@ -49,6 +59,8 @@ func set_focus_ui():
 			booleansFocus.text = "pétillant"
 
 func set_hover_ui():
+	if (!resource):
+		return
 	hover_name_label.text = resource.ingredient_name
 	hover_name_label.add_theme_color_override("default_color",resource.text_color)
 	hover_name_label.do_resize_text()
@@ -67,6 +79,8 @@ func _ready() -> void:
 	set_self_ui()
 
 func _on_mouse_entered() -> void:
+	if (!resource):
+		return
 	hover.show()
 	set_hover_ui()
 
@@ -75,9 +89,21 @@ func _on_mouse_exited() -> void:
 
 
 func _on_focus_entered() -> void:
+	if (!resource):
+		return
 	focus.show()
 	set_focus_ui()
 
 
 func _on_focus_exited() -> void:
 	focus.hide()
+
+func _process(_delta: float) -> void:
+	if Global.active_drink_submenu != null:
+		focus.hide()
+
+func _on_pressed() -> void:
+	if !Global.active_drink_submenu:
+		return
+	match(Global.active_drink_submenu.id):
+		"Fermentation":print("nice")

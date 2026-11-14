@@ -5,9 +5,9 @@
 
 [resource]
 script = ExtResource("1_lmve7")
-drink_name = "Bière de base"
-icon = ExtResource("1_5mmrw")
 degrees = 5
+ingredient_name = "Bière"
+icon = ExtResource("1_5mmrw")
 bitterness = 2
 sweetness = 3
 fruity = true

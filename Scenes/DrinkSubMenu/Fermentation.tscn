@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://d3176dlpwjvof"]
+
+[ext_resource type="Script" uid="uid://et742jqp0c57" path="res://Scenes/DrinkSubMenu/Fermentation.gd" id="1_jgvjj"]
+[ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://addons/AutoSizeText/ui/AutoSizeLabel.gd" id="2_rxjry"]
+[ext_resource type="PackedScene" uid="uid://fkjn5x638hlm" path="res://Scenes/ingredients/ingredient_base.tscn" id="3_qnoag"]
+
+[sub_resource type="DrawableTexture2D" id="DrawableTexture2D_5q66j"]
+
+[node name="Fermentation" type="Control" unique_id=912534386]
+layout_mode = 3
+anchor_left = 0.025
+anchor_top = 0.05
+anchor_right = 0.46
+anchor_bottom = 0.95000005
+script = ExtResource("1_jgvjj")
+metadata/_custom_type_script = "uid://et742jqp0c57"
+
+[node name="background" type="TextureRect" parent="." unique_id=923223262]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("DrawableTexture2D_5q66j")
+
+[node name="AutoSizeLabel" type="Label" parent="." unique_id=2081047654]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.29517877
+anchor_top = 0.04286694
+anchor_right = 0.7048212
+anchor_bottom = 0.12791497
+offset_bottom = 1.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 38
+text = "Fermentation"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_rxjry")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=270089603]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07822477
+anchor_top = 0.19478737
+anchor_right = 0.9217752
+anchor_bottom = 0.92352533
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=2109550289]
+layout_mode = 2
+
+[node name="IngredientBase" parent="HBoxContainer/VBoxContainer" unique_id=1564469009 instance=ExtResource("3_qnoag")]
+layout_mode = 2
+resource = null
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer" unique_id=1343695129]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="IngredientBase2" parent="HBoxContainer/VBoxContainer" unique_id=1859194575 instance=ExtResource("3_qnoag")]
+layout_mode = 2
+resource = null
