@@ -2,7 +2,10 @@ extends Control
 
 
 @export var fermentation: DrinkSubMenu
+@export var grid: GridContainer
 
+func _ready() -> void:
+	Global.grid = grid
 
 func _on_storage_bookmark_pressed() -> void:
 	if Global.active_drink_submenu:

@@ -107,7 +107,5 @@ func _on_pressed() -> void:
 	if !Global.active_drink_submenu:
 		return
 	match(Global.active_drink_submenu.id):
-		"Fermentation": 
-			Global.selected_ingredients = self
-			Global.active_drink_submenu.ingredient_selected()
+		"":pass
 			

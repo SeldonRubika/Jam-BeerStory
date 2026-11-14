@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b7scmvja60cy4"]
+
+[ext_resource type="Texture2D" uid="uid://cnou3bjak46dh" path="res://Assets/Animations/Bubbles/Bubbles_01.png" id="1_e0idd"]
+[ext_resource type="Script" uid="uid://comag7ebpkgce" path="res://Scenes/DrinkSubMenu/fermentation_bar.gd" id="1_rgoe0"]
+[ext_resource type="Texture2D" uid="uid://b8i02ybsdartt" path="res://Assets/Animations/Bubbles/Bubbles_02.png" id="3_k1knb"]
+[ext_resource type="Texture2D" uid="uid://b3li7uwkk6mcs" path="res://Assets/Animations/Bubbles/Bubbles_03.png" id="4_24mx8"]
+[ext_resource type="Texture2D" uid="uid://c473vg7qu0uuq" path="res://Assets/Animations/Bubbles/Bubbles_04.png" id="5_qgyg3"]
+[ext_resource type="Texture2D" uid="uid://cimcaxr88r4q2" path="res://Assets/Animations/Bubbles/Bubbles_05.png" id="6_rr8db"]
+
+[node name="FermentationBar" type="TextureRect" unique_id=134217211]
+anchors_preset = -1
+anchor_left = 1.0289855
+anchor_right = 1.4347826
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+mouse_filter = 2
+texture = ExtResource("1_e0idd")
+expand_mode = 5
+stretch_mode = 5
+script = ExtResource("1_rgoe0")
+textures = Array[Texture2D]([ExtResource("1_e0idd"), ExtResource("3_k1knb"), ExtResource("4_24mx8"), ExtResource("5_qgyg3"), ExtResource("6_rr8db")])
