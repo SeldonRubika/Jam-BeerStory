@@ -5,4 +5,9 @@
 
 [resource]
 script = ExtResource("2_ag2sk")
+ingredient_name = "Noix de coco"
+desc = "Ramené des îles du Sud, cette coquille révelle un coeur fondant... Comme Marius en GD1."
+bitterness = 2
+sweetness = 7
+fruity = true
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

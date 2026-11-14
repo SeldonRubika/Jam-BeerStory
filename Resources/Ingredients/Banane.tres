@@ -5,4 +5,8 @@
 
 [resource]
 script = ExtResource("2_pubht")
+ingredient_name = "Banane"
+desc = "Et là le type me dit \"500€ et des bananes\" et là je me dis \"Pourquoi il veut des bananes ce tdc\"."
+sweetness = 5
+fruity = true
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

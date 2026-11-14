@@ -5,4 +5,10 @@
 
 [resource]
 script = ExtResource("2_2mbk1")
+ingredient_name = "Betterave"
+desc = "En jus, on pourrait les prendre pour du sang. Un genre de repas CROUS pour vampire."
+type = 3
+bitterness = 1
+sweetness = 6
+fruity = true
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

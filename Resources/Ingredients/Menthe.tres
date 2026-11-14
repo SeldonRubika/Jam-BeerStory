@@ -5,4 +5,10 @@
 
 [resource]
 script = ExtResource("2_mytos")
+ingredient_name = "Menthe"
+desc = "Récolté dans la vallée, terre du comte Menthe-et-Cristaux."
+type = 1
+bitterness = 6
+sweetness = 4
+fruity = true
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

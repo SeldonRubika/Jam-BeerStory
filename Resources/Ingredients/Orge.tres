@@ -5,4 +5,9 @@
 
 [resource]
 script = ExtResource("2_guak2")
+ingredient_name = "Orge"
+desc = "Ne surtout pas rajouter un \"i\" avant le \"e\"."
+type = 1
+bitterness = 5
+sweetness = 2
 metadata/_custom_type_script = "uid://renlxgu8rtkv"
