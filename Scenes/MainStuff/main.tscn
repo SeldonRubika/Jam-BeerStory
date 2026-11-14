@@ -304,6 +304,7 @@ layout_mode = 2
 resource = ExtResource("19_si52c")
 
 [node name="Fermentation" parent="Book_Open" unique_id=912534386 instance=ExtResource("4_n07qj")]
+visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchor_left = 0.0859375
@@ -311,6 +312,7 @@ anchor_right = 0.48350695
 anchor_bottom = 0.8611111
 
 [node name="Broyage" parent="Book_Open" unique_id=715145535 instance=ExtResource("16_gys0y")]
+visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 
