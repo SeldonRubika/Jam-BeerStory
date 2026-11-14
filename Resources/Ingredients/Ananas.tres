@@ -7,7 +7,7 @@
 script = ExtResource("2_u7egc")
 ingredient_name = "Ananas"
 desc = "Change le goût du sperme ... voilà voilà ... que dire de plus ..."
-bitterness = 1
-sweetness = 6
+bitterness = 10
+sweetness = 60
 fruity = true
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

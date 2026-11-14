@@ -8,5 +8,6 @@ script = ExtResource("2_m24ub")
 ingredient_name = "Blé"
 desc = "Récupéré sur un navire pas loin de Rome. Peut être utilisé pour fabriqué de l'alcool pur."
 type = 1
-bitterness = 5
+bitterness = 50
+sweetness = 50
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

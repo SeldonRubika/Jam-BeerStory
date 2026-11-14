@@ -8,14 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://tswgfff1ld38" path="res://Assets/Book/couverture_livre.png" id="3_qyqbn"]
 [ext_resource type="Script" uid="uid://leehmvr1x5lu" path="res://addons/AutoSizeText/ui/AutoSizeRichTextLabel.gd" id="3_xsi4l"]
 [ext_resource type="PackedScene" uid="uid://d3176dlpwjvof" path="res://Scenes/DrinkSubMenu/Fermentation.tscn" id="4_n07qj"]
-[ext_resource type="Resource" uid="uid://c1wsgln1jh5kw" path="res://Resources/Drinks/AlcoolPur.tres" id="5_4e1qo"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://addons/AutoSizeText/ui/AutoSizeLabel.gd" id="5_acqp8"]
-[ext_resource type="Resource" uid="uid://crn2ikri8g47b" path="res://Resources/Drinks/Eau.tres" id="6_txtry"]
 [ext_resource type="Resource" uid="uid://bah2j40ccokhh" path="res://Resources/Drinks/EauPetillante.tres" id="7_cblkn"]
-[ext_resource type="Resource" uid="uid://2hqik8uq36wc" path="res://Resources/Drinks/PotionTaureauAile.tres" id="8_b6kj8"]
 [ext_resource type="Script" uid="uid://drgxgfhgbk7d8" path="res://Scenes/MainStuff/page.gd" id="8_cn4e2"]
 [ext_resource type="Texture2D" uid="uid://dgi1hkbyohyts" path="res://Assets/Animations/Book_Opening/livre_anim01.png" id="9_ajusn"]
-[ext_resource type="Resource" uid="uid://oj1fihi7rf88" path="res://Resources/Drinks/PotionTigreFou.tres" id="9_swcbe"]
 [ext_resource type="Texture2D" uid="uid://bxn02ygir2j70" path="res://Assets/Animations/Book_Opening/livre_anim02.png" id="10_0km6h"]
 [ext_resource type="Texture2D" uid="uid://w7j1rriwfo38" path="res://Assets/BookMarks/MP_discution.png" id="10_swcbe"]
 [ext_resource type="Texture2D" uid="uid://rlcmcgmx1rs2" path="res://Assets/Animations/Book_Opening/livre_anim03.png" id="11_7p5sd"]
@@ -34,8 +30,20 @@
 [ext_resource type="PackedScene" uid="uid://qpqskwpsly3n" path="res://Scenes/DrinkSubMenu/broyage.tscn" id="16_gys0y"]
 [ext_resource type="Resource" uid="uid://bcvergkg7bnb0" path="res://Resources/Ingredients/Cactus.tres" id="17_m8wsu"]
 [ext_resource type="Texture2D" uid="uid://c8mwql3imy8em" path="res://Assets/Animations/Book_Opening/livre_anim09.png" id="17_wlwqd"]
-[ext_resource type="Resource" uid="uid://c17estnksnubl" path="res://Resources/Ingredients/Citron.tres" id="18_5ucu8"]
+[ext_resource type="Resource" uid="uid://de3bjqqxwd5hs" path="res://Resources/Ingredients/Champignon.tres" id="19_emdne"]
 [ext_resource type="Resource" uid="uid://bvv2lxnh8rdfc" path="res://Resources/Ingredients/Menthe.tres" id="19_si52c"]
+[ext_resource type="Resource" uid="uid://b8ars7q4rr4bi" path="res://Resources/Ingredients/Pomme.tres" id="23_wlwqd"]
+[ext_resource type="Resource" uid="uid://djjm2snscj0k2" path="res://Resources/Ingredients/Houblon.tres" id="24_wl0wt"]
+[ext_resource type="Resource" uid="uid://ckyglmaykgfgv" path="res://Resources/Ingredients/Carotte.tres" id="25_rf7g0"]
+[ext_resource type="Resource" uid="uid://bm6ixfj8oq6u1" path="res://Resources/Ingredients/Cerise.tres" id="28_ok8gr"]
+[ext_resource type="Resource" uid="uid://1jiyqfqeedhq" path="res://Resources/Ingredients/FruitDragon.tres" id="29_817mi"]
+[ext_resource type="Resource" uid="uid://ban47ef15cf75" path="res://Resources/Ingredients/Piment.tres" id="30_k35l4"]
+[ext_resource type="Resource" uid="uid://btdxjavagu23b" path="res://Resources/Ingredients/Riz.tres" id="31_m0bbn"]
+[ext_resource type="Resource" uid="uid://b2eme057js684" path="res://Resources/Ingredients/Orge.tres" id="32_aexys"]
+[ext_resource type="Resource" uid="uid://cmlmnp63yypvp" path="res://Resources/Ingredients/Ble.tres" id="33_kkbom"]
+[ext_resource type="Resource" uid="uid://b4ffe5c6cmps5" path="res://Resources/Ingredients/Banane.tres" id="34_qmstw"]
+[ext_resource type="Resource" uid="uid://cmdxmvgpyo5or" path="res://Resources/Ingredients/Tomate.tres" id="35_nsubq"]
+[ext_resource type="Resource" uid="uid://cp7o6yb4ihy3s" path="res://Resources/Ingredients/NoixDeCoco.tres" id="36_yp7o4"]
 
 [node name="Main" type="Control" unique_id=1026774502]
 layout_mode = 3
@@ -225,11 +233,11 @@ metadata/_edit_use_anchors_ = true
 
 [node name="DrinkBase" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=840213197 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("5_4e1qo")
+resource = ExtResource("19_emdne")
 
 [node name="DrinkBase2" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=1043418724 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("6_txtry")
+resource = ExtResource("17_m8wsu")
 
 [node name="DrinkBase3" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=1529819369 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
@@ -237,71 +245,71 @@ resource = ExtResource("7_cblkn")
 
 [node name="DrinkBase4" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=1050190539 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("8_b6kj8")
+resource = ExtResource("19_si52c")
 
 [node name="DrinkBase5" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=691005010 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("9_swcbe")
+resource = ExtResource("23_wlwqd")
 
 [node name="DrinkBase6" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=1564469009 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("5_4e1qo")
+resource = ExtResource("24_wl0wt")
 
 [node name="DrinkBase7" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=893214129 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("6_txtry")
+resource = ExtResource("25_rf7g0")
 
 [node name="DrinkBase8" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=284419972 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("7_cblkn")
+resource = ExtResource("16_cn4e2")
 
 [node name="DrinkBase9" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=150347962 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("8_b6kj8")
+resource = ExtResource("15_cukkd")
 
 [node name="DrinkBase10" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=730766477 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("9_swcbe")
+resource = ExtResource("28_ok8gr")
 
 [node name="DrinkBase11" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=418655257 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("5_4e1qo")
+resource = ExtResource("29_817mi")
 
 [node name="DrinkBase12" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=2049822637 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("6_txtry")
+resource = ExtResource("30_k35l4")
 
 [node name="DrinkBase13" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=1361810358 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("7_cblkn")
+resource = ExtResource("31_m0bbn")
 
 [node name="DrinkBase14" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=528627088 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("8_b6kj8")
+resource = ExtResource("30_k35l4")
 
 [node name="DrinkBase15" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=750065718 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("9_swcbe")
+resource = ExtResource("16_cn4e2")
 
 [node name="DrinkBase16" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=370261215 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("15_cukkd")
+resource = ExtResource("32_aexys")
 
 [node name="DrinkBase17" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=222930850 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("16_cn4e2")
+resource = ExtResource("33_kkbom")
 
 [node name="DrinkBase18" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=365870480 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("17_m8wsu")
+resource = ExtResource("34_qmstw")
 
 [node name="DrinkBase19" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=1008466711 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("18_5ucu8")
+resource = ExtResource("35_nsubq")
 
 [node name="DrinkBase20" parent="Book_Open/InventoryPage/ScrollContainer/GridContainer" unique_id=54850779 instance=ExtResource("3_5xgcf")]
 layout_mode = 2
-resource = ExtResource("19_si52c")
+resource = ExtResource("36_yp7o4")
 
 [node name="Fermentation" parent="Book_Open" unique_id=912534386 instance=ExtResource("4_n07qj")]
 visible = false

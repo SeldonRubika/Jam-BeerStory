@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("2_yhwcj")
 desc = "Pomme"
-sweetness = 2
+sweetness = 20
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

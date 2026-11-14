@@ -18,9 +18,13 @@ var text_color : Color = [Color.YELLOW,Color.RED,Color.SKY_BLUE,Color.GREEN_YELL
 func GetBroyageResource():
 	var new = DrinkResource.new()
 	new.degrees = 0
-	new.ingredient_name = "Jus de " + ingredient_name
 	new.base = ingredient_name
-	new.desc = "Jus très nutritif fait à partir de " + ingredient_name + "."
+	if new.base[0] in "AEIOUY" :
+		new.ingredient_name = "Jus d'" + ingredient_name
+		new.desc = "Jus très nutritif fait à partir d'" + ingredient_name + "."
+	else :
+		new.ingredient_name = "Jus de " + ingredient_name
+		new.desc = "Jus très nutritif fait à partir de " + ingredient_name + "."
 	new.type = Global.IngredientsTypes.Liquid
 	new.types = Global.DrinkTypes.Softs
 	new.bitterness = bitterness
@@ -35,27 +39,35 @@ func GetBroyageResource():
 func GetFermentedResource():
 	if ingredient_name[0] == "M":
 		var new = DrinkResource.new()
-		new.ingredient_name = "Bière de " + ingredient_name
-		new.base = ingredient_name
-		new.desc = "Bière fait à partir de " + ingredient_name + "."
+		new.base = base
+		if new.base[0] in "AEIOUY" :
+			new.ingredient_name = "Bière d'" + new.base
+			new.desc = "Bière fait à partir d'" + ingredient_name + "."
+		else :
+			new.ingredient_name = "Bière de " + new.base
+			new.desc = "Bière fait à partir de " + ingredient_name + "."
 		new.type = Global.IngredientsTypes.Liquid
-		new.types = Global.DrinkTypes.Softs
+		new.types = Global.DrinkTypes.Fermented
 		new.bitterness = bitterness * 1.1
 		new.sweetness = sweetness * 0.9
-		new.degrees = new.sweetness * 0.3
+		new.degrees = new.sweetness * 0.35
 		new.fruity = fruity
 		new.gazeous = true
 		return new
 	if ingredient_name[0] == "J":
 		var new = DrinkResource.new()
-		new.ingredient_name = "Vin de " + ingredient_name
-		new.base = ingredient_name
-		new.desc = "Vin fait à partir de " + ingredient_name + "."
+		new.base = base
+		if new.base[0] in "AEIOUY" :
+			new.ingredient_name = "Vin d'" + new.base
+			new.desc = "Vin fait à partir d'" + ingredient_name + "."
+		else :
+			new.ingredient_name = "Vin de " + new.base
+			new.desc = "Vin fait à partir de " + ingredient_name + "."
 		new.type = Global.IngredientsTypes.Liquid
-		new.types = Global.DrinkTypes.Softs
+		new.types = Global.DrinkTypes.Fermented
 		new.bitterness = bitterness * 1.1
 		new.sweetness = sweetness * 0.9
-		new.degrees = new.sweetness * 0.5
+		new.degrees = new.sweetness * 0.3
 		new.fruity = fruity
 		new.gazeous = gazeous
 		return new
@@ -66,9 +78,13 @@ func GetFermentedResource():
 func GetBroyageByproduct():
 	var new = DrinkResource.new()
 	new.degrees = 0
-	new.ingredient_name = "Moût de " + ingredient_name
 	new.base = ingredient_name
-	new.desc = "Moût très nutritif fait à partir de " + ingredient_name + "."
+	if new.base[0] in "AEIOUY" :
+		new.ingredient_name = "Moût d'" + ingredient_name
+		new.desc = "Moût très nutritif fait à partir d'" + ingredient_name + "."
+	else :
+		new.ingredient_name = "Moût de " + ingredient_name
+		new.desc = "Moût très nutritif fait à partir de " + ingredient_name + "."
 	new.type = Global.IngredientsTypes.Liquid
 	new.types = Global.DrinkTypes.Softs
 	new.bitterness = bitterness * 1.3

@@ -10,13 +10,21 @@ class_name DrinkResource
 
 func GetDistilledResource():
 	var new = DrinkResource.new()
-	new.base = ingredient_name
+	new.base = base
 	if fruity :
-		new.ingredient_name = "Eau-de-vie de " + ingredient_name
-		new.desc = "Eau-de-vie très nutritif fait à partir de " + ingredient_name + "."
+		if new.base[0] in "AEIOUY" : 
+			new.ingredient_name = "Eau-de-vie d'" + new.base
+			new.desc = "Eau-de-vie très nutritive fait à partir d'" + new.base + "."
+		else : 
+			new.ingredient_name = "Eau-de-vie de " + new.base
+			new.desc = "Eau-de-vie très nutritive fait à partir de " + new.base + "."
 	else :
-		new.ingredient_name = "Spiritueux de " + ingredient_name
-		new.desc = "Spiritueux très nutritif fait à partir de " + ingredient_name + "."
+		if new.base[0] in "AEIOUY" : 
+			new.ingredient_name = "Spiritueux d'" + new.base
+			new.desc = "Spiritueux très nutritif fait à partir d' " + new.base + "."
+		else :
+			new.ingredient_name = "Spiritueux de" + new.base
+			new.desc = "Spiritueux très nutritif fait à partir de" + new.base + "."
 	new.type = Global.IngredientsTypes.Liquid
 	new.types = Global.DrinkTypes.Distillied
 	new.bitterness = bitterness * 1.1
@@ -29,19 +37,18 @@ func GetDistilledResource():
 func GetCombinedResource(ingredient : DrinkResource):
 	# self est forcément une boisson, ingredient par contre peut être liquide ou autre
 	var new = DrinkResource.new()
-	new.base = ingredient_name
-	
-	if fruity :
-		new.ingredient_name = "Eau-de-vie de " + ingredient_name
-		new.desc = "Eau-de-vie très nutritif fait à partir de " + ingredient_name + "."
-	elif fruity:
-		new.ingredient_name = "Spiritueux de " + ingredient_name
-		new.desc = "Spiritueux très nutritif fait à partir de " + ingredient_name + "."
-		
+	new.base = base	
 	new.type = Global.IngredientsTypes.Liquid
 	
 	if ingredient.type != Global.IngredientsTypes.Liquid :
 		# Si c'est une Liqueur (liquide + ingrédient pas liquide)
+		if new.base[0] in "AEIOUY" :
+			new.ingredient_name = "Liqueur d'" + ingredient.base
+			new.desc = "Liqueur très nutritive fait à partir d'" + ingredient.base + "."
+		else :
+			new.ingredient_name = "Liqueur de " + ingredient.base
+			new.desc = "Liqueur très nutritive fait à partir de " + ingredient.base + "."
+		
 		new.types = Global.DrinkTypes.Liquor
 		new.sweetness = (sweetness * 0.8) + (ingredient.sweetness * 0.2) 
 		new.bitterness = (bitterness * 0.8) + (ingredient.bitterness * 0.2) 
@@ -51,6 +58,9 @@ func GetCombinedResource(ingredient : DrinkResource):
 		return new
 	else :
 		# Si c'est un Cocktail (liquide + liquide)
+		new.ingredient_name = "Cocktail" + new.base + " " + ingredient.base
+		new.desc = "Cocktail très nutritif."
+		
 		new.types = Global.DrinkTypes.Cocktail
 		new.sweetness = (sweetness + ingredient.sweetness) * 0.5
 		new.bitterness = (bitterness + ingredient.bitterness) * 0.5
