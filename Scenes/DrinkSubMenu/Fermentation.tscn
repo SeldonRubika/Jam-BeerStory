@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d3176dlpwjvof"]
 
-[ext_resource type="Script" uid="uid://co65eywvsnl6c" path="res://Scenes/DrinkSubMenu/fermentation.gd" id="1_qhrlv"]
+[ext_resource type="Script" uid="uid://co65eywvsnl6c" path="res://Scenes/DrinkSubMenu/Fermentation.gd" id="1_qhrlv"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://addons/AutoSizeText/ui/AutoSizeLabel.gd" id="2_rxjry"]
 [ext_resource type="PackedScene" uid="uid://fkjn5x638hlm" path="res://Scenes/ingredients/ingredient_base.tscn" id="3_qnoag"]
 [ext_resource type="PackedScene" uid="uid://b7scmvja60cy4" path="res://Scenes/DrinkSubMenu/fermentation_bar.tscn" id="4_qhrlv"]
@@ -75,6 +75,7 @@ offset_right = 4.967987
 offset_bottom = 7.4359894
 mouse_filter = 2
 disabled = true
+resource = null
 
 [node name="FermentationBar" parent="HBoxContainer/tonneau" unique_id=134217211 instance=ExtResource("4_qhrlv")]
 layout_mode = 1
@@ -110,6 +111,7 @@ offset_right = 4.967987
 offset_bottom = 7.4359894
 mouse_filter = 2
 disabled = true
+resource = null
 
 [node name="FermentationBar" parent="HBoxContainer/tonneau2" unique_id=150732093 instance=ExtResource("4_qhrlv")]
 layout_mode = 1
@@ -145,6 +147,7 @@ offset_right = 4.967987
 offset_bottom = 7.4359894
 mouse_filter = 2
 disabled = true
+resource = null
 
 [node name="FermentationBar" parent="HBoxContainer/tonneau3" unique_id=302790832 instance=ExtResource("4_qhrlv")]
 layout_mode = 1

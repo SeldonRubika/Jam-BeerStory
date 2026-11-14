@@ -89,5 +89,7 @@ func _on_jardinier_book_pressed() -> void:
 func _on_combination_book_pressed() -> void:
 	if changing_tab:
 		return
+	if Global.active_drink_submenu:
+		Global.active_drink_submenu.deselect()
 	tab_index = 5
 	change_tab()

@@ -4,7 +4,7 @@ class_name IngredientResource
 @export_category("information")
 @export var ingredient_name := "Pomme"
 @export var base := ""
-@export var icon : Texture2D = preload("res://icon.svg")
+@export var icon : Texture2D
 @export var desc :="Le type de bière pour lesquelles mathis se fait ban du camel"
 var text_color : Color = [Color.YELLOW,Color.RED,Color.SKY_BLUE,Color.GREEN_YELLOW,Color.ORANGE].pick_random()
 

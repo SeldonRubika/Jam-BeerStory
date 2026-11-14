@@ -34,7 +34,7 @@ func GetDistilledResource():
 	new.gazeous = gazeous
 	return new
 	
-func GetCombinedResource(ingredient : DrinkResource):
+func GetCombinedResource(ingredient : IngredientResource):
 	# self est forcément une boisson, ingredient par contre peut être liquide ou autre
 	var new = DrinkResource.new()
 	new.base = base	
@@ -66,7 +66,7 @@ func GetCombinedResource(ingredient : DrinkResource):
 		new.types = Global.DrinkTypes.Cocktail
 		new.sweetness = (sweetness + ingredient.sweetness) * 0.5
 		new.bitterness = (bitterness + ingredient.bitterness) * 0.5
-		new.degrees = (degrees + ingredient.begrees) * 0.5
+		new.degrees = (degrees + ingredient.degrees) * 0.5
 		new.fruity = (fruity or ingredient.fruity)
 		new.gazeous = (gazeous or ingredient.gazeous)
 		new.mix_level = min(4,mix_level + ingredient.mix_level + 1)

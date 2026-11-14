@@ -32,7 +32,13 @@ func set_self_ui():
 	name_label.get_parent().show()
 	name_label.text = resource.ingredient_name
 	name_label.add_theme_color_override("default_color",resource.text_color)
-	ingredient_icon.texture = resource.icon
+	if resource.icon:
+		ingredient_icon.texture = resource.icon
+	else:
+		if resource.type == Global.IngredientsTypes.Liquid:
+			ingredient_icon.texture = Global.GetDrinkTypeTexture(resource.types)
+		else:
+			ingredient_icon.texture = Global.GetIngredientTypeTexture(resource.type)
 	name_label.do_resize_text()
 
 	if (focus.visible):

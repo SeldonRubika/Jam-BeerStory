@@ -11,8 +11,13 @@ var active_drink_submenu : DrinkSubMenu = null
 
 var selected_ingredients:IngredientBase
 
-func GetDrinkTypeTexture(_type:DrinkTypes):
-	return preload("uid://bwickkrqp6r6i")
+func GetDrinkTypeTexture(type:DrinkTypes):
+	match type:
+		DrinkTypes.Fermented: return preload("uid://bsw820vxibise")
+		DrinkTypes.Distillied: return preload("uid://clu0dbsxr7plw")
+		DrinkTypes.Liquor: return preload("uid://b4cektdkkhrxi")
+		DrinkTypes.Cocktail: return preload("uid://cgu62rknsqtan")
+		DrinkTypes.Softs: return preload("uid://bflc0eofbxgtn")
 
 func GetIngredientTypeTexture(type:IngredientsTypes):
 	match type:
