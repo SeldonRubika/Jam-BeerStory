@@ -92,6 +92,7 @@ func _on_mouse_exited() -> void:
 func _on_focus_entered() -> void:
 	if (!resource or Global.active_drink_submenu):
 		return
+	focus.show()
 	var tween = create_tween()
 	tween.tween_property(focus,"modulate",Color(1.0,1.0,1.0,1.0),.5)
 	hover.hide()
@@ -101,6 +102,7 @@ func _on_focus_entered() -> void:
 func _on_focus_exited() -> void:
 	var tween = create_tween()
 	tween.tween_property(focus,"modulate",Color(1.0,1.0,1.0,0.0),.5)
+	tween.tween_callback(focus.hide)
 
 func _on_pressed() -> void:
 	if !Global.active_drink_submenu:

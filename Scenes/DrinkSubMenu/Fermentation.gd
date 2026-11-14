@@ -29,14 +29,12 @@ func _on_tonneau_3_pressed() -> void:
 func object_in_tonneau(tonneau:TextureButton):
 	var child := tonneau.get_child(0)
 	if (!child.resource):
-		print("hey")
 		if !Global.selected_ingredients:
 			return
 		if ( Global.selected_ingredients.resource.type != Global.IngredientsTypes.Liquid):
 			return
 		if Global.selected_ingredients.resource.types != Global.DrinkTypes.Softs:
 			return
-		print("ho")
 		child.resource = Global.selected_ingredients.resource
 		child.set_self_ui()
 		Global.selected_ingredients.resource = null
