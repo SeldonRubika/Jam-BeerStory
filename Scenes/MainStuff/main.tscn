@@ -37,6 +37,7 @@
 [ext_resource type="Resource" uid="uid://c17estnksnubl" path="res://Resources/Ingredients/Citron.tres" id="18_5ucu8"]
 [ext_resource type="Resource" uid="uid://bvv2lxnh8rdfc" path="res://Resources/Ingredients/Menthe.tres" id="19_si52c"]
 [ext_resource type="PackedScene" uid="uid://bmalfbaenelw0" path="res://Scenes/DrinkSubMenu/combination.tscn" id="31_ajusn"]
+[ext_resource type="Texture2D" uid="uid://ckpnwprjll1iw" path="res://Assets/BookMarks/MP_Combiner.png" id="37_0km6h"]
 
 [node name="Main" type="Control" unique_id=1026774502]
 layout_mode = 3
@@ -398,7 +399,7 @@ layout_mode = 2
 size_flags_vertical = 3
 offset_transform_enabled = true
 offset_transform_position = Vector2(-4, 0)
-texture_normal = ExtResource("14_cbaa3")
+texture_normal = ExtResource("37_0km6h")
 stretch_mode = 5
 
 [node name="JardinierBook" type="TextureButton" parent="Book_Open/MarquePage/VBoxContainer" unique_id=449747512]
