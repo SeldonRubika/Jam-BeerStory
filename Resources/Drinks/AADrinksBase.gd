@@ -37,43 +37,121 @@ func GetDistilledResource():
 func GetCombinedResource(ingredient : IngredientResource):
 	# self est forcément une boisson, ingredient par contre peut être liquide ou autre
 	var new = DrinkResource.new()
-	new.base = base	
 	new.type = Global.IngredientsTypes.Liquid
 	
-	if ingredient.type != Global.IngredientsTypes.Liquid :
-		# Si c'est une Liqueur (liquide + ingrédient pas liquide)
-		if new.base[0] in "AEIOUY" :
-			new.base = ingredient.ingredient_name
-			new.ingredient_name = "Liqueur d'" + ingredient.ingredient_name
-			new.desc = "Liqueur très nutritive fait à partir d'" + ingredient.ingredient_name + "."
-		else :
-			new.base = ingredient.ingredient_name
-			new.ingredient_name = "Liqueur de " + ingredient.ingredient_name
-			new.desc = "Liqueur très nutritive fait à partir de " + ingredient.ingredient_name + "."
-		
-		new.types = Global.DrinkTypes.Liquor
-		new.sweetness = (sweetness * 0.8) + (ingredient.sweetness * 0.2) 
-		new.bitterness = (bitterness * 0.8) + (ingredient.bitterness * 0.2) 
+	if ingredient.ingredient_name == "Sucre" :
 		new.degrees = degrees
-		new.fruity = (fruity or ingredient.fruity)
-		new.gazeous = (gazeous or ingredient.gazeous)
-		return new
-	else :
-		# Si c'est un Cocktail (liquide + liquide)
-		new.ingredient_name = "Cocktail" + new.base + " " + ingredient.base
-		new.desc = "Cocktail très nutritif."
-		
-		new.types = Global.DrinkTypes.Cocktail
-		new.sweetness = (sweetness + ingredient.sweetness) * 0.5
-		new.bitterness = (bitterness + ingredient.bitterness) * 0.5
-		new.degrees = (degrees + ingredient.degrees) * 0.5
-		new.fruity = (fruity or ingredient.fruity)
-		new.gazeous = (gazeous or ingredient.gazeous)
-		new.mix_level = min(4,mix_level + ingredient.mix_level + 1)
+		new.base = base
+		new.ingredient_name = ingredient_name + " sucré"
+		new.desc = desc
+		new.type = type
+		new.types = types
+		new.bitterness = bitterness
+		new.sweetness = sweetness + 20
+		new.fruity = fruity
+		new.gazeous = gazeous
 		if new.mix_level >= 4 :
 			new.shitty = true
 		else :
 			new.shitty = (shitty or ingredient.shitty)
 		return new
+		
+	elif ingredient.ingredient_name == "Alcool pur" : 
+		new.degrees = (degrees + 96) * 0.5
+		new.base = base
+		new.ingredient_name = ingredient_name + " fort"
+		new.desc = desc
+		new.type = type
+		new.types = types
+		new.bitterness = bitterness
+		new.sweetness = sweetness
+		new.fruity = fruity
+		new.gazeous = gazeous
+		new.mix_level = mix_level + 1
+		if new.mix_level >= 4 :
+			new.shitty = true
+		else :
+			new.shitty = (shitty or ingredient.shitty)
+		return new
+		
+	elif ingredient.ingredient_name == "Eau" : 
+		new.degrees = degrees * 0.5
+		new.base = base
+		new.ingredient_name = ingredient_name + " dilué"
+		new.desc = desc
+		new.type = type
+		new.types = types
+		new.bitterness = bitterness
+		new.sweetness = sweetness
+		new.fruity = fruity
+		new.gazeous = gazeous
+		new.mix_level = mix_level + 1
+		if new.mix_level >= 4 :
+			new.shitty = true
+		else :
+			new.shitty = (shitty or ingredient.shitty)
+		return new
+		
+	elif ingredient.ingredient_name == "Assucrite" : 
+		new.degrees = degrees
+		new.base = base
+		new.ingredient_name = ingredient_name + " sec"
+		new.desc = desc
+		new.type = type
+		new.types = types
+		new.bitterness = bitterness
+		new.sweetness = sweetness - 10
+		new.fruity = fruity
+		new.gazeous = gazeous
+		new.mix_level = mix_level + 1
+		if new.mix_level >= 4 :
+			new.shitty = true
+		else :
+			new.shitty = (shitty or ingredient.shitty)
+		return new
+		
+	else :
+		
+		new.base = base
+		
+		if ingredient.type != Global.IngredientsTypes.Liquid :
+			# Si c'est une Liqueur (liquide + ingrédient pas liquide)
+			if new.base[0] in "AEIOUY" :
+				new.base = ingredient.ingredient_name
+				new.ingredient_name = "Liqueur d'" + ingredient.ingredient_name
+				new.desc = "Liqueur très nutritive fait à partir d'" + ingredient.ingredient_name + "."
+			else :
+				new.base = ingredient.ingredient_name
+				new.ingredient_name = "Liqueur de " + ingredient.ingredient_name
+				new.desc = "Liqueur très nutritive fait à partir de " + ingredient.ingredient_name + "."
+			
+			new.types = Global.DrinkTypes.Liquor
+			new.sweetness = (sweetness * 0.8) + (ingredient.sweetness * 0.2) 
+			new.bitterness = (bitterness * 0.8) + (ingredient.bitterness * 0.2) 
+			new.degrees = degrees
+			new.fruity = (fruity or ingredient.fruity)
+			new.gazeous = (gazeous or ingredient.gazeous)
+			if new.mix_level >= 4 :
+				new.shitty = true
+			else :
+				new.shitty = (shitty or ingredient.shitty)
+			return new
+		else :
+			# Si c'est un Cocktail (liquide + liquide)
+			new.ingredient_name = "Cocktail" + new.base + " " + ingredient.base
+			new.desc = "Cocktail très nutritif."
+			
+			new.types = Global.DrinkTypes.Cocktail
+			new.sweetness = (sweetness + ingredient.sweetness) * 0.5
+			new.bitterness = (bitterness + ingredient.bitterness) * 0.5
+			new.degrees = (degrees + ingredient.degrees) * 0.5
+			new.fruity = (fruity or ingredient.fruity)
+			new.gazeous = (gazeous or ingredient.gazeous)
+			new.mix_level = min(4,mix_level + ingredient.mix_level + 1)
+			if new.mix_level >= 4 :
+				new.shitty = true
+			else :
+				new.shitty = (shitty or ingredient.shitty)
+			return new
 		
 	

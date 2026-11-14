@@ -48,9 +48,9 @@ func GetFermentedResource():
 			new.desc = "Bière fait à partir de " + ingredient_name + "."
 		new.type = Global.IngredientsTypes.Liquid
 		new.types = Global.DrinkTypes.Fermented
-		new.bitterness = bitterness * 1.1
-		new.sweetness = sweetness * 0.9
-		new.degrees = new.sweetness * 0.35
+		new.bitterness = min(bitterness * 1.1, 100)
+		new.degrees = 16 * sqrt(sweetness / 100.0) * (1.0 - bitterness / 500.0)
+		new.sweetness = sweetness * 0.75
 		new.fruity = fruity
 		new.gazeous = true
 		return new
@@ -65,9 +65,9 @@ func GetFermentedResource():
 			new.desc = "Vin fait à partir de " + ingredient_name + "."
 		new.type = Global.IngredientsTypes.Liquid
 		new.types = Global.DrinkTypes.Fermented
-		new.bitterness = bitterness * 1.1
-		new.sweetness = sweetness * 0.9
-		new.degrees = new.sweetness * 0.3
+		new.bitterness = min(bitterness * 1.1, 100)
+		new.sweetness = sweetness * 0.75
+		new.degrees = 20 * sqrt(sweetness / 100.0) * (1.0 - bitterness / 500.0)
 		new.fruity = fruity
 		new.gazeous = gazeous
 		return new
@@ -88,7 +88,7 @@ func GetBroyageByproduct():
 	new.type = Global.IngredientsTypes.Liquid
 	new.types = Global.DrinkTypes.Softs
 	new.bitterness = bitterness * 1.3
-	new.sweetness = sweetness * 0.2
+	new.sweetness = sweetness * 0.35
 	new.fruity = fruity
 	new.gazeous = gazeous
 	return new

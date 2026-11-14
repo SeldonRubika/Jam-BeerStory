@@ -1,6 +1,5 @@
 [gd_resource type="Resource" script_class="DrinkResource" format=3 uid="uid://oj1fihi7rf88"]
 
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_6g7py"]
 [ext_resource type="Script" uid="uid://dhefokc82kmno" path="res://Resources/Drinks/AADrinksBase.gd" id="1_c0tlh"]
 
 [resource]
@@ -9,8 +8,8 @@ types = 4
 ingredient_name = "Potion du Tigre Fou"
 desc = "Totalement crazy le tiger ou quoi là ?"
 type = 2
-bitterness = 2
-sweetness = 6
+bitterness = 20
+sweetness = 60
 fruity = true
 gazeous = true
 metadata/_custom_type_script = "uid://dhefokc82kmno"
