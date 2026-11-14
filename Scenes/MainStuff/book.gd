@@ -5,6 +5,7 @@ extends Control
 @export var grid: GridContainer
 @export var broyage: DrinkSubMenu
 @export var page: TextureRect
+@export var combination: DrinkSubMenu
 @export var inventory_page: Control
 
 @onready var page_per_index := {
@@ -13,12 +14,14 @@ extends Control
 	2:broyage,
 	3:fermentation,
 	4:null,
-	5:null,
+	5:combination,
+	6:null,
 }
 
 var tab_index := 0
 var previous_tab_index := 0
 var changing_tab := false
+var flip_tab_duration := 0.4
 func _ready() -> void:
 	Global.grid = grid
 
@@ -28,9 +31,9 @@ func change_tab():
 	tween.tween_property(inventory_page,"modulate",Color(1.0,1.0,1.0,0.0),.5)
 	await tween.finished
 	if (previous_tab_index < tab_index):
-		await page.animate(1)
+		await page.animate(flip_tab_duration)
 	elif (previous_tab_index > tab_index):
-		await page.inverse_animate(1)
+		await page.inverse_animate(flip_tab_duration)
 	previous_tab_index = tab_index
 	var new_tween = create_tween()
 	new_tween.tween_property(inventory_page,"modulate",Color(1.0,1.0,1.0,1.0),.5)
@@ -77,6 +80,13 @@ func _on_distiller_book_pressed() -> void:
 	change_tab()
 
 func _on_jardinier_book_pressed() -> void:
+	if changing_tab:
+		return
+	tab_index = 6
+	change_tab()
+
+
+func _on_combination_book_pressed() -> void:
 	if changing_tab:
 		return
 	tab_index = 5

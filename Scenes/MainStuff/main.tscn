@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://c8mwql3imy8em" path="res://Assets/Animations/Book_Opening/livre_anim09.png" id="17_wlwqd"]
 [ext_resource type="Resource" uid="uid://c17estnksnubl" path="res://Resources/Ingredients/Citron.tres" id="18_5ucu8"]
 [ext_resource type="Resource" uid="uid://bvv2lxnh8rdfc" path="res://Resources/Ingredients/Menthe.tres" id="19_si52c"]
+[ext_resource type="PackedScene" uid="uid://bmalfbaenelw0" path="res://Scenes/DrinkSubMenu/combination.tscn" id="31_ajusn"]
 
 [node name="Main" type="Control" unique_id=1026774502]
 layout_mode = 3
@@ -110,7 +111,7 @@ max_font_size = 72
 metadata/_custom_type_script = "uid://leehmvr1x5lu"
 metadata/_edit_use_anchors_ = true
 
-[node name="Book_Open" type="Control" parent="." unique_id=204703665 node_paths=PackedStringArray("fermentation", "grid", "broyage", "page", "inventory_page")]
+[node name="Book_Open" type="Control" parent="." unique_id=204703665 node_paths=PackedStringArray("fermentation", "grid", "broyage", "page", "combination", "inventory_page")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -122,6 +123,7 @@ fermentation = NodePath("Fermentation")
 grid = NodePath("InventoryPage/ScrollContainer/GridContainer")
 broyage = NodePath("Broyage")
 page = NodePath("Couverture/page")
+combination = NodePath("Combination")
 inventory_page = NodePath("InventoryPage")
 
 [node name="Background" type="ColorRect" parent="Book_Open" unique_id=1822726919]
@@ -316,6 +318,15 @@ visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 
+[node name="Combination" parent="Book_Open" unique_id=627038379 instance=ExtResource("31_ajusn")]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchor_left = 0.104166664
+anchor_bottom = 0.85339504
+id = "Combination"
+metadata/_edit_use_anchors_ = true
+
 [node name="MarquePage" type="Control" parent="Book_Open" unique_id=379467599]
 z_index = -2
 layout_mode = 1
@@ -382,6 +393,14 @@ offset_transform_position = Vector2(-4, 0)
 texture_normal = ExtResource("14_cbaa3")
 stretch_mode = 5
 
+[node name="CombinationBook" type="TextureButton" parent="Book_Open/MarquePage/VBoxContainer" unique_id=1537632686]
+layout_mode = 2
+size_flags_vertical = 3
+offset_transform_enabled = true
+offset_transform_position = Vector2(-4, 0)
+texture_normal = ExtResource("14_cbaa3")
+stretch_mode = 5
+
 [node name="JardinierBook" type="TextureButton" parent="Book_Open/MarquePage/VBoxContainer" unique_id=449747512]
 layout_mode = 2
 size_flags_vertical = 3
@@ -395,4 +414,5 @@ stretch_mode = 5
 [connection signal="pressed" from="Book_Open/MarquePage/VBoxContainer/BroyageBook" to="Book_Open" method="_on_broyage_book_pressed"]
 [connection signal="pressed" from="Book_Open/MarquePage/VBoxContainer/FermentationBook" to="Book_Open" method="_on_fermentation_bookmark_2_pressed"]
 [connection signal="pressed" from="Book_Open/MarquePage/VBoxContainer/DistillerBook" to="Book_Open" method="_on_distiller_book_pressed"]
+[connection signal="pressed" from="Book_Open/MarquePage/VBoxContainer/CombinationBook" to="Book_Open" method="_on_combination_book_pressed"]
 [connection signal="pressed" from="Book_Open/MarquePage/VBoxContainer/JardinierBook" to="Book_Open" method="_on_jardinier_book_pressed"]

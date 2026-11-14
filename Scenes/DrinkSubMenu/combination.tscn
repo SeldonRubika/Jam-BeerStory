@@ -1,0 +1,192 @@
+[gd_scene format=3 uid="uid://bmalfbaenelw0"]
+
+[ext_resource type="Script" uid="uid://bf0pt2djmc84h" path="res://Scenes/DrinkSubMenu/combination.gd" id="1_r0ckt"]
+[ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://addons/AutoSizeText/ui/AutoSizeLabel.gd" id="2_pglv4"]
+[ext_resource type="PackedScene" uid="uid://fkjn5x638hlm" path="res://Scenes/ingredients/ingredient_base.tscn" id="3_ip7l4"]
+[ext_resource type="Texture2D" uid="uid://cajghehxih2tc" path="res://Assets/PlaceHolders/Placeholder_broyer.png" id="4_r0ckt"]
+
+[node name="Combination" type="Control" unique_id=912534386 node_paths=PackedStringArray("slot_1", "slot_2", "result")]
+layout_mode = 3
+anchor_left = 0.025
+anchor_top = 0.05
+anchor_right = 0.46
+anchor_bottom = 0.95000005
+mouse_filter = 1
+script = ExtResource("1_r0ckt")
+slot_1 = NodePath("HBoxContainer/Slot1")
+slot_2 = NodePath("HBoxContainer/Slot2")
+result = NodePath("HBoxContainer/Result")
+metadata/_custom_type_script = "uid://et742jqp0c57"
+
+[node name="AutoSizeLabel" type="Label" parent="." unique_id=2081047654]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.29517877
+anchor_top = 0.04286694
+anchor_right = 0.7048212
+anchor_bottom = 0.12791497
+offset_bottom = 1.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 38
+text = "Mixage"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_pglv4")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="HBoxContainer" type="Control" parent="." unique_id=1179704318]
+layout_mode = 1
+anchor_left = 0.07822477
+anchor_top = 0.19478737
+anchor_right = 0.9217752
+anchor_bottom = 0.92352533
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Slot1" type="TextureButton" parent="HBoxContainer" unique_id=1363454366]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.035484485
+anchor_top = 0.11723526
+anchor_right = 0.29051557
+anchor_bottom = 0.4542353
+offset_top = 0.17501831
+offset_right = 0.19328308
+offset_bottom = -0.049987793
+size_flags_horizontal = 3
+disabled = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="IngredientBase" parent="HBoxContainer/Slot1" unique_id=1564469009 instance=ExtResource("3_ip7l4")]
+layout_mode = 1
+anchor_left = 0.036000002
+anchor_top = 0.052
+anchor_right = 0.96400005
+anchor_bottom = 0.9480001
+offset_left = -4.9680004
+offset_top = -7.4360003
+offset_right = 4.967987
+offset_bottom = 7.4359894
+mouse_filter = 2
+disabled = true
+resource = null
+
+[node name="AutoSizeLabel" type="Label" parent="HBoxContainer/Slot1" unique_id=541576866]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.094000004
+anchor_top = -0.273
+anchor_right = 1.08
+anchor_bottom = 0.030000001
+offset_left = -0.027982712
+offset_top = 0.039001465
+offset_right = -0.040023804
+offset_bottom = 0.02600193
+theme_override_font_sizes/font_size = 20
+text = "Boisson uniquement"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_pglv4")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="Slot2" type="TextureButton" parent="HBoxContainer" unique_id=1021442863]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6529145
+anchor_top = 0.11788234
+anchor_right = 0.9788721
+anchor_bottom = 0.45388237
+offset_top = -0.099990845
+offset_right = 0.21121216
+offset_bottom = 0.1000061
+size_flags_horizontal = 3
+disabled = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="IngredientBase" parent="HBoxContainer/Slot2" unique_id=1140041615 instance=ExtResource("3_ip7l4")]
+layout_mode = 1
+anchor_left = 0.036000002
+anchor_top = 0.052
+anchor_right = 0.96400005
+anchor_bottom = 0.9480001
+offset_left = -4.9680004
+offset_top = -7.4360003
+offset_right = 4.967987
+offset_bottom = 7.4359894
+mouse_filter = 2
+disabled = true
+resource = null
+
+[node name="Result" type="TextureButton" parent="HBoxContainer" unique_id=976862074]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.035484485
+anchor_top = 0.7437647
+anchor_right = 0.2904731
+anchor_bottom = 1.0797648
+offset_top = -0.099990845
+offset_right = 0.21121216
+offset_bottom = 0.1000061
+size_flags_horizontal = 3
+disabled = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="IngredientBase" parent="HBoxContainer/Result" unique_id=103853650 instance=ExtResource("3_ip7l4")]
+layout_mode = 1
+anchor_left = 0.036000002
+anchor_top = 0.052
+anchor_right = 0.96400005
+anchor_bottom = 0.9480001
+offset_left = -4.9680004
+offset_top = -7.4360003
+offset_right = 4.967987
+offset_bottom = 7.4359894
+mouse_filter = 2
+disabled = true
+resource = null
+
+[node name="Mixage" type="TextureButton" parent="HBoxContainer" unique_id=206829621]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.586829
+anchor_top = 0.7152942
+anchor_right = 1.024829
+anchor_bottom = 1.1602354
+offset_left = -0.06434631
+offset_top = 1.0
+offset_right = 0.064331055
+offset_bottom = 0.8999634
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_r0ckt")
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="AutoSizeLabel" type="Label" parent="HBoxContainer/Mixage" unique_id=575119752]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.21200001
+theme_override_font_sizes/font_size = 38
+text = "Mixer"
+horizontal_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_pglv4")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[connection signal="pressed" from="HBoxContainer/Slot1" to="." method="_on_slot_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/Slot2" to="." method="_on_slot_2_pressed"]
