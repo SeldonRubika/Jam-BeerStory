@@ -1,13 +1,11 @@
 [gd_resource type="Resource" script_class="DrinkResource" format=3 uid="uid://bdmceqrdpnw21"]
 
-[ext_resource type="Texture2D" uid="uid://c1e1wbdl6lm6v" path="res://Assets/PlaceHolders/drink.png" id="1_5mmrw"]
 [ext_resource type="Script" uid="uid://dhefokc82kmno" path="res://Resources/Drinks/AADrinksBase.gd" id="1_lmve7"]
 
 [resource]
 script = ExtResource("1_lmve7")
 degrees = 5
 ingredient_name = "Bière"
-icon = ExtResource("1_5mmrw")
 bitterness = 2
 sweetness = 3
 fruity = true

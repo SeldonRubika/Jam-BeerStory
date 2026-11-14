@@ -139,11 +139,10 @@ offset_top = -0.099990845
 offset_right = 0.21121216
 offset_bottom = 0.1000061
 size_flags_horizontal = 3
-disabled = true
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
-[node name="IngredientBase" parent="HBoxContainer/Result" unique_id=103853650 instance=ExtResource("3_ip7l4")]
+[node name="Result" parent="HBoxContainer/Result" unique_id=103853650 instance=ExtResource("3_ip7l4")]
 layout_mode = 1
 anchor_left = 0.036000002
 anchor_top = 0.052
@@ -190,3 +189,5 @@ metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 
 [connection signal="pressed" from="HBoxContainer/Slot1" to="." method="_on_slot_1_pressed"]
 [connection signal="pressed" from="HBoxContainer/Slot2" to="." method="_on_slot_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Result" to="." method="_on_result_pressed"]
+[connection signal="pressed" from="HBoxContainer/Mixage" to="." method="_on_mixage_pressed"]
