@@ -8,5 +8,5 @@ script = ExtResource("2_qo22f")
 ingredient_name = "Oeil de Dragon"
 desc = "Un ingrédient légendaire provenant d'une créature mythique. Personne ne sait avec certitude à quoi ressemblera une boisson faite avec ce dernier."
 type = 4
-bitterness = 10
+bitterness = 100
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

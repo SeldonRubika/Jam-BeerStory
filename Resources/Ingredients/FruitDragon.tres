@@ -7,7 +7,7 @@
 script = ExtResource("2_mtvso")
 ingredient_name = "Fruit du Dragon"
 desc = "Promis il ne vient pas d'un arbre à Dragon, ça ressemble juste vaguement à un oeuf un peu stylé."
-bitterness = 2
-sweetness = 2
+bitterness = 20
+sweetness = 20
 fruity = true
 metadata/_custom_type_script = "uid://renlxgu8rtkv"
