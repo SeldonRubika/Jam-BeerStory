@@ -2,7 +2,6 @@
 
 [ext_resource type="Shader" uid="uid://6bbtlyoxlwjt" path="res://Resources/Shaders/MenuBackground.gdshader" id="1_bkwd7"]
 [ext_resource type="Script" uid="uid://40tl7x8mkd66" path="res://Scenes/Menu/main_menu.gd" id="1_tself"]
-[ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://addons/AutoSizeText/ui/AutoSizeLabel.gd" id="3_7jtkx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5q66j"]
 shader = ExtResource("1_bkwd7")
@@ -18,39 +17,14 @@ shader_parameter/spin_speed = 0.33
 shader_parameter/pulse_speed = 3.0
 shader_parameter/appear = 1.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tself"]
-bg_color = Color(0.11372549, 0.11372549, 0.11372549, 0.60784316)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0.48806697, 0.40671077, 0.19605377, 1)
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_5q66j"]
-color = Color(0.60784316, 0.16078432, 0.08235294, 1)
-thickness = 8
-
-[sub_resource type="DrawableTexture2D" id="DrawableTexture2D_5q66j"]
-
-[node name="MainMenu" type="Control" unique_id=210427808 node_paths=PackedStringArray("main_part", "magic_circle_shader")]
-layout_mode = 3
+[node name="MainMenu" type="TextureButton" unique_id=238709462 node_paths=PackedStringArray("magic_circle_shader")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tself")
-main_part = NodePath("MainPart")
 magic_circle_shader = NodePath("Magic_Circle_Shader")
-
-[node name="Background" type="ColorRect" parent="." unique_id=635241080]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
 
 [node name="Magic_Circle_Shader" type="ColorRect" parent="." unique_id=87727161]
 material = SubResource("ShaderMaterial_5q66j")
@@ -61,81 +35,11 @@ anchor_right = 0.8
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="MagicCircleColorChange" type="Timer" parent="." unique_id=657624548]
 wait_time = 2.5
 autostart = true
 
-[node name="MainPart" type="Panel" parent="." unique_id=1589070688]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.2934028
-anchor_top = 0.06635802
-anchor_right = 0.7065972
-anchor_bottom = 0.93364197
-offset_left = 15.0
-offset_right = -15.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_tself")
-metadata/_edit_use_anchors_ = true
-
-[node name="Container" type="VBoxContainer" parent="MainPart" unique_id=404026168]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 19.0
-offset_top = 18.0
-offset_right = -19.0
-offset_bottom = -18.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 6
-
-[node name="Title" type="Label" parent="MainPart/Container" unique_id=936364529]
-custom_minimum_size = Vector2(0, 96)
-layout_mode = 2
-theme_override_colors/font_color = Color(0.8784314, 0.5568628, 0.27058825, 1)
-theme_override_font_sizes/font_size = 64
-text = "Beer Story"
-horizontal_alignment = 1
-vertical_alignment = 1
-clip_text = true
-text_overrun_behavior = 3
-script = ExtResource("3_7jtkx")
-min_font_size = 32
-max_font_size = 64
-metadata/_custom_type_script = "uid://d11kfgsd6jgt"
-metadata/_edit_use_anchors_ = true
-
-[node name="HSeparator" type="HSeparator" parent="MainPart/Container" unique_id=1389528312]
-layout_mode = 2
-theme_override_styles/separator = SubResource("StyleBoxLine_5q66j")
-
-[node name="ButtonContainers" type="VBoxContainer" parent="MainPart/Container" unique_id=1566870235]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 12
-metadata/_edit_use_anchors_ = true
-
-[node name="Start" type="TextureButton" parent="MainPart/Container/ButtonContainers" unique_id=1246177521]
-layout_mode = 2
-size_flags_vertical = 3
-texture_normal = SubResource("DrawableTexture2D_5q66j")
-stretch_mode = 5
-
-[node name="Options" type="TextureButton" parent="MainPart/Container/ButtonContainers" unique_id=1331547532]
-layout_mode = 2
-size_flags_vertical = 3
-texture_normal = SubResource("DrawableTexture2D_5q66j")
-stretch_mode = 5
-
-[node name="Quit" type="TextureButton" parent="MainPart/Container/ButtonContainers" unique_id=2027627109]
-layout_mode = 2
-size_flags_vertical = 3
-texture_normal = SubResource("DrawableTexture2D_5q66j")
-stretch_mode = 5
-
+[connection signal="pressed" from="." to="." method="_on_pressed"]
 [connection signal="timeout" from="MagicCircleColorChange" to="." method="_on_magic_circle_color_change_timeout"]
-[connection signal="pressed" from="MainPart/Container/ButtonContainers/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="MainPart/Container/ButtonContainers/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="MainPart/Container/ButtonContainers/Quit" to="." method="_on_quit_pressed"]

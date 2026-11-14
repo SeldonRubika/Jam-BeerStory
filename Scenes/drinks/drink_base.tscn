@@ -5,8 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://c1e1wbdl6lm6v" path="res://Assets/PlaceHolders/drink.png" id="2_454oq"]
 [ext_resource type="Resource" uid="uid://bdmceqrdpnw21" path="res://Resources/Drinks/TestBeer.tres" id="2_q4sok"]
 [ext_resource type="Texture2D" uid="uid://cwvxvc8qi5f40" path="res://Assets/Slots/Slot_empty.png" id="3_j778k"]
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="4_v4xni"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://addons/AutoSizeText/ui/AutoSizeLabel.gd" id="7_3p54d"]
+[ext_resource type="Texture2D" uid="uid://c4bx1tijojlef" path="res://Assets/Icons/DegresAlcool.png" id="7_m2v1f"]
+[ext_resource type="Texture2D" uid="uid://bsg7m8t7o2vta" path="res://Assets/Icons/Amer.png" id="8_gk22y"]
+[ext_resource type="Texture2D" uid="uid://cmmrmfyvlsai6" path="res://Assets/Icons/Sugar.png" id="10_68xia"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_454oq"]
 bg_color = Color(0, 0, 0, 0.5882353)
@@ -180,7 +182,7 @@ size_flags_vertical = 3
 [node name="icône" type="TextureRect" parent="Hover/VBoxContainer/AllStatsHolder/StatContainer" unique_id=41402390]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("4_v4xni")
+texture = ExtResource("7_m2v1f")
 expand_mode = 3
 stretch_mode = 5
 
@@ -211,7 +213,7 @@ size_flags_vertical = 3
 [node name="icône" type="TextureRect" parent="Hover/VBoxContainer/AllStatsHolder/StatContainer2" unique_id=2105240331]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("4_v4xni")
+texture = ExtResource("8_gk22y")
 expand_mode = 3
 stretch_mode = 5
 
@@ -242,7 +244,7 @@ size_flags_vertical = 3
 [node name="icône" type="TextureRect" parent="Hover/VBoxContainer/AllStatsHolder/StatContainer3" unique_id=1356333952]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("4_v4xni")
+texture = ExtResource("10_68xia")
 expand_mode = 3
 stretch_mode = 5
 
@@ -322,11 +324,11 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 64
-theme_override_font_sizes/bold_font_size = 64
-theme_override_font_sizes/bold_italics_font_size = 64
-theme_override_font_sizes/italics_font_size = 64
-theme_override_font_sizes/mono_font_size = 64
+theme_override_font_sizes/normal_font_size = 7
+theme_override_font_sizes/bold_font_size = 7
+theme_override_font_sizes/bold_italics_font_size = 7
+theme_override_font_sizes/italics_font_size = 7
+theme_override_font_sizes/mono_font_size = 7
 bbcode_enabled = true
 text = "[color=yellow]Classic Beer"
 scroll_active = false
@@ -360,7 +362,7 @@ size_flags_vertical = 3
 [node name="icône" type="TextureRect" parent="Focus/stuff/AllStatsHolder/StatContainer" unique_id=849457473]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("4_v4xni")
+texture = ExtResource("7_m2v1f")
 expand_mode = 3
 stretch_mode = 5
 
@@ -368,7 +370,7 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 46
+theme_override_font_sizes/font_size = 7
 text = "Degrés"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -384,11 +386,11 @@ metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 57
-theme_override_font_sizes/bold_font_size = 57
-theme_override_font_sizes/bold_italics_font_size = 57
-theme_override_font_sizes/italics_font_size = 57
-theme_override_font_sizes/mono_font_size = 57
+theme_override_font_sizes/normal_font_size = 7
+theme_override_font_sizes/bold_font_size = 7
+theme_override_font_sizes/bold_italics_font_size = 7
+theme_override_font_sizes/italics_font_size = 7
+theme_override_font_sizes/mono_font_size = 7
 bbcode_enabled = true
 text = ": 5"
 scroll_active = false
@@ -406,7 +408,7 @@ size_flags_vertical = 3
 [node name="icône" type="TextureRect" parent="Focus/stuff/AllStatsHolder/StatContainer2" unique_id=1326999592]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("4_v4xni")
+texture = ExtResource("8_gk22y")
 expand_mode = 3
 stretch_mode = 5
 
@@ -414,10 +416,11 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 7
 text = "Amertume"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 clip_text = true
 text_overrun_behavior = 3
 script = ExtResource("7_3p54d")
@@ -429,11 +432,11 @@ metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 57
-theme_override_font_sizes/bold_font_size = 57
-theme_override_font_sizes/bold_italics_font_size = 57
-theme_override_font_sizes/italics_font_size = 57
-theme_override_font_sizes/mono_font_size = 57
+theme_override_font_sizes/normal_font_size = 7
+theme_override_font_sizes/bold_font_size = 7
+theme_override_font_sizes/bold_italics_font_size = 7
+theme_override_font_sizes/italics_font_size = 7
+theme_override_font_sizes/mono_font_size = 7
 bbcode_enabled = true
 text = ": 5"
 scroll_active = false
@@ -451,7 +454,7 @@ size_flags_vertical = 3
 [node name="icône" type="TextureRect" parent="Focus/stuff/AllStatsHolder/StatContainer3" unique_id=716580672]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("4_v4xni")
+texture = ExtResource("10_68xia")
 expand_mode = 3
 stretch_mode = 5
 
@@ -459,7 +462,7 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 55
+theme_override_font_sizes/font_size = 7
 text = "Sucre"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -475,11 +478,11 @@ metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 57
-theme_override_font_sizes/bold_font_size = 57
-theme_override_font_sizes/bold_italics_font_size = 57
-theme_override_font_sizes/italics_font_size = 57
-theme_override_font_sizes/mono_font_size = 57
+theme_override_font_sizes/normal_font_size = 7
+theme_override_font_sizes/bold_font_size = 7
+theme_override_font_sizes/bold_italics_font_size = 7
+theme_override_font_sizes/italics_font_size = 7
+theme_override_font_sizes/mono_font_size = 7
 bbcode_enabled = true
 text = ": 5"
 scroll_active = false
@@ -498,11 +501,11 @@ theme_override_styles/separator = SubResource("StyleBoxLine_454oq")
 custom_maximum_size = Vector2(-1, 40)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 41
-theme_override_font_sizes/bold_font_size = 41
-theme_override_font_sizes/bold_italics_font_size = 41
-theme_override_font_sizes/italics_font_size = 41
-theme_override_font_sizes/mono_font_size = 41
+theme_override_font_sizes/normal_font_size = 7
+theme_override_font_sizes/bold_font_size = 7
+theme_override_font_sizes/bold_italics_font_size = 7
+theme_override_font_sizes/italics_font_size = 7
+theme_override_font_sizes/mono_font_size = 7
 bbcode_enabled = true
 text = "|"
 scroll_active = false
@@ -520,11 +523,11 @@ theme_override_styles/separator = SubResource("StyleBoxLine_454oq")
 [node name="Description" type="RichTextLabel" parent="Focus/stuff" unique_id=1568982462]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 64
-theme_override_font_sizes/bold_font_size = 64
-theme_override_font_sizes/bold_italics_font_size = 64
-theme_override_font_sizes/italics_font_size = 64
-theme_override_font_sizes/mono_font_size = 64
+theme_override_font_sizes/normal_font_size = 9
+theme_override_font_sizes/bold_font_size = 9
+theme_override_font_sizes/bold_italics_font_size = 9
+theme_override_font_sizes/italics_font_size = 9
+theme_override_font_sizes/mono_font_size = 9
 text = "Shitty ahh description"
 scroll_active = false
 horizontal_alignment = 1

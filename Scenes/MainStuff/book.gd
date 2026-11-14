@@ -7,13 +7,14 @@ extends Control
 @export var page: TextureRect
 @export var combination: DrinkSubMenu
 @export var inventory_page: Control
+@export var distillation: DrinkSubMenu
 
 @onready var page_per_index := {
 	0:null,
 	1:null,
 	2:broyage,
 	3:fermentation,
-	4:null,
+	4:distillation,
 	5:combination,
 	6:null,
 }
@@ -31,9 +32,13 @@ func change_tab():
 	tween.tween_property(inventory_page,"modulate",Color(1.0,1.0,1.0,0.0),.5)
 	await tween.finished
 	if (previous_tab_index < tab_index):
-		await page.animate(flip_tab_duration)
+		var difference = tab_index - previous_tab_index
+		for i in range(difference):
+			await page.animate(flip_tab_duration/difference)
 	elif (previous_tab_index > tab_index):
-		await page.inverse_animate(flip_tab_duration)
+		var difference =  previous_tab_index - tab_index
+		for i in range(difference):
+			await page.inverse_animate(flip_tab_duration/difference)
 	previous_tab_index = tab_index
 	var new_tween = create_tween()
 	new_tween.tween_property(inventory_page,"modulate",Color(1.0,1.0,1.0,1.0),.5)
@@ -76,6 +81,8 @@ func _on_broyage_book_pressed() -> void:
 func _on_distiller_book_pressed() -> void:
 	if changing_tab:
 		return
+	if Global.active_drink_submenu:
+		Global.active_drink_submenu.deselect()
 	tab_index = 4
 	change_tab()
 
