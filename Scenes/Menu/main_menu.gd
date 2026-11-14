@@ -20,4 +20,4 @@ func _on_pressed() -> void:
 	await tween.finished
 	hide()
 	book_closed.show()
-	book_closed.animate(5)
+	book_closed.animate(.5)

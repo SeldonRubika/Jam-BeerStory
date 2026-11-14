@@ -13,7 +13,6 @@
 [ext_resource type="Resource" uid="uid://c1wsgln1jh5kw" path="res://Resources/Drinks/AlcoolPur.tres" id="5_4e1qo"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://addons/AutoSizeText/ui/AutoSizeLabel.gd" id="5_acqp8"]
 [ext_resource type="Texture2D" uid="uid://cjhovlm7rsndg" path="res://Assets/Animations/Book_Closed/Livre_ouverture04.png" id="5_ok8gr"]
-[ext_resource type="Texture2D" uid="uid://c8ieobwtot052" path="res://Assets/Animations/Book_Closed/Livre_ouverture05.png" id="6_817mi"]
 [ext_resource type="Resource" uid="uid://crn2ikri8g47b" path="res://Resources/Drinks/Eau.tres" id="6_txtry"]
 [ext_resource type="Resource" uid="uid://bah2j40ccokhh" path="res://Resources/Drinks/EauPetillante.tres" id="7_cblkn"]
 [ext_resource type="Texture2D" uid="uid://ks4pnhru53kx" path="res://Assets/Animations/Book_Closed/Livre_ouverture06.png" id="7_k35l4"]
@@ -62,7 +61,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_li67x")
 book_open = NodePath("../Book_Open")
-textures = Array[Texture2D]([ExtResource("2_wlwqd"), ExtResource("3_wl0wt"), ExtResource("4_rf7g0"), ExtResource("5_ok8gr"), ExtResource("6_817mi"), ExtResource("7_k35l4")])
+textures = Array[Texture2D]([ExtResource("2_wlwqd"), ExtResource("3_wl0wt"), ExtResource("4_rf7g0"), ExtResource("5_ok8gr"), ExtResource("7_k35l4"), ExtResource("7_k35l4")])
 couverture = NodePath("Couverture")
 
 [node name="Background" type="ColorRect" parent="Book_Closed" unique_id=2013186759]
@@ -79,31 +78,33 @@ color = Color(0.9999997, 0.80183095, 0.5247078, 1)
 z_index = -2
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_right = 1.0
+anchor_left = 0.016
+anchor_top = 0.054
+anchor_right = 0.984
 anchor_bottom = 1.0
+offset_top = -298.0
+offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_wlwqd")
-expand_mode = 4
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="Title" type="RichTextLabel" parent="Book_Closed/Couverture" unique_id=994966489]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.22222222
-anchor_top = 0.18672839
-anchor_right = 0.7547639
-anchor_bottom = 0.30582714
+anchor_left = 0.54404163
+anchor_top = 0.43425915
+anchor_right = 0.80914974
+anchor_bottom = 0.5533579
 offset_right = 0.25598145
 offset_bottom = -0.17599487
 theme_override_colors/default_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 67
-theme_override_font_sizes/bold_font_size = 67
-theme_override_font_sizes/bold_italics_font_size = 67
-theme_override_font_sizes/italics_font_size = 67
-theme_override_font_sizes/mono_font_size = 67
+theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/bold_font_size = 64
+theme_override_font_sizes/bold_italics_font_size = 64
+theme_override_font_sizes/italics_font_size = 64
+theme_override_font_sizes/mono_font_size = 64
 bbcode_enabled = true
 text = "[wave]Beer Story"
 horizontal_alignment = 1
@@ -117,16 +118,17 @@ metadata/_edit_use_anchors_ = true
 z_index = 3
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.54800004
-anchor_top = 0.363
-anchor_right = 0.93000007
-anchor_bottom = 0.80100006
+anchor_left = 0.48897225
+anchor_top = 0.3815185
+anchor_right = 0.87097234
+anchor_bottom = 0.81951857
 offset_left = -0.2960205
 offset_top = 6.776001
 offset_right = -0.36010742
 offset_bottom = -7.0480347
 book_closed = NodePath("..")
 title = NodePath("../Couverture/Title")
+metadata/_edit_use_anchors_ = true
 
 [node name="Book_Open" type="Control" parent="." unique_id=204703665 node_paths=PackedStringArray("fermentation", "grid", "broyage", "page", "combination", "inventory_page", "distillation")]
 visible = false
