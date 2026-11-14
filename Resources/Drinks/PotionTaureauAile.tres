@@ -6,6 +6,7 @@
 script = ExtResource("1_wqm7c")
 types = 4
 ingredient_name = "Potion du Taureau ailé"
+base = "Eau"
 desc = "La potion qui donne des ailes."
 type = 2
 bitterness = 10

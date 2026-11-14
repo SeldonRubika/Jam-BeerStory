@@ -138,7 +138,7 @@ func GetCombinedResource(ingredient : IngredientResource):
 			return new
 		else :
 			# Si c'est un Cocktail (liquide + liquide)
-			new.ingredient_name = "Cocktail" + new.base + " " + ingredient.base
+			new.ingredient_name = "Cocktail " + new.base + " " + ingredient.base
 			new.desc = "Cocktail très nutritif."
 			
 			new.types = Global.DrinkTypes.Cocktail

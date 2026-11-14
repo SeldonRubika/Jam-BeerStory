@@ -15,6 +15,8 @@ func ingredient_selected():
 			slot.disabled = false
 
 func get_item(child):
+	if !Global.selected_ingredients.resource:
+		return
 	child.resource = Global.selected_ingredients.resource
 	child.set_self_ui()
 	Global.selected_ingredients.resource = null

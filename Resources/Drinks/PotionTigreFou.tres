@@ -6,6 +6,7 @@
 script = ExtResource("1_c0tlh")
 types = 4
 ingredient_name = "Potion du Tigre Fou"
+base = "Eau"
 desc = "Totalement crazy le tiger ou quoi là ?"
 type = 2
 bitterness = 20
