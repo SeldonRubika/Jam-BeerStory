@@ -5,4 +5,7 @@
 
 [resource]
 script = ExtResource("2_4p8n6")
+ingredient_name = "Houblon"
+desc = "Une plante utilisée dans la fabrication de la bière."
+bitterness = 8
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

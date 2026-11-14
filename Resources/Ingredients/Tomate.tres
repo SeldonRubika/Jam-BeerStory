@@ -5,4 +5,9 @@
 
 [resource]
 script = ExtResource("2_mowjp")
+ingredient_name = "Tomate"
+desc = "uwu je suis rouge comme une tomate ~~ Nathan-chan je crois que... uwu je vais tomber dans les pommes"
+type = 3
+bitterness = 2
+sweetness = 6
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

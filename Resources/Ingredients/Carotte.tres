@@ -5,4 +5,9 @@
 
 [resource]
 script = ExtResource("2_8gcjk")
+ingredient_name = "Carotte"
+desc = "Quoi de neuf docteur ?"
+type = 3
+sweetness = 4
+fruity = true
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

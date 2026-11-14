@@ -5,4 +5,9 @@
 
 [resource]
 script = ExtResource("2_6dvv3")
+ingredient_name = "Urine de Troll"
+desc = "Rien a dire. C'est juste de la pisse. Parfait pour faire une boisson absolument imbuvable."
+type = 4
+bitterness = 10
+sweetness = 2
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

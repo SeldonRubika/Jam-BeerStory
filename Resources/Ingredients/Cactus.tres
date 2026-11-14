@@ -5,4 +5,9 @@
 
 [resource]
 script = ExtResource("2_4dg62")
+ingredient_name = "Cactus"
+desc = "Ouch ! Je me suis piqué... Et si je le mangeais ? "
+type = 1
+bitterness = 7
+sweetness = 7
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

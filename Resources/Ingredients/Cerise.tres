@@ -5,4 +5,8 @@
 
 [resource]
 script = ExtResource("2_slt8d")
+ingredient_name = "Cerise"
+desc = "Je crois c'est un truc sexuel sur Fruitz"
+sweetness = 5
+fruity = true
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

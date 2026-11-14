@@ -1,10 +1,12 @@
 [gd_resource type="Resource" script_class="DrinkResource" format=3 uid="uid://crn2ikri8g47b"]
 
+[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_qp44k"]
 [ext_resource type="Script" uid="uid://dhefokc82kmno" path="res://Resources/Drinks/AADrinksBase.gd" id="1_v4u8n"]
 
 [resource]
 script = ExtResource("1_v4u8n")
-drink_name = "Eau"
-desc = "Placeholder"
 types = 4
+ingredient_name = "Eau"
+desc = "J'adore l'eau. Dans 20, 30 ans yen aura plus."
+type = 2
 metadata/_custom_type_script = "uid://dhefokc82kmno"

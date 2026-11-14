@@ -1,10 +1,13 @@
 [gd_resource type="Resource" script_class="DrinkResource" format=3 uid="uid://bah2j40ccokhh"]
 
 [ext_resource type="Script" uid="uid://dhefokc82kmno" path="res://Resources/Drinks/AADrinksBase.gd" id="1_l62bu"]
+[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_ns6xn"]
 
 [resource]
 script = ExtResource("1_l62bu")
-drink_name = "Eau"
-desc = "Placeholder"
 types = 4
+ingredient_name = "Eau gazeuze"
+desc = "Juste de l'eau qui pétille finalement. C'est un peu le mec chill des boissons en fait, il fait de mal à personne."
+type = 2
+gazeous = true
 metadata/_custom_type_script = "uid://dhefokc82kmno"

@@ -1,8 +1,15 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://bsqyyrdiqvt4f"]
 
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_irmtb"]
 [ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_ls5dr"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_07hny"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
 
 [resource]
 script = ExtResource("2_ls5dr")
+ingredient_name = "Pierre Kipétille"
+icon = SubResource("CompressedTexture2D_07hny")
+desc = "Cette pierre volcanique est utilisée dans la région afin de rendre n'importe quel breuvage pétillant."
+type = 4
+gazeous = true
 metadata/_custom_type_script = "uid://renlxgu8rtkv"
