@@ -11,7 +11,7 @@ var active_drink_submenu : DrinkSubMenu = null
 
 var selected_ingredients:IngredientBase
 
-func GetDrinkTypeTexture(type:DrinkTypes):
+func GetDrinkTypeTexture(_type:DrinkTypes):
 	return preload("uid://bwickkrqp6r6i")
 
 func GetIngredientTypeTexture(type:IngredientsTypes):

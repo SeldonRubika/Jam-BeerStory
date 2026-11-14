@@ -5,7 +5,9 @@ class_name DrinkSubMenu
 
 func selected():
 	Global.active_drink_submenu = self
-	show()
+	var tween = create_tween()
+	tween.tween_property(self,"modulate",Color(1.0,1.0,1.0,1.0),.5)
 
 func deselect():
-	hide()
+	var tween = create_tween()
+	tween.tween_property(self,"modulate",Color(1.0,1.0,1.0,0.0),.5)
