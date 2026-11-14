@@ -3,17 +3,18 @@
 [ext_resource type="Script" uid="uid://et742jqp0c57" path="res://Scenes/DrinkSubMenu/Fermentation.gd" id="1_jgvjj"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://addons/AutoSizeText/ui/AutoSizeLabel.gd" id="2_rxjry"]
 [ext_resource type="PackedScene" uid="uid://fkjn5x638hlm" path="res://Scenes/ingredients/ingredient_base.tscn" id="3_qnoag"]
+[ext_resource type="PackedScene" uid="uid://b7scmvja60cy4" path="res://Scenes/DrinkSubMenu/fermentation_bar.tscn" id="4_qhrlv"]
 
 [sub_resource type="DrawableTexture2D" id="DrawableTexture2D_5q66j"]
 
-[node name="Fermentation" type="Control" unique_id=912534386 node_paths=PackedStringArray("tonneau", "tonneau_2", "tonneau_3")]
+[node name="Fermentation" type="Control" unique_id=912534386 node_paths=PackedStringArray("tonneau_1", "tonneau_2", "tonneau_3")]
 layout_mode = 3
 anchor_left = 0.025
 anchor_top = 0.05
 anchor_right = 0.46
 anchor_bottom = 0.95000005
 script = ExtResource("1_jgvjj")
-tonneau = NodePath("HBoxContainer/tonneau")
+tonneau_1 = NodePath("HBoxContainer/tonneau")
 tonneau_2 = NodePath("HBoxContainer/tonneau2")
 tonneau_3 = NodePath("HBoxContainer/tonneau3")
 metadata/_custom_type_script = "uid://et742jqp0c57"
@@ -83,18 +84,16 @@ offset_top = -7.4360003
 offset_right = 4.967987
 offset_bottom = 7.4359894
 mouse_filter = 2
+disabled = true
 resource = null
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/tonneau" unique_id=1343695129]
+[node name="FermentationBar" parent="HBoxContainer/tonneau" unique_id=134217211 instance=ExtResource("4_qhrlv")]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 1.0289855
-anchor_right = 1.4347826
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 3
-mouse_filter = 2
+anchor_left = 1.0
+anchor_right = 1.4927536
+grow_horizontal = 1
+grow_vertical = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="tonneau2" type="TextureButton" parent="HBoxContainer" unique_id=1021442863]
 layout_mode = 1
@@ -121,18 +120,15 @@ offset_top = -7.4360003
 offset_right = 4.967987
 offset_bottom = 7.4359894
 mouse_filter = 2
+disabled = true
 resource = null
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/tonneau2" unique_id=549411931]
+[node name="FermentationBar" parent="HBoxContainer/tonneau2" unique_id=150732093 instance=ExtResource("4_qhrlv")]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 1.0289855
-anchor_right = 1.4347826
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 3
-mouse_filter = 2
+anchor_left = 1.0
+anchor_right = 1.4927536
+grow_horizontal = 1
+grow_vertical = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="tonneau3" type="TextureButton" parent="HBoxContainer" unique_id=976862074]
@@ -160,18 +156,15 @@ offset_top = -7.4360003
 offset_right = 4.967987
 offset_bottom = 7.4359894
 mouse_filter = 2
+disabled = true
 resource = null
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/tonneau3" unique_id=417178198]
+[node name="FermentationBar" parent="HBoxContainer/tonneau3" unique_id=302790832 instance=ExtResource("4_qhrlv")]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 1.0289855
-anchor_right = 1.4347826
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 3
-mouse_filter = 2
+anchor_left = 1.0
+anchor_right = 1.4927536
+grow_horizontal = 1
+grow_vertical = 1
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="HBoxContainer/tonneau" to="." method="_on_tonneau_pressed"]
