@@ -3,6 +3,7 @@ extends Control
 
 @export var magic_circle_shader: ColorRect
 var color_theme := Color("8c73ff")
+@export var book_closed: Control
 
 func _process(_delta: float) -> void:
 	if(visible):
@@ -16,6 +17,8 @@ func _on_magic_circle_color_change_timeout() -> void:
 
 func _on_start_pressed() -> void:
 	hide()
+	book_closed.show()
+	book_closed.animate(5)
 
 
 func _on_options_pressed() -> void:

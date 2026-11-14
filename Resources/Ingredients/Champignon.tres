@@ -7,7 +7,7 @@
 script = ExtResource("2_5gvvd")
 ingredient_name = "Champignon"
 desc = "Y a un plombier qui en prend pour devenir plus grand et tout, mais nan là c'est juste un champi basique."
-type = 3
+type = 4
 bitterness = 8
 sweetness = 2
 fruity = true

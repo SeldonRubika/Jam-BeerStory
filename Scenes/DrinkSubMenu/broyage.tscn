@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://qpqskwpsly3n"]
+
+[ext_resource type="Script" uid="uid://b7tgpj1iau5dj" path="res://Scenes/DrinkSubMenu/broyage.gd" id="1_so7dn"]
+[ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://addons/AutoSizeText/ui/AutoSizeLabel.gd" id="2_1ayws"]
+[ext_resource type="PackedScene" uid="uid://fkjn5x638hlm" path="res://Scenes/ingredients/ingredient_base.tscn" id="3_8gj6a"]
+[ext_resource type="Texture2D" uid="uid://cajghehxih2tc" path="res://Assets/PlaceHolders/Placeholder_broyer.png" id="5_1ayws"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ayws"]
+bg_color = Color(0.20152655, 0.20152661, 0.20152646, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_so7dn"]
+bg_color = Color(0.86343604, 5.318448e-06, 7.70092e-07, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[node name="Broyage" type="Control" unique_id=912534386 node_paths=PackedStringArray("pilon", "broyage_progress", "byproduct")]
+layout_mode = 3
+anchor_left = 0.025
+anchor_top = 0.05
+anchor_right = 0.46
+anchor_bottom = 0.95000005
+script = ExtResource("1_so7dn")
+pilon = NodePath("HBoxContainer/pilon")
+broyage_progress = NodePath("HBoxContainer/pilon/BroyageProgress")
+byproduct = NodePath("HBoxContainer/Byproducts/byproduct")
+id = "Broyage"
+metadata/_custom_type_script = "uid://et742jqp0c57"
+
+[node name="AutoSizeLabel" type="Label" parent="." unique_id=2081047654]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.29517877
+anchor_top = 0.04286694
+anchor_right = 0.7048212
+anchor_bottom = 0.12791497
+offset_bottom = 1.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 38
+text = "Broyage"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_1ayws")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="HBoxContainer" type="Control" parent="." unique_id=1179704318]
+layout_mode = 1
+anchor_left = 0.07822477
+anchor_top = 0.19478737
+anchor_right = 0.9217752
+anchor_bottom = 0.92352533
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="pilon" type="TextureButton" parent="HBoxContainer" unique_id=976862074]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.29097277
+anchor_top = 0.11317646
+anchor_right = 0.61693037
+anchor_bottom = 0.4491765
+offset_top = -0.099990845
+offset_right = 0.21121216
+offset_bottom = 0.1000061
+size_flags_horizontal = 3
+disabled = true
+stretch_mode = 5
+
+[node name="IngredientBase" parent="HBoxContainer/pilon" unique_id=103853650 instance=ExtResource("3_8gj6a")]
+layout_mode = 1
+anchor_left = 0.036000002
+anchor_top = 0.052
+anchor_right = 0.96400005
+anchor_bottom = 0.9480001
+offset_left = -4.9680004
+offset_top = -7.4360003
+offset_right = 4.967987
+offset_bottom = 7.4359894
+mouse_filter = 2
+disabled = true
+resource = null
+
+[node name="BroyageProgress" type="ProgressBar" parent="HBoxContainer/pilon" unique_id=1593769274]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.08400001
+anchor_right = 1.261
+anchor_bottom = 0.94400007
+offset_left = 1.0
+offset_top = -0.012001038
+offset_right = -0.018005371
+offset_bottom = 0.0079956055
+theme_override_styles/background = SubResource("StyleBoxFlat_1ayws")
+theme_override_styles/fill = SubResource("StyleBoxFlat_so7dn")
+step = 1.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Byproducts" type="TextureButton" parent="HBoxContainer" unique_id=992644818]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.78775555
+anchor_top = 0.53200006
+anchor_right = 1.1326382
+anchor_bottom = 0.8585883
+offset_top = -0.099990845
+offset_right = 0.21121216
+offset_bottom = 0.1000061
+size_flags_horizontal = 3
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="byproduct" parent="HBoxContainer/Byproducts" unique_id=1564469009 instance=ExtResource("3_8gj6a")]
+layout_mode = 1
+anchor_left = 0.04513683
+anchor_top = 0.23340489
+anchor_right = 0.9288632
+anchor_bottom = 1.123396
+mouse_filter = 2
+disabled = true
+resource = null
+metadata/_edit_use_anchors_ = true
+
+[node name="AutoSizeLabel" type="Label" parent="HBoxContainer/Byproducts" unique_id=1843437281]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.21200001
+theme_override_font_sizes/font_size = 31
+text = "Reste"
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_1ayws")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="Broyage" type="TextureButton" parent="HBoxContainer" unique_id=1774512947]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.28100002
+anchor_top = 0.52705884
+anchor_right = 0.71900004
+anchor_bottom = 0.97200006
+offset_left = -0.06434631
+offset_right = 0.064331055
+offset_bottom = -0.10003662
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_1ayws")
+stretch_mode = 5
+
+[node name="AutoSizeLabel" type="Label" parent="HBoxContainer/Broyage" unique_id=1926000026]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.21200001
+theme_override_font_sizes/font_size = 38
+text = "Broyer"
+horizontal_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_1ayws")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[connection signal="pressed" from="HBoxContainer/pilon" to="." method="_on_pilon_pressed"]
+[connection signal="pressed" from="HBoxContainer/Byproducts" to="." method="_on_byproducts_pressed"]
+[connection signal="pressed" from="HBoxContainer/Broyage" to="." method="_on_broyage_pressed"]

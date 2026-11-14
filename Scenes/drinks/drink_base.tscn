@@ -14,11 +14,8 @@ bg_color = Color(0, 0, 0, 0.5882353)
 color = Color(0.60784316, 0.16078432, 0.08235294, 1)
 thickness = 4
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ayn3u"]
-bg_color = Color(0.65882355, 0, 0.11372549, 0.4745098)
-
 [node name="DrinkBase" type="Button" unique_id=1564469009 node_paths=PackedStringArray("degreesHover", "degreesFocus", "name_label", "ingredient_icon", "hover", "bitternessHover", "sweetnessHover", "hover_name_label", "booleansHover", "hover_icon", "focus", "focus_name_label", "bitternessFocus", "sweetnessFocus", "booleansFocus", "description", "focus_icon")]
-custom_minimum_size = Vector2(96, 96)
+custom_minimum_size = Vector2(80, 80)
 custom_maximum_size = Vector2(128, 128)
 anchors_preset = -1
 anchor_left = 0.44400004
@@ -37,7 +34,7 @@ degreesHover = NodePath("Hover/VBoxContainer/AllStatsHolder/StatContainer/Degree
 degreesFocus = NodePath("Focus/stuff/AllStatsHolder/StatContainer/Degrees")
 resource = ExtResource("2_q4sok")
 name_label = NodePath("Panel/NameLabel")
-ingredient_icon = NodePath("DrinkIcon")
+ingredient_icon = NodePath("IngredientsIcon")
 hover = NodePath("Hover")
 bitternessHover = NodePath("Hover/VBoxContainer/AllStatsHolder/StatContainer2/Bitterness")
 sweetnessHover = NodePath("Hover/VBoxContainer/AllStatsHolder/StatContainer3/Sweetness")
@@ -63,7 +60,7 @@ texture = ExtResource("3_j778k")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="DrinkIcon" type="TextureRect" parent="." unique_id=350251625]
+[node name="IngredientsIcon" type="TextureRect" parent="." unique_id=350251625]
 modulate = Color(0.32941177, 1, 1, 1)
 layout_mode = 1
 anchors_preset = 15
@@ -118,9 +115,9 @@ visibility_layer = 2
 z_index = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.05
+anchor_left = 0.091
 anchor_top = 0.1
-anchor_right = 0.25
+anchor_right = 0.255
 anchor_bottom = 0.45
 theme_override_styles/panel = SubResource("StyleBoxFlat_454oq")
 
@@ -291,21 +288,15 @@ min_font_size = 6
 max_font_size = 64
 metadata/_custom_type_script = "uid://leehmvr1x5lu"
 
-[node name="Focus" type="Panel" parent="." unique_id=1564406953]
+[node name="Focus" type="Control" parent="." unique_id=1549384719]
 visible = false
 top_level = true
 visibility_layer = 2
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.025
-anchor_top = 0.05
-anchor_right = 0.46
-anchor_bottom = 0.95
-offset_left = 8.0
-offset_top = 8.0
-offset_right = -8.0
-offset_bottom = -8.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_ayn3u")
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.45
+anchor_bottom = 0.86
 
 [node name="stuff" type="VBoxContainer" parent="Focus" unique_id=1203593363]
 layout_mode = 1

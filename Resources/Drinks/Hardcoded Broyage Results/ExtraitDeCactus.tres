@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DrinkResource" format=3 uid="uid://bokirk1ohqn0h"]
+
+[ext_resource type="Texture2D" uid="uid://c1e1wbdl6lm6v" path="res://Assets/PlaceHolders/drink.png" id="1_bwxup"]
+[ext_resource type="Script" uid="uid://dhefokc82kmno" path="res://Resources/Drinks/AADrinksBase.gd" id="2_uvvy5"]
+
+[resource]
+script = ExtResource("2_uvvy5")
+types = 4
+ingredient_name = "Extrait de cactus"
+icon = ExtResource("1_bwxup")
+desc = "Un petit extrait à base de cactus"
+type = 2
+bitterness = 7
+metadata/_custom_type_script = "uid://dhefokc82kmno"

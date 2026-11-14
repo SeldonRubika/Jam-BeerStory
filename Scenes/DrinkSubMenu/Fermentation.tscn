@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://d3176dlpwjvof"]
 
-[ext_resource type="Script" uid="uid://et742jqp0c57" path="res://Scenes/DrinkSubMenu/Fermentation.gd" id="1_jgvjj"]
+[ext_resource type="Script" uid="uid://ca6r1pitv3cdl" path="res://Scenes/DrinkSubMenu/fermentation.gd" id="1_qhrlv"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://addons/AutoSizeText/ui/AutoSizeLabel.gd" id="2_rxjry"]
 [ext_resource type="PackedScene" uid="uid://fkjn5x638hlm" path="res://Scenes/ingredients/ingredient_base.tscn" id="3_qnoag"]
 [ext_resource type="PackedScene" uid="uid://b7scmvja60cy4" path="res://Scenes/DrinkSubMenu/fermentation_bar.tscn" id="4_qhrlv"]
-
-[sub_resource type="DrawableTexture2D" id="DrawableTexture2D_5q66j"]
 
 [node name="Fermentation" type="Control" unique_id=912534386 node_paths=PackedStringArray("tonneau_1", "tonneau_2", "tonneau_3")]
 layout_mode = 3
@@ -13,21 +11,12 @@ anchor_left = 0.025
 anchor_top = 0.05
 anchor_right = 0.46
 anchor_bottom = 0.95000005
-script = ExtResource("1_jgvjj")
+script = ExtResource("1_qhrlv")
 tonneau_1 = NodePath("HBoxContainer/tonneau")
 tonneau_2 = NodePath("HBoxContainer/tonneau2")
 tonneau_3 = NodePath("HBoxContainer/tonneau3")
+id = "Fermentation"
 metadata/_custom_type_script = "uid://et742jqp0c57"
-
-[node name="background" type="TextureRect" parent="." unique_id=923223262]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = SubResource("DrawableTexture2D_5q66j")
 
 [node name="AutoSizeLabel" type="Label" parent="." unique_id=2081047654]
 layout_mode = 1

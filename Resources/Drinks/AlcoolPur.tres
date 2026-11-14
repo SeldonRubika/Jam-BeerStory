@@ -5,6 +5,8 @@
 
 [resource]
 script = ExtResource("1_0hs12")
+shitty = true
+degrees = 96
 ingredient_name = "Alcool pur"
 desc = "Ca pique."
 type = 2

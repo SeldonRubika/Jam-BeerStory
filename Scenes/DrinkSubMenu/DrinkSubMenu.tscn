@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bg53nj0lsdrsx"]
 
-[ext_resource type="Script" uid="uid://et742jqp0c57" path="res://Scenes/DrinkSubMenu/Fermentation.gd" id="1_dcchf"]
+[ext_resource type="Script" uid="uid://et742jqp0c57" path="res://Scenes/DrinkSubMenu/DrinkSubMenuBase.gd" id="1_dcchf"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://addons/AutoSizeText/ui/AutoSizeLabel.gd" id="2_5teyq"]
 
 [sub_resource type="DrawableTexture2D" id="DrawableTexture2D_dcchf"]
@@ -39,6 +39,7 @@ theme_override_font_sizes/font_size = 38
 text = "IDK"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 clip_text = true
 text_overrun_behavior = 3
 script = ExtResource("2_5teyq")

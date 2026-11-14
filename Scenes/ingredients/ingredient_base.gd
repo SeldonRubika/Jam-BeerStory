@@ -13,7 +13,7 @@ class_name IngredientBase
 @export var hover_icon: TextureRect
 
 #focus
-@export var focus: Panel
+@export var focus: Control
 @export var focus_name_label: AutoSizeRichTextLabel
 @export var bitternessFocus: AutoSizeRichTextLabel
 @export var sweetnessFocus: AutoSizeRichTextLabel
@@ -93,6 +93,7 @@ func _on_focus_entered() -> void:
 	if (!resource):
 		return
 	focus.show()
+	hover.hide()
 	set_focus_ui()
 
 
@@ -107,5 +108,9 @@ func _on_pressed() -> void:
 	if !Global.active_drink_submenu:
 		return
 	match(Global.active_drink_submenu.id):
-		"":pass
+		"Broyage":
+			if (resource.type == Global.IngredientsTypes.Liquid):
+				return
+			Global.selected_ingredients = self
+			Global.active_drink_submenu.ingredient_selected()
 			

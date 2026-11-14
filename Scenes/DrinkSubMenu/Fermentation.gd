@@ -1,19 +1,12 @@
-extends Control
-class_name DrinkSubMenu
+extends DrinkSubMenu
 
-var id := "Fermentation"
+
 @export var tonneau_1: TextureButton
 @export var tonneau_2: TextureButton
 @export var tonneau_3: TextureButton
 @onready var slots := [tonneau_1,tonneau_2,tonneau_3]
 var awaiting_slots := []
 @export var fermentation_time :=10.0
-func selected():
-	Global.active_drink_submenu = self
-	show()
-
-func deselect():
-	hide()
 
 func ingredient_selected():
 	awaiting_slots.clear()
@@ -51,7 +44,7 @@ func object_in_tonneau(tonneau:TextureButton):
 		tonneau.get_child(1).animate(fermentation_time)
 		await get_tree().create_timer(fermentation_time).timeout
 		tonneau.disabled = false
-		child.resource = GetFermentedResource(child.resource)
+		child.resource = child.resource.GetFermentedResource()
 		child.set_self_ui()
 	else:
 		if (child.resource.type != Global.IngredientsTypes.Liquid):
@@ -66,8 +59,3 @@ func object_in_tonneau(tonneau:TextureButton):
 		child.resource = null
 		child.set_self_ui()
 		tonneau.disabled = true
-
-func GetFermentedResource(base_resource : IngredientResource):
-	match (base_resource.ingredient_name):
-		"Eau":return preload("uid://m1o0eubqv17j")
-	return preload("uid://c1wsgln1jh5kw")
