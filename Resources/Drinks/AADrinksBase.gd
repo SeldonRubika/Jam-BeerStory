@@ -43,11 +43,13 @@ func GetCombinedResource(ingredient : DrinkResource):
 	if ingredient.type != Global.IngredientsTypes.Liquid :
 		# Si c'est une Liqueur (liquide + ingrédient pas liquide)
 		if new.base[0] in "AEIOUY" :
-			new.ingredient_name = "Liqueur d'" + ingredient.base
-			new.desc = "Liqueur très nutritive fait à partir d'" + ingredient.base + "."
+			new.base = ingredient.ingredient_name
+			new.ingredient_name = "Liqueur d'" + ingredient.ingredient_name
+			new.desc = "Liqueur très nutritive fait à partir d'" + ingredient.ingredient_name + "."
 		else :
-			new.ingredient_name = "Liqueur de " + ingredient.base
-			new.desc = "Liqueur très nutritive fait à partir de " + ingredient.base + "."
+			new.base = ingredient.ingredient_name
+			new.ingredient_name = "Liqueur de " + ingredient.ingredient_name
+			new.desc = "Liqueur très nutritive fait à partir de " + ingredient.ingredient_name + "."
 		
 		new.types = Global.DrinkTypes.Liquor
 		new.sweetness = (sweetness * 0.8) + (ingredient.sweetness * 0.2) 
