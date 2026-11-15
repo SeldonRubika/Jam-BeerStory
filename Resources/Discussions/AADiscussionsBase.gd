@@ -18,3 +18,5 @@ class_name DiscussionBase
 @export var fruity_required := 0
 @export var gazeous_required := 0
 @export var required_type : Global.DrinkTypes
+## 1 asks for only one thing 2 for two and so on
+@export_range(1,6) var difficulty : int = 1

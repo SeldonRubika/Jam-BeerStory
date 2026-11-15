@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://b3l5kx4e7cy1b"]
+
+[ext_resource type="Script" uid="uid://b7tgpj1iau5dj" path="res://Scenes/DrinkSubMenu/broyage.gd" id="1_fgo02"]
+[ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://addons/AutoSizeText/ui/AutoSizeLabel.gd" id="2_3oal6"]
+[ext_resource type="PackedScene" uid="uid://fkjn5x638hlm" path="res://Scenes/ingredients/ingredient_base.tscn" id="3_uoul6"]
+[ext_resource type="Texture2D" uid="uid://cajghehxih2tc" path="res://Assets/PlaceHolders/Placeholder_broyer.png" id="5_hr08k"]
+
+[node name="Broyage" type="Control" unique_id=912534386 node_paths=PackedStringArray("pilon", "broyage_progress", "byproduct")]
+layout_mode = 3
+anchor_left = 0.025
+anchor_top = 0.05
+anchor_right = 0.46
+anchor_bottom = 0.95000005
+script = ExtResource("1_fgo02")
+pilon = NodePath("HBoxContainer/Proposition")
+broyage_progress = NodePath("")
+byproduct = NodePath("")
+id = "Broyage"
+metadata/_custom_type_script = "uid://et742jqp0c57"
+
+[node name="AutoSizeLabel" type="Label" parent="." unique_id=2081047654]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.29517877
+anchor_top = 0.04286694
+anchor_right = 0.7048212
+anchor_bottom = 0.12791497
+offset_bottom = 1.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 38
+text = "Clients"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_3oal6")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="HBoxContainer" type="Control" parent="." unique_id=1179704318]
+layout_mode = 1
+anchor_left = 0.07822477
+anchor_top = 0.19478737
+anchor_right = 0.9217752
+anchor_bottom = 0.92352533
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Proposition" type="TextureButton" parent="HBoxContainer" unique_id=976862074]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.03075322
+anchor_top = 0.3837647
+anchor_right = 0.35671082
+anchor_bottom = 0.71976477
+offset_top = -0.099990845
+offset_right = 0.21121216
+offset_bottom = 0.1000061
+size_flags_horizontal = 3
+disabled = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="IngredientBase" parent="HBoxContainer/Proposition" unique_id=103853650 instance=ExtResource("3_uoul6")]
+layout_mode = 1
+anchor_left = 0.036000002
+anchor_top = 0.052
+anchor_right = 0.96400005
+anchor_bottom = 0.9480001
+offset_left = -4.9680004
+offset_top = -7.4360003
+offset_right = 4.967987
+offset_bottom = 7.4359894
+mouse_filter = 2
+disabled = true
+resource = null
+metadata/_edit_use_anchors_ = true
+
+[node name="AutoSizeLabel" type="Label" parent="HBoxContainer/Proposition" unique_id=1779299299]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.014
+anchor_top = 0.07
+anchor_right = 2.0140002
+anchor_bottom = 0.282
+offset_left = 0.067993164
+offset_top = -0.010000229
+offset_right = 0.06796265
+offset_bottom = -0.0099983215
+theme_override_font_sizes/font_size = 28
+text = "Drink Name"
+horizontal_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_3oal6")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="Sell" type="TextureButton" parent="HBoxContainer" unique_id=2121668]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.40230972
+anchor_top = 0.7011765
+anchor_right = 0.84030974
+anchor_bottom = 1.1461178
+offset_left = -0.06434631
+offset_top = 1.0
+offset_right = 0.064331055
+offset_bottom = 0.8999634
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_hr08k")
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="AutoSizeLabel" type="Label" parent="HBoxContainer/Sell" unique_id=1496950223]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.21200001
+theme_override_font_sizes/font_size = 38
+text = "Vendre"
+horizontal_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_3oal6")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[connection signal="pressed" from="HBoxContainer/Proposition" to="." method="_on_pilon_pressed"]
