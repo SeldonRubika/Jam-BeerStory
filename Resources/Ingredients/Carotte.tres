@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://ckyglmaykgfgv"]
 
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_0mjif"]
+[ext_resource type="Texture2D" uid="uid://cnjy5gcwno1jr" path="res://Assets/SpecificIcons/Carotte.png" id="1_0mjif"]
 [ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_8gcjk"]
 
 [resource]
 script = ExtResource("2_8gcjk")
 ingredient_name = "Carotte"
+icon = ExtResource("1_0mjif")
 desc = "Quoi de neuf docteur ?"
 type = 3
 sweetness = 40

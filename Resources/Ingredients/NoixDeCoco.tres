@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://cp7o6yb4ihy3s"]
 
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_4m8nl"]
+[ext_resource type="Texture2D" uid="uid://0ub6v8rvk11" path="res://Assets/SpecificIcons/Coconut.png" id="1_4m8nl"]
 [ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_ag2sk"]
 
 [resource]
 script = ExtResource("2_ag2sk")
 ingredient_name = "Noix de coco"
+icon = ExtResource("1_4m8nl")
 desc = "Ramené des îles du Sud, cette coquille révelle un coeur fondant... Comme Marius en GD1."
 bitterness = 20
 sweetness = 70

@@ -1,10 +1,11 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://b8ars7q4rr4bi"]
 
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_hijuk"]
+[ext_resource type="Texture2D" uid="uid://eolmwplg7iej" path="res://Assets/SpecificIcons/Pomme.png" id="1_hijuk"]
 [ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_yhwcj"]
 
 [resource]
 script = ExtResource("2_yhwcj")
+icon = ExtResource("1_hijuk")
 desc = "Pomme"
 sweetness = 20
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

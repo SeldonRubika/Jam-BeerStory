@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://bcvergkg7bnb0"]
 
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_w8cwn"]
+[ext_resource type="Texture2D" uid="uid://d38afirg1ecrs" path="res://Assets/SpecificIcons/Cactus.png" id="1_w8cwn"]
 [ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_4dg62"]
 
 [resource]
 script = ExtResource("2_4dg62")
 ingredient_name = "Cactus"
+icon = ExtResource("1_w8cwn")
 desc = "Ouch ! Je me suis piqué... Et si je le mangeais ? "
 type = 1
 bitterness = 70

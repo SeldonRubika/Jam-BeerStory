@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://addons/AutoSizeText/ui/AutoSizeLabel.gd" id="2_rxjry"]
 [ext_resource type="PackedScene" uid="uid://fkjn5x638hlm" path="res://Scenes/ingredients/ingredient_base.tscn" id="3_qnoag"]
 [ext_resource type="PackedScene" uid="uid://b7scmvja60cy4" path="res://Scenes/DrinkSubMenu/fermentation_bar.tscn" id="4_qhrlv"]
+[ext_resource type="FontFile" uid="uid://dinmnkta5iosd" path="res://Assets/font/MorrisRoman-Black.ttf" id="5_ci3ps"]
 
 [node name="Fermentation" type="Control" unique_id=912534386 node_paths=PackedStringArray("tonneau_1", "tonneau_2", "tonneau_3")]
 layout_mode = 3
@@ -85,6 +86,28 @@ grow_horizontal = 1
 grow_vertical = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="AutoSizeLabel" type="Label" parent="HBoxContainer/tonneau" unique_id=1276105537]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.094000004
+anchor_top = -0.273
+anchor_right = 1.08
+anchor_bottom = 0.030000001
+offset_left = -0.027982712
+offset_top = 0.039001465
+offset_right = -0.040023804
+offset_bottom = 0.02600193
+theme_override_fonts/font = ExtResource("5_ci3ps")
+theme_override_font_sizes/font_size = 22
+text = "Softs Uniquement"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_rxjry")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
 [node name="tonneau2" type="TextureButton" parent="HBoxContainer" unique_id=1021442863]
 layout_mode = 1
 anchors_preset = -1
@@ -121,6 +144,28 @@ grow_horizontal = 1
 grow_vertical = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="AutoSizeLabel" type="Label" parent="HBoxContainer/tonneau2" unique_id=89852036]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.094000004
+anchor_top = -0.273
+anchor_right = 1.08
+anchor_bottom = 0.030000001
+offset_left = -0.027982712
+offset_top = 0.039001465
+offset_right = -0.040023804
+offset_bottom = 0.02600193
+theme_override_fonts/font = ExtResource("5_ci3ps")
+theme_override_font_sizes/font_size = 22
+text = "Softs Uniquement"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_rxjry")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
 [node name="tonneau3" type="TextureButton" parent="HBoxContainer" unique_id=976862074]
 layout_mode = 1
 anchors_preset = -1
@@ -156,6 +201,28 @@ anchor_right = 1.4927536
 grow_horizontal = 1
 grow_vertical = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="AutoSizeLabel" type="Label" parent="HBoxContainer/tonneau3" unique_id=2045894959]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.094000004
+anchor_top = -0.273
+anchor_right = 1.08
+anchor_bottom = 0.030000001
+offset_left = -0.027982712
+offset_top = 0.039001465
+offset_right = -0.040023804
+offset_bottom = 0.02600193
+theme_override_fonts/font = ExtResource("5_ci3ps")
+theme_override_font_sizes/font_size = 22
+text = "Softs Uniquement"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_rxjry")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 
 [connection signal="pressed" from="HBoxContainer/tonneau" to="." method="_on_tonneau_pressed"]
 [connection signal="pressed" from="HBoxContainer/tonneau2" to="." method="_on_tonneau_2_pressed"]

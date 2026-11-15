@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://c17estnksnubl"]
 
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_bdno1"]
+[ext_resource type="Texture2D" uid="uid://c7vx6ke5e51vv" path="res://Assets/SpecificIcons/Citron.png" id="1_bdno1"]
 [ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_lc4l3"]
 
 [resource]
 script = ExtResource("2_lc4l3")
 ingredient_name = "Citron"
+icon = ExtResource("1_bdno1")
 desc = "Jcrois c'est un brainrot là."
 bitterness = 30
 sweetness = 10

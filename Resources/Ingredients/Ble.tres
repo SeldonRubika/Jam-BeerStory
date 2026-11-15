@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://cmlmnp63yypvp"]
 
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_62tts"]
+[ext_resource type="Texture2D" uid="uid://8ncadaxm5b7i" path="res://Assets/SpecificIcons/Orge.png" id="1_62tts"]
 [ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_m24ub"]
 
 [resource]
 script = ExtResource("2_m24ub")
 ingredient_name = "Blé"
+icon = ExtResource("1_62tts")
 desc = "Récupéré sur un navire pas loin de Rome. Peut être utilisé pour fabriqué de l'alcool pur."
 type = 1
 bitterness = 50

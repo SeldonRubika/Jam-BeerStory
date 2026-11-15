@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://c8gceunbms7t"]
 
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_gg6bl"]
+[ext_resource type="Texture2D" uid="uid://fp7ggbel3s2f" path="res://Assets/SpecificIcons/Potato.png" id="1_gg6bl"]
 [ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_q7kmd"]
 
 [resource]
 script = ExtResource("2_q7kmd")
 ingredient_name = "Pomme de terre"
+icon = ExtResource("1_gg6bl")
 desc = "1917, Révolution Bolchévique, les moyens de production sont saisis des mains des bourgeois. Gloire au régime !"
 type = 3
 bitterness = 10

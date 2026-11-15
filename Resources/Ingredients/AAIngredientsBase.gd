@@ -10,8 +10,8 @@ var text_color : Color = [Color.YELLOW,Color.RED,Color.SKY_BLUE,Color.GREEN_YELL
 
 @export_category("Stats")
 @export var type : Global.IngredientsTypes = Global.IngredientsTypes.Fruit
-@export var bitterness := 0
-@export var sweetness := 0
+@export_range(0,100) var bitterness := 0
+@export_range(0,100) var sweetness := 0
 @export var fruity := false
 @export var gazeous := false
 
@@ -32,9 +32,6 @@ func GetBroyageResource():
 	new.fruity = fruity
 	new.gazeous = gazeous
 	return new
-	match (ingredient_name):
-		"Cactus":return load("uid://bokirk1ohqn0h")
-	return load("uid://ch5hbfceu2m0h")
 
 func GetFermentedResource():
 	if ingredient_name[0] == "M":
@@ -49,7 +46,7 @@ func GetFermentedResource():
 		new.type = Global.IngredientsTypes.Liquid
 		new.types = Global.DrinkTypes.Fermented
 		new.bitterness = min(bitterness * 1.1, 100)
-		new.degrees = 16 * sqrt(sweetness / 100.0) * (1.0 - bitterness / 500.0)
+		new.degrees = max(min(100, 16 * sqrt(sweetness / 100.0) * (1.0 - bitterness / 500.0)),0)
 		new.sweetness = sweetness * 0.75
 		new.fruity = fruity
 		new.gazeous = true
@@ -67,7 +64,7 @@ func GetFermentedResource():
 		new.types = Global.DrinkTypes.Fermented
 		new.bitterness = min(bitterness * 1.1, 100)
 		new.sweetness = sweetness * 0.75
-		new.degrees = 20 * sqrt(sweetness / 100.0) * (1.0 - bitterness / 500.0)
+		new.degrees = max(min(100,20 * sqrt(sweetness / 100.0) * (1.0 - bitterness / 500.0)),0)
 		new.fruity = fruity
 		new.gazeous = gazeous
 		return new
@@ -87,11 +84,8 @@ func GetBroyageByproduct():
 		new.desc = "Moût très nutritif fait à partir de " + ingredient_name + "."
 	new.type = Global.IngredientsTypes.Liquid
 	new.types = Global.DrinkTypes.Softs
-	new.bitterness = bitterness * 1.3
+	new.bitterness = min(100,bitterness * 1.3)
 	new.sweetness = sweetness * 0.35
 	new.fruity = fruity
 	new.gazeous = gazeous
 	return new
-	match (ingredient_name):
-		"":return
-	return load("uid://ch5hbfceu2m0h")

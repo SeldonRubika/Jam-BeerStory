@@ -11,10 +11,13 @@ config_version=5
 [application]
 
 config/name="BeerStory"
-config/version="V0.1"
+config/description="A small project about brewing some beverages and offer them to wacky client made by the \"DemiFiliere\" team (Hadrien HEURTEAUX, Tom KETHIRI , Noam HUYGHE, Eleonore TESSIER, Vassili FELISIAK, Marius RAPANAKIS-BOURG)"
+config/version="V0.2"
 run/main_scene="uid://ctfg71sm4eect"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/stretch_mode=4
+boot_splash/image="uid://ceq6f2nbbt1vm"
+config/icon="uid://ceq6f2nbbt1vm"
 
 [autoload]
 
@@ -23,7 +26,7 @@ Global="*uid://wd6u01numcgx"
 [display]
 
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+mouse_cursor/custom_image="uid://b2on1culp3owm"
 
 [file_customization]
 

@@ -7,7 +7,7 @@ extends DrinkSubMenu
 
 @onready var slots := [alambic_1,alambic_2]
 var awaiting_slots := []
-@export var distillation_time :=10.0
+@export var distillation_time := 9.0
 
 func ingredient_selected():
 	awaiting_slots.clear()
@@ -17,11 +17,43 @@ func ingredient_selected():
 			slot.disabled = false
 
 func _on_alambic_pressed() -> void:
-	pass # Replace with function body.
-
+	distillation(alambic_1)
 
 func _on_alambic_2_pressed() -> void:
-	pass # Replace with function body.
+	distillation(alambic_2)
+
+
+func distillation(alambic):
+	var child = alambic.get_child(0)
+	if (!child.resource):
+		if !Global.selected_ingredients:
+			return
+		if ( Global.selected_ingredients.resource.type != Global.IngredientsTypes.Liquid):
+			return
+		child.resource = Global.selected_ingredients.resource
+		child.set_self_ui()
+		Global.selected_ingredients.resource = null
+		Global.selected_ingredients.set_self_ui()
+		Global.selected_ingredients = null
+		alambic.disabled = true
+		alambic.get_child(1).animate(distillation_time)
+		await get_tree().create_timer(distillation_time).timeout
+		alambic.disabled = false
+		child.resource = child.resource.GetDistilledResource()
+		child.set_self_ui()
+	else:
+		if (child.resource.type != Global.IngredientsTypes.Liquid):
+			print("error, non liquid in distillation case")
+			return
+		if (child.resource.types != Global.DrinkTypes.Distillied):
+			print("error, result of distilliation was not distillied type")
+			return
+		var cell : IngredientBase = Global.GetFirstInventoryEmptyCell()
+		cell.resource = child.resource
+		cell.set_self_ui()
+		child.resource = null
+		child.set_self_ui()
+		alambic.disabled = true
 
 
 func _on_result_pressed() -> void:

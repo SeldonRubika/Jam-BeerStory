@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://dmtpnurq5gcki"]
 
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_igsy5"]
+[ext_resource type="Texture2D" uid="uid://dfdmbim5yrqix" path="res://Assets/Icons/Vegetables_icon.png" id="1_igsy5"]
 [ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_2mbk1"]
 
 [resource]
 script = ExtResource("2_2mbk1")
 ingredient_name = "Betterave"
+icon = ExtResource("1_igsy5")
 desc = "En jus, on pourrait les prendre pour du sang. Un genre de repas CROUS pour vampire."
 type = 3
 bitterness = 10

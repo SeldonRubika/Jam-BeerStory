@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://b4ffe5c6cmps5"]
 
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_rfhxw"]
+[ext_resource type="Texture2D" uid="uid://b508eqefab5c" path="res://Assets/SpecificIcons/Sprite-banane.png" id="1_rfhxw"]
 [ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_pubht"]
 
 [resource]
 script = ExtResource("2_pubht")
 ingredient_name = "Banane"
+icon = ExtResource("1_rfhxw")
 desc = "Et là le type me dit \"500€ et des bananes\" et là je me dis \"Pourquoi il veut des bananes ce tdc\"."
 sweetness = 50
 fruity = true

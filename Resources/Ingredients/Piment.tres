@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://ban47ef15cf75"]
 
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_tl83r"]
+[ext_resource type="Texture2D" uid="uid://cc4swvxe7inhg" path="res://Assets/SpecificIcons/Piment.png" id="1_tl83r"]
 [ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_gj7ed"]
 
 [resource]
 script = ExtResource("2_gj7ed")
 ingredient_name = "Piment"
+icon = ExtResource("1_tl83r")
 desc = "AAAAAAAH ÇA BRULE AAAAAAAAH"
 type = 3
 bitterness = 20

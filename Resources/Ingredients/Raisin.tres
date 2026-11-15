@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://nqwr6eponxhx"]
 
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_eyray"]
+[ext_resource type="Texture2D" uid="uid://i2y6iqcj54u8" path="res://Assets/Icons/Fruit_icon.png" id="1_eyray"]
 [ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_o8d8b"]
 
 [resource]
 script = ExtResource("2_o8d8b")
 ingredient_name = "Raisin"
+icon = ExtResource("1_eyray")
 desc = "Utilisé pour faire du vin. Faut l'écraser avec ses gros pieds bien crades."
 bitterness = 10
 sweetness = 80

@@ -4,8 +4,9 @@
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://addons/AutoSizeText/ui/AutoSizeLabel.gd" id="2_5k7kb"]
 [ext_resource type="PackedScene" uid="uid://fkjn5x638hlm" path="res://Scenes/ingredients/ingredient_base.tscn" id="3_2xtaj"]
 [ext_resource type="PackedScene" uid="uid://b7scmvja60cy4" path="res://Scenes/DrinkSubMenu/fermentation_bar.tscn" id="4_q076r"]
+[ext_resource type="FontFile" uid="uid://dinmnkta5iosd" path="res://Assets/font/MorrisRoman-Black.ttf" id="5_5k7kb"]
 
-[node name="Distillation" type="Control" unique_id=912534386 node_paths=PackedStringArray("alambic_1", "alambic_2", "result", "result_2")]
+[node name="Distillation" type="Control" unique_id=912534386 node_paths=PackedStringArray("alambic_1", "alambic_2")]
 layout_mode = 3
 anchor_left = 0.025
 anchor_top = 0.05
@@ -15,8 +16,6 @@ mouse_filter = 1
 script = ExtResource("1_bw4lf")
 alambic_1 = NodePath("HBoxContainer/Alambic")
 alambic_2 = NodePath("HBoxContainer/Alambic2")
-result = NodePath("HBoxContainer/Result")
-result_2 = NodePath("HBoxContainer/Result2")
 id = "Distillation"
 metadata/_custom_type_script = "uid://et742jqp0c57"
 
@@ -88,6 +87,28 @@ grow_horizontal = 1
 grow_vertical = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="AutoSizeLabel" type="Label" parent="HBoxContainer/Alambic" unique_id=1204791503]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.094000004
+anchor_top = -0.273
+anchor_right = 1.08
+anchor_bottom = 0.030000001
+offset_left = -1.027998
+offset_top = 0.039001465
+offset_right = 0.95999146
+offset_bottom = 0.02600193
+theme_override_fonts/font = ExtResource("5_5k7kb")
+theme_override_font_sizes/font_size = 20
+text = "Boisson Uniquement"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_5k7kb")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
 [node name="Alambic2" type="TextureButton" parent="HBoxContainer" unique_id=1021442863]
 layout_mode = 1
 anchors_preset = -1
@@ -125,67 +146,29 @@ grow_horizontal = 1
 grow_vertical = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Result" type="TextureButton" parent="HBoxContainer" unique_id=976862074]
+[node name="AutoSizeLabel" type="Label" parent="HBoxContainer/Alambic2" unique_id=811980058]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.09462529
-anchor_top = 0.58847064
-anchor_right = 0.42058292
-anchor_bottom = 0.92447066
-offset_top = -0.099990845
-offset_right = 0.21121216
-offset_bottom = 0.1000061
-size_flags_horizontal = 3
-stretch_mode = 5
-metadata/_edit_use_anchors_ = true
-
-[node name="IngredientBase" parent="HBoxContainer/Result" unique_id=103853650 instance=ExtResource("3_2xtaj")]
-layout_mode = 1
-anchor_left = 0.036000002
-anchor_top = 0.052
-anchor_right = 0.96400005
-anchor_bottom = 0.9480001
-offset_left = -4.9680004
-offset_top = -7.4360003
-offset_right = 4.967987
-offset_bottom = 7.4359894
-mouse_filter = 2
-disabled = true
-resource = null
-
-[node name="Result2" type="TextureButton" parent="HBoxContainer" unique_id=1586684541]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.6150644
-anchor_top = 0.58847064
-anchor_right = 0.94102204
-anchor_bottom = 0.92447066
-offset_top = -0.099990845
-offset_right = 0.21121216
-offset_bottom = 0.1000061
-size_flags_horizontal = 3
-stretch_mode = 5
-metadata/_edit_use_anchors_ = true
-
-[node name="IngredientBase" parent="HBoxContainer/Result2" unique_id=1056935477 instance=ExtResource("3_2xtaj")]
-layout_mode = 1
-anchor_left = 0.036000002
-anchor_top = 0.052
-anchor_right = 0.96400005
-anchor_bottom = 0.9480001
-offset_left = -4.9680004
-offset_top = -7.4360003
-offset_right = 4.967987
-offset_bottom = 7.4359894
-mouse_filter = 2
-disabled = true
-resource = null
+anchor_left = -0.094000004
+anchor_top = -0.273
+anchor_right = 1.08
+anchor_bottom = 0.030000001
+offset_left = -0.027982712
+offset_top = 0.039001465
+offset_right = -0.040023804
+offset_bottom = 0.02600193
+theme_override_fonts/font = ExtResource("5_5k7kb")
+theme_override_font_sizes/font_size = 20
+text = "Boisson Uniquement"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_5k7kb")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 
 [connection signal="pressed" from="HBoxContainer/Alambic" to="." method="_on_alambic_pressed"]
 [connection signal="pressed" from="HBoxContainer/Alambic" to="." method="_on_tonneau_pressed"]
 [connection signal="pressed" from="HBoxContainer/Alambic2" to="." method="_on_alambic_2_pressed"]
 [connection signal="pressed" from="HBoxContainer/Alambic2" to="." method="_on_tonneau_2_pressed"]
-[connection signal="pressed" from="HBoxContainer/Result" to="." method="_on_result_pressed"]
-[connection signal="pressed" from="HBoxContainer/Result" to="." method="_on_tonneau_3_pressed"]
-[connection signal="pressed" from="HBoxContainer/Result2" to="." method="_on_result_2_pressed"]
-[connection signal="pressed" from="HBoxContainer/Result2" to="." method="_on_tonneau_3_pressed"]

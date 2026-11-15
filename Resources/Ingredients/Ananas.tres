@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://bucps5b1gdx05"]
 
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_mkhe6"]
+[ext_resource type="Texture2D" uid="uid://bs3kqqvl31ucl" path="res://Assets/SpecificIcons/Ananas.png" id="1_mkhe6"]
 [ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_u7egc"]
 
 [resource]
 script = ExtResource("2_u7egc")
 ingredient_name = "Ananas"
+icon = ExtResource("1_mkhe6")
 desc = "Change le goût du sperme ... voilà voilà ... que dire de plus ..."
 bitterness = 10
 sweetness = 60

@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://cmdxmvgpyo5or"]
 
-[ext_resource type="Texture2D" uid="uid://liaqpr81b5sa" path="res://icon.svg" id="1_0axor"]
+[ext_resource type="Texture2D" uid="uid://fxeepomrpl88" path="res://Assets/SpecificIcons/Tomate.png" id="1_0axor"]
 [ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_mowjp"]
 
 [resource]
 script = ExtResource("2_mowjp")
 ingredient_name = "Tomate"
+icon = ExtResource("1_0axor")
 desc = "uwu je suis rouge comme une tomate ~~ Nathan-chan je crois que... uwu je vais tomber dans les pommes"
 type = 3
 bitterness = 20

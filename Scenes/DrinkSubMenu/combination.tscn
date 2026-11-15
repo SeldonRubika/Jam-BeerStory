@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bf0pt2djmc84h" path="res://Scenes/DrinkSubMenu/combination.gd" id="1_r0ckt"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://addons/AutoSizeText/ui/AutoSizeLabel.gd" id="2_pglv4"]
 [ext_resource type="PackedScene" uid="uid://fkjn5x638hlm" path="res://Scenes/ingredients/ingredient_base.tscn" id="3_ip7l4"]
+[ext_resource type="FontFile" uid="uid://dinmnkta5iosd" path="res://Assets/font/MorrisRoman-Black.ttf" id="4_pglv4"]
 [ext_resource type="Texture2D" uid="uid://cajghehxih2tc" path="res://Assets/PlaceHolders/Placeholder_broyer.png" id="4_r0ckt"]
 
 [node name="Combination" type="Control" unique_id=912534386 node_paths=PackedStringArray("slot_1", "slot_2", "result")]
@@ -89,6 +90,7 @@ offset_left = -0.027982712
 offset_top = 0.039001465
 offset_right = -0.040023804
 offset_bottom = 0.02600193
+theme_override_fonts/font = ExtResource("4_pglv4")
 theme_override_font_sizes/font_size = 20
 text = "Boisson uniquement"
 horizontal_alignment = 1
