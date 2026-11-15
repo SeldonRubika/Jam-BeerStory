@@ -8,9 +8,10 @@ extends Control
 @export var combination: DrinkSubMenu
 @export var inventory_page: Control
 @export var distillation: DrinkSubMenu
+@export var clients: DrinkSubMenu
 
 @onready var page_per_index := {
-	0:null,
+	0:clients,
 	1:null,
 	2:broyage,
 	3:fermentation,
@@ -25,6 +26,7 @@ var changing_tab := false
 var flip_tab_duration := 0.4
 func _ready() -> void:
 	Global.grid = grid
+	clients.selected()
 
 func change_tab():
 	changing_tab = true
@@ -67,6 +69,8 @@ func _on_fermentation_bookmark_2_pressed() -> void:
 func _on_discussion_book_pressed() -> void:
 	if changing_tab:
 		return
+	if Global.active_drink_submenu:
+		Global.active_drink_submenu.deselect()
 	tab_index = 0
 	change_tab()
 
