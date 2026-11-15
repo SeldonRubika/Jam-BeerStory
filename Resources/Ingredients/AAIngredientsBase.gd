@@ -15,24 +15,6 @@ var text_color : Color = [Color.YELLOW,Color.RED,Color.SKY_BLUE,Color.GREEN_YELL
 @export var fruity := false
 @export var gazeous := false
 
-func GetBroyageResource():
-	var new = DrinkResource.new()
-	new.degrees = 0
-	new.base = ingredient_name
-	if new.base[0] in "AEIOUY" :
-		new.ingredient_name = "Jus d'" + ingredient_name
-		new.desc = "Jus très nutritif fait à partir d'" + ingredient_name + "."
-	else :
-		new.ingredient_name = "Jus de " + ingredient_name
-		new.desc = "Jus très nutritif fait à partir de " + ingredient_name + "."
-	new.type = Global.IngredientsTypes.Liquid
-	new.types = Global.DrinkTypes.Softs
-	new.bitterness = bitterness
-	new.sweetness = sweetness
-	new.fruity = fruity
-	new.gazeous = gazeous
-	return new
-
 func GetFermentedResource():
 	if ingredient_name[0] == "M":
 		var new = DrinkResource.new()
@@ -68,9 +50,25 @@ func GetFermentedResource():
 		new.fruity = fruity
 		new.gazeous = gazeous
 		return new
-	match (ingredient_name):
-		"Eau":return load("uid://m1o0eubqv17j")
-	return load("uid://c1wsgln1jh5kw")
+
+func GetBroyageResource():
+	var new = DrinkResource.new()
+	new.degrees = 0
+	new.base = ingredient_name
+	if new.base[0] in "AEIOUY" :
+		new.ingredient_name = "Jus d'" + ingredient_name
+		new.desc = "Jus très nutritif fait à partir d'" + ingredient_name + "."
+	else :
+		new.ingredient_name = "Jus de " + ingredient_name
+		new.desc = "Jus très nutritif fait à partir de " + ingredient_name + "."
+	new.type = Global.IngredientsTypes.Liquid
+	new.types = Global.DrinkTypes.Softs
+	new.bitterness = bitterness
+	new.sweetness = sweetness
+	new.fruity = fruity
+	new.gazeous = gazeous
+	return new
+
 
 func GetBroyageByproduct():
 	var new = DrinkResource.new()

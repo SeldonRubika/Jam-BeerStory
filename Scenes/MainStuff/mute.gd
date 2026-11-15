@@ -12,3 +12,7 @@ func _on_pressed() -> void:
 	else:
 		muted= true
 		scheisse.volume_linear = 0.0
+
+
+func _on_scheisse_finished() -> void:
+	scheisse.play()

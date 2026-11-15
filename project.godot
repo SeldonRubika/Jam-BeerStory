@@ -12,12 +12,13 @@ config_version=5
 
 config/name="BeerStory"
 config/description="A small project about brewing some beverages and offer them to wacky client made by the \"DemiFiliere\" team (Hadrien HEURTEAUX, Tom KETHIRI , Noam HUYGHE, Eleonore TESSIER, Vassili FELISIAK, Marius RAPANAKIS-BOURG)"
-config/version="V0.2"
+config/version="V1.0"
 run/main_scene="uid://ctfg71sm4eect"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/stretch_mode=4
 boot_splash/image="uid://ceq6f2nbbt1vm"
 config/icon="uid://ceq6f2nbbt1vm"
+run/version="V0.2"
 
 [autoload]
 

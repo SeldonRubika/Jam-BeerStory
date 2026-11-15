@@ -36,6 +36,7 @@ script = ExtResource("1_k53du")
 degreesHover = NodePath("Hover/VBoxContainer/AllStatsHolder/StatContainer/Degrees")
 degreesFocus = NodePath("Focus/stuff/AllStatsHolder/StatContainer/Degrees")
 label = NodePath("Focus/stuff/AllStatsHolder/StatContainer2/Label")
+resource = null
 name_label = NodePath("Panel/NameLabel")
 ingredient_icon = NodePath("IngredientsIcon")
 hover = NodePath("Hover")

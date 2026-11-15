@@ -34,6 +34,14 @@ func GetDistilledResource():
 	new.gazeous = gazeous
 	return new
 	
+
+func GetFermentedResource():
+	if types == Global.DrinkTypes.Softs:
+		return super()
+	else:
+		print(load("uid://c1wsgln1jh5kw"))
+		return load("uid://c1wsgln1jh5kw")
+
 func GetCombinedResource(ingredient : IngredientResource):
 	# self est forcément une boisson, ingredient par contre peut être liquide ou autre
 	var new = DrinkResource.new()
@@ -135,7 +143,7 @@ func GetCombinedResource(ingredient : IngredientResource):
 		
 		new.base = base
 		
-		if ingredient.type != Global.IngredientsTypes.Liquid or ingredient_name == "Alcool pur":
+		if ingredient_name == "Alcool pur":
 			# Si c'est une Liqueur (liquide + ingrédient pas liquide)
 			if new.base[0] in "AEIOUY" :
 				new.base = ingredient.ingredient_name
@@ -154,7 +162,16 @@ func GetCombinedResource(ingredient : IngredientResource):
 			new.gazeous = (gazeous or ingredient.gazeous)
 			new.shitty = true
 			return new
-			
+		elif ingredient.type != Global.IngredientsTypes.Liquid:
+			new.base = base
+			new.ingredient_name = ingredient_name + " aromatisé à "+ingredient.ingredient_name
+			new.desc = "Base d'" + base + "aromatisé à"+ ingredient.base + ". Il manque du sucre."
+			new.types = types
+			new.sweetness = min(100,(sweetness * 0.8) + (ingredient.sweetness * 0.2)) 
+			new.bitterness = min(100,(bitterness * 0.8) + (ingredient.bitterness * 0.2)) 
+			new.fruity = (fruity or ingredient.fruity)
+			new.gazeous = (gazeous or ingredient.gazeous)
+			return new
 		else :
 			# Si c'est un Cocktail (liquide + liquide)
 			new.ingredient_name = "Cocktail " + new.base + " " + ingredient.base
@@ -163,11 +180,10 @@ func GetCombinedResource(ingredient : IngredientResource):
 			new.types = Global.DrinkTypes.Cocktail
 			new.sweetness = min(100,(sweetness + ingredient.sweetness) * 0.5)
 			new.bitterness = min(100,(bitterness + ingredient.bitterness) * 0.5)
-			if new.type == Global.IngredientsTypes.Liquid:
+			if ingredient.type == Global.IngredientsTypes.Liquid:
 				new.degrees = min(100,(degrees + ingredient.degrees) * 0.5)
 			new.fruity = (fruity or ingredient.fruity)
 			new.gazeous = (gazeous or ingredient.gazeous)
-			new.mix_level = min(4,mix_level + ingredient.mix_level + 1)
 			return new
-		
+	return new
 	

@@ -605,4 +605,5 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="Book_Open/MarquePage/VBoxContainer/DistillerBook" to="Book_Open" method="_on_distiller_book_pressed"]
 [connection signal="pressed" from="Book_Open/MarquePage/VBoxContainer/CombinationBook" to="Book_Open" method="_on_combination_book_pressed"]
 [connection signal="pressed" from="Book_Open/MarquePage/VBoxContainer/JardinierBook" to="Book_Open" method="_on_jardinier_book_pressed"]
+[connection signal="finished" from="Scheisse" to="mute" method="_on_scheisse_finished"]
 [connection signal="pressed" from="mute" to="mute" method="_on_pressed"]

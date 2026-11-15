@@ -33,8 +33,6 @@ func object_in_tonneau(tonneau:TextureButton):
 			return
 		if ( Global.selected_ingredients.resource.type != Global.IngredientsTypes.Liquid):
 			return
-		if Global.selected_ingredients.resource.types != Global.DrinkTypes.Softs:
-			return
 		child.resource = Global.selected_ingredients.resource
 		child.set_self_ui()
 		Global.selected_ingredients.resource = null
