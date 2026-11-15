@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("2_8n237")
 ingredient_name = "Riz"
+base = "Riz"
 icon = ExtResource("1_rr00a")
 desc = "Peut-être utilisé pour fabriquer de l'alcool de riz. Ou un tasty crousty (plat populaire dans les terres de l'ouest)."
 type = 1

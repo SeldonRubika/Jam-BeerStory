@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_0hs12")
+types = null
 shitty = true
 degrees = 96
 ingredient_name = "Alcool pur"
