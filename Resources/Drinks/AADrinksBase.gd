@@ -11,7 +11,7 @@ class_name DrinkResource
 func GetDistilledResource():
 	var new = DrinkResource.new()
 	new.base = base
-	if fruity and not Global.DrinkTypes.Softs :
+	if fruity :
 		if new.base[0] in "AEIOUY" : 
 			new.ingredient_name = "Eau-de-vie d'" + new.base
 			new.desc = "Eau-de-vie très nutritive fait à partir d'" + new.base + "."
@@ -129,18 +129,13 @@ func GetCombinedResource(ingredient : IngredientResource):
 		new.sweetness = max(0,sweetness - 10)
 		new.fruity = fruity
 		new.gazeous = gazeous
-		new.mix_level = mix_level + 1
-		if new.mix_level >= 4 :
-			new.shitty = true
-		else :
-			new.shitty = (shitty or ingredient.shitty)
 		return new
 		
 	else :
 		
-		new.base = ingredient.base
+		new.base = base
 		
-		if ingredient.type != Global.IngredientsTypes.Liquid and ingredient_name == "Alcool pur":
+		if ingredient.type != Global.IngredientsTypes.Liquid or ingredient_name == "Alcool pur":
 			# Si c'est une Liqueur (liquide + ingrédient pas liquide)
 			if new.base[0] in "AEIOUY" :
 				new.base = ingredient.ingredient_name
@@ -168,14 +163,11 @@ func GetCombinedResource(ingredient : IngredientResource):
 			new.types = Global.DrinkTypes.Cocktail
 			new.sweetness = min(100,(sweetness + ingredient.sweetness) * 0.5)
 			new.bitterness = min(100,(bitterness + ingredient.bitterness) * 0.5)
-			new.degrees = min(100,(degrees + ingredient.degrees) * 0.5)
+			if new.type == Global.IngredientsTypes.Liquid:
+				new.degrees = min(100,(degrees + ingredient.degrees) * 0.5)
 			new.fruity = (fruity or ingredient.fruity)
 			new.gazeous = (gazeous or ingredient.gazeous)
 			new.mix_level = min(4,mix_level + ingredient.mix_level + 1)
-			if new.mix_level >= 4 :
-				new.shitty = true
-			else :
-				new.shitty = (shitty or ingredient.shitty)
 			return new
 		
 	

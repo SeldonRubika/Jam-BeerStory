@@ -5,6 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://fkjn5x638hlm" path="res://Scenes/ingredients/ingredient_base.tscn" id="3_ip7l4"]
 [ext_resource type="FontFile" uid="uid://dinmnkta5iosd" path="res://Assets/font/MorrisRoman-Black.ttf" id="4_pglv4"]
 [ext_resource type="Texture2D" uid="uid://cipdilyb0du1t" path="res://Assets/Icons/Combiner.png" id="5_pglv4"]
+[ext_resource type="Texture2D" uid="uid://wvbhdtl80o1k" path="res://Assets/Icons/Intero.png" id="6_yhst3"]
+[ext_resource type="Script" uid="uid://mlc52s6vgql4" path="res://Scenes/Discussion/guide.gd" id="7_fu413"]
+[ext_resource type="Script" uid="uid://leehmvr1x5lu" path="res://addons/AutoSizeText/ui/AutoSizeRichTextLabel.gd" id="8_8m8hu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lm4gx"]
+bg_color = Color(0, 0, 0, 0.6666667)
 
 [node name="Combination" type="Control" unique_id=912534386 node_paths=PackedStringArray("slot_1", "slot_2", "result")]
 layout_mode = 3
@@ -187,7 +193,89 @@ text_overrun_behavior = 3
 script = ExtResource("2_pglv4")
 metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 
+[node name="Guide" type="TextureButton" parent="." unique_id=1431192255 node_paths=PackedStringArray("panel")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.05107599
+anchor_top = 0.13648833
+anchor_right = 0.03392401
+anchor_bottom = 0.20548834
+texture_normal = ExtResource("6_yhst3")
+script = ExtResource("7_fu413")
+panel = NodePath("Panel")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Guide" unique_id=139475675]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.4133046
+anchor_top = -1.689827
+anchor_right = 11.710051
+anchor_bottom = 8.697623
+offset_right = 0.0031051636
+offset_bottom = 0.00063705444
+theme_override_styles/panel = SubResource("StyleBoxFlat_lm4gx")
+metadata/_edit_use_anchors_ = true
+
+[node name="AutoSizeLabel" type="Label" parent="Guide/Panel" unique_id=152605927]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15200001
+anchor_top = 0.14602388
+anchor_right = 0.79003036
+anchor_bottom = 0.25397614
+offset_left = -0.19200516
+offset_top = -0.03800583
+offset_right = 0.14797974
+offset_bottom = -0.16203308
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 38
+text = "Combination"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_pglv4")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+metadata/_edit_use_anchors_ = true
+
+[node name="AHHHJHHHBHHNHH" type="RichTextLabel" parent="Guide/Panel" unique_id=1054877143]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08825252
+anchor_top = 0.2515455
+anchor_right = 0.8941379
+anchor_bottom = 0.9612616
+offset_left = 0.052000046
+offset_top = -0.14601898
+offset_right = -0.07861328
+offset_bottom = 0.19262695
+theme_override_fonts/normal_font = ExtResource("4_pglv4")
+theme_override_font_sizes/normal_font_size = 38
+theme_override_font_sizes/bold_font_size = 38
+theme_override_font_sizes/bold_italics_font_size = 38
+theme_override_font_sizes/italics_font_size = 38
+theme_override_font_sizes/mono_font_size = 38
+text = "Permet de mixer vos boissons et vos ingrédients pour faire des nouvelles boissons ou modifier vos boissons.
+Boisson + Sucre --> Augmente le sucre de la boisson
+Boisson + Alcool Pur --> Augmente le degré de la boisson
+Boisson + Eau --> Réduit le degré de la boisson
+Boisson + Asucrite --> Réduit le sucre de la boisson
+Boisson + Boisson --> Cocktail (trop de mixage donne une boisson imbuvable)
+Alcoor Pur + Ingrédient --> Ingrédient Macéré
+Ingrédient Macéré + Sucre --> Liqueur"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("8_8m8hu")
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="HBoxContainer/Slot1" to="." method="_on_slot_1_pressed"]
 [connection signal="pressed" from="HBoxContainer/Slot2" to="." method="_on_slot_2_pressed"]
 [connection signal="pressed" from="HBoxContainer/Result" to="." method="_on_result_pressed"]
 [connection signal="pressed" from="HBoxContainer/Mixage" to="." method="_on_mixage_pressed"]
+[connection signal="pressed" from="Guide" to="Guide" method="_on_pressed"]

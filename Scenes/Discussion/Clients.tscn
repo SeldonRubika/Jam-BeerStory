@@ -8,6 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://xxdocj8o0hyt" path="res://Assets/Icons/Placeholder_vendre.png" id="5_uoul6"]
 [ext_resource type="Texture2D" uid="uid://y3csw0q1l5k5" path="res://Assets/Icons/Decor_bar.png" id="6_0mkcy"]
 [ext_resource type="Texture2D" uid="uid://dkqkwyrvnweoh" path="res://Assets/Characters/Dragon-farfadet_happy.png" id="6_uoul6"]
+[ext_resource type="Texture2D" uid="uid://cti8c3mfl35ym" path="res://Assets/Icons/ClocheUwu.png" id="9_3ryr7"]
+[ext_resource type="Script" uid="uid://mlc52s6vgql4" path="res://Scenes/Discussion/guide.gd" id="9_hr08k"]
+[ext_resource type="Texture2D" uid="uid://wvbhdtl80o1k" path="res://Assets/Icons/Intero.png" id="9_ixqxo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0mkcy"]
+bg_color = Color(0, 0, 0, 0.6666667)
 
 [node name="Clients" type="Control" unique_id=912534386 node_paths=PackedStringArray("proposition", "drink_name", "drink_price_range", "dialog_text", "dialog", "client_icon")]
 layout_mode = 3
@@ -20,7 +26,7 @@ proposition = NodePath("HBoxContainer/Proposition")
 drink_name = NodePath("HBoxContainer/Proposition/DrinkName")
 drink_price_range = NodePath("HBoxContainer/Proposition/DrinkPriceRange")
 dialog_text = NodePath("Dialog/dialog_text")
-dialog = NodePath("Dialog")
+dialog = NodePath("Dialog/Call")
 client_icon = NodePath("Dialog/client_icon")
 id = "Clients"
 metadata/_custom_type_script = "uid://et742jqp0c57"
@@ -154,16 +160,14 @@ text_overrun_behavior = 3
 script = ExtResource("2_3oal6")
 metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 
-[node name="Dialog" type="Button" parent="." unique_id=1118895371]
+[node name="Dialog" type="Control" parent="." unique_id=1265074879]
 layout_mode = 1
-anchors_preset = -1
 anchor_left = 0.10616219
 anchor_top = 0.12962963
 anchor_right = 0.90654856
 anchor_bottom = 0.5569973
 offset_right = -0.08959961
 offset_bottom = -0.24081421
-flat = true
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect2" type="TextureRect" parent="Dialog" unique_id=753473839]
@@ -222,5 +226,94 @@ script = ExtResource("4_fgo02")
 metadata/_custom_type_script = "uid://leehmvr1x5lu"
 metadata/_edit_use_anchors_ = true
 
+[node name="Call" type="TextureButton" parent="Dialog" unique_id=1726501555]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7381546
+anchor_top = 0.42168674
+anchor_right = 0.8381546
+anchor_bottom = 0.5826868
+offset_right = -0.10000229
+offset_bottom = -0.08900452
+texture_normal = ExtResource("9_3ryr7")
+metadata/_edit_use_anchors_ = true
+
+[node name="Guide" type="TextureButton" parent="." unique_id=1025617612 node_paths=PackedStringArray("panel")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.05107599
+anchor_top = 0.13648833
+anchor_right = 0.03392401
+anchor_bottom = 0.20548834
+texture_normal = ExtResource("9_ixqxo")
+script = ExtResource("9_hr08k")
+panel = NodePath("Panel")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Guide" unique_id=1866096278]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.4133046
+anchor_top = -1.689827
+anchor_right = 11.710051
+anchor_bottom = 8.697623
+offset_right = 0.0031051636
+offset_bottom = 0.00063705444
+theme_override_styles/panel = SubResource("StyleBoxFlat_0mkcy")
+metadata/_edit_use_anchors_ = true
+
+[node name="AutoSizeLabel" type="Label" parent="Guide/Panel" unique_id=641452978]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15200001
+anchor_top = 0.14602388
+anchor_right = 0.79003036
+anchor_bottom = 0.25397614
+offset_left = -0.19200516
+offset_top = -0.03800583
+offset_right = 0.14797974
+offset_bottom = -0.16203308
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 38
+text = "Clients"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_3oal6")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+metadata/_edit_use_anchors_ = true
+
+[node name="AHHHJHHHBHHNHH" type="RichTextLabel" parent="Guide/Panel" unique_id=1697431945]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08825252
+anchor_top = 0.2515455
+anchor_right = 0.8941379
+anchor_bottom = 0.9612616
+offset_left = 0.052000046
+offset_top = -0.14601898
+offset_right = -0.07861328
+offset_bottom = 0.19262695
+theme_override_fonts/normal_font = ExtResource("4_0mkcy")
+theme_override_font_sizes/normal_font_size = 33
+theme_override_font_sizes/bold_font_size = 33
+theme_override_font_sizes/bold_italics_font_size = 33
+theme_override_font_sizes/italics_font_size = 33
+theme_override_font_sizes/mono_font_size = 33
+text = "suivez la demande du client et proposez lui une boisson approprié afin de gagner de l'argent, en fonction de si vous avez bien réussi la commande le client sera plus ou moins content et vous paiera différement.
+"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_fgo02")
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="HBoxContainer/Proposition" to="." method="_on_proposition_pressed"]
 [connection signal="pressed" from="HBoxContainer/Sell" to="." method="_on_sell_pressed"]
+[connection signal="pressed" from="Dialog/Call" to="." method="_on_call_pressed"]
+[connection signal="pressed" from="Guide" to="Guide" method="_on_pressed"]

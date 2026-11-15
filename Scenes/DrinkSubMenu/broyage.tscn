@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://fkjn5x638hlm" path="res://Scenes/ingredients/ingredient_base.tscn" id="3_8gj6a"]
 [ext_resource type="FontFile" uid="uid://dinmnkta5iosd" path="res://Assets/font/MorrisRoman-Black.ttf" id="4_1ayws"]
 [ext_resource type="Texture2D" uid="uid://cajghehxih2tc" path="res://Assets/PlaceHolders/Placeholder_broyer.png" id="5_1ayws"]
+[ext_resource type="Texture2D" uid="uid://wvbhdtl80o1k" path="res://Assets/Icons/Intero.png" id="6_wfwhu"]
+[ext_resource type="Script" uid="uid://mlc52s6vgql4" path="res://Scenes/Discussion/guide.gd" id="7_0xdns"]
+[ext_resource type="Script" uid="uid://leehmvr1x5lu" path="res://addons/AutoSizeText/ui/AutoSizeRichTextLabel.gd" id="8_72igm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ayws"]
 bg_color = Color(0.20152655, 0.20152661, 0.20152646, 1)
@@ -21,6 +24,9 @@ border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
 border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dgx1"]
+bg_color = Color(0, 0, 0, 0.6666667)
 
 [node name="Broyage" type="Control" unique_id=912534386 node_paths=PackedStringArray("pilon", "broyage_progress", "byproduct")]
 layout_mode = 3
@@ -92,7 +98,6 @@ offset_right = 4.967987
 offset_bottom = 7.4359894
 mouse_filter = 2
 disabled = true
-resource = null
 
 [node name="BroyageProgress" type="ProgressBar" parent="HBoxContainer/pilon" unique_id=1593769274]
 layout_mode = 1
@@ -123,7 +128,7 @@ offset_top = 0.039001465
 offset_right = -0.040023804
 offset_bottom = 0.02600193
 theme_override_fonts/font = ExtResource("4_1ayws")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 22
 text = "Ingrédients Uniquement"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -155,7 +160,6 @@ anchor_right = 0.9288632
 anchor_bottom = 1.123396
 mouse_filter = 2
 disabled = true
-resource = null
 metadata/_edit_use_anchors_ = true
 
 [node name="AutoSizeLabel" type="Label" parent="HBoxContainer/Byproducts" unique_id=1843437281]
@@ -164,7 +168,7 @@ anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.21200001
 theme_override_fonts/font = ExtResource("4_1ayws")
-theme_override_font_sizes/font_size = 31
+theme_override_font_sizes/font_size = 34
 text = "Reste"
 horizontal_alignment = 1
 vertical_alignment = 2
@@ -205,6 +209,82 @@ text_overrun_behavior = 3
 script = ExtResource("2_1ayws")
 metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 
+[node name="Guide" type="TextureButton" parent="." unique_id=1142259302 node_paths=PackedStringArray("panel")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.05107599
+anchor_top = 0.13648833
+anchor_right = 0.03392401
+anchor_bottom = 0.20548834
+texture_normal = ExtResource("6_wfwhu")
+script = ExtResource("7_0xdns")
+panel = NodePath("Panel")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Guide" unique_id=1871793280]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.4133046
+anchor_top = -1.689827
+anchor_right = 11.710051
+anchor_bottom = 8.697623
+offset_right = 0.0031051636
+offset_bottom = 0.00063705444
+theme_override_styles/panel = SubResource("StyleBoxFlat_4dgx1")
+metadata/_edit_use_anchors_ = true
+
+[node name="AutoSizeLabel" type="Label" parent="Guide/Panel" unique_id=1625346012]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15200001
+anchor_top = 0.14602388
+anchor_right = 0.79003036
+anchor_bottom = 0.25397614
+offset_left = -0.19200516
+offset_top = -0.03800583
+offset_right = 0.14797974
+offset_bottom = -0.16203308
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 38
+text = "Broyage"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_1ayws")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+metadata/_edit_use_anchors_ = true
+
+[node name="AHHHJHHHBHHNHH" type="RichTextLabel" parent="Guide/Panel" unique_id=316114166]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08825252
+anchor_top = 0.2515455
+anchor_right = 0.8941379
+anchor_bottom = 0.9612616
+offset_left = 0.052000046
+offset_top = -0.14601898
+offset_right = -0.07861328
+offset_bottom = 0.19262695
+theme_override_fonts/normal_font = ExtResource("4_1ayws")
+theme_override_font_sizes/normal_font_size = 38
+theme_override_font_sizes/bold_font_size = 38
+theme_override_font_sizes/bold_italics_font_size = 38
+theme_override_font_sizes/italics_font_size = 38
+theme_override_font_sizes/mono_font_size = 38
+text = "Permet de broyer vos ingrédients en appuyant de manière répétée sur le bouton, cela vous donne du jus et du moût
+"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("8_72igm")
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="HBoxContainer/pilon" to="." method="_on_pilon_pressed"]
 [connection signal="pressed" from="HBoxContainer/Byproducts" to="." method="_on_byproducts_pressed"]
 [connection signal="pressed" from="HBoxContainer/Broyage" to="." method="_on_broyage_pressed"]
+[connection signal="pressed" from="Guide" to="Guide" method="_on_pressed"]
