@@ -1,5 +1,7 @@
 extends Button
 class_name IngredientBase
+const SLOT_EMPTY = preload("uid://cwvxvc8qi5f40")
+const SLOT_EMPTY_BLANC = preload("uid://cckrta61inx3r")
 
 @export var resource : IngredientResource = preload("uid://b8ars7q4rr4bi")
 @export var name_label: AutoSizeRichTextLabel
@@ -94,8 +96,10 @@ func _on_mouse_entered() -> void:
 func _on_mouse_exited() -> void:
 	hover.hide()
 
+@export var background: TextureRect
 
 func _on_focus_entered() -> void:
+	background.texture = SLOT_EMPTY_BLANC
 	if (!resource or Global.active_drink_submenu):
 		return
 	focus.show()
@@ -106,6 +110,7 @@ func _on_focus_entered() -> void:
 
 
 func _on_focus_exited() -> void:
+	background.texture = SLOT_EMPTY
 	var tween = create_tween()
 	tween.tween_property(focus,"modulate",Color(1.0,1.0,1.0,0.0),.5)
 	tween.tween_callback(focus.hide)

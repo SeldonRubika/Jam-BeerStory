@@ -17,6 +17,7 @@ script = ExtResource("1_r0ckt")
 slot_1 = NodePath("HBoxContainer/Slot1")
 slot_2 = NodePath("HBoxContainer/Slot2")
 result = NodePath("HBoxContainer/Result")
+id = "Combination"
 metadata/_custom_type_script = "uid://et742jqp0c57"
 
 [node name="AutoSizeLabel" type="Label" parent="." unique_id=2081047654]
@@ -77,7 +78,6 @@ offset_right = 4.967987
 offset_bottom = 7.4359894
 mouse_filter = 2
 disabled = true
-resource = null
 
 [node name="AutoSizeLabel" type="Label" parent="HBoxContainer/Slot1" unique_id=541576866]
 layout_mode = 1
@@ -128,7 +128,6 @@ offset_right = 4.967987
 offset_bottom = 7.4359894
 mouse_filter = 2
 disabled = true
-resource = null
 
 [node name="Result" type="TextureButton" parent="HBoxContainer" unique_id=976862074]
 layout_mode = 1
@@ -156,7 +155,6 @@ offset_right = 4.967987
 offset_bottom = 7.4359894
 mouse_filter = 2
 disabled = true
-resource = null
 
 [node name="Mixage" type="TextureButton" parent="HBoxContainer" unique_id=206829621]
 layout_mode = 1

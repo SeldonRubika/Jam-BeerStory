@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://de3bjqqxwd5hs"]
 
+[ext_resource type="Texture2D" uid="uid://bq5dnxqi7tkir" path="res://Assets/SpecificIcons/Mushroom.png" id="1_8hcle"]
 [ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_5gvvd"]
 
 [resource]
 script = ExtResource("2_5gvvd")
 ingredient_name = "Champignon"
 base = "Champignon"
+icon = ExtResource("1_8hcle")
 desc = "Y a un plombier qui en prend pour devenir plus grand et tout, mais nan là c'est juste un champi basique."
 type = 4
 bitterness = 80

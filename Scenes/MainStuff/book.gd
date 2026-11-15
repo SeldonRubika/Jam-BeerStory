@@ -9,6 +9,7 @@ extends Control
 @export var inventory_page: Control
 @export var distillation: DrinkSubMenu
 @export var clients: DrinkSubMenu
+@export var jardin: DrinkSubMenu
 
 @onready var page_per_index := {
 	0:clients,
@@ -17,7 +18,7 @@ extends Control
 	3:fermentation,
 	4:distillation,
 	5:combination,
-	6:null,
+	6:jardin,
 }
 
 var tab_index := 0
@@ -93,6 +94,8 @@ func _on_distiller_book_pressed() -> void:
 func _on_jardinier_book_pressed() -> void:
 	if changing_tab:
 		return
+	if Global.active_drink_submenu:
+		Global.active_drink_submenu.deselect()
 	tab_index = 6
 	change_tab()
 

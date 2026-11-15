@@ -13,9 +13,11 @@ const INIT_TEXT := ["Je reviens d'un donjon et je suis assoifé.\n","Je sais ce 
 var days = 1
 var gold = 0
 var has_mission := false
-
+@export var client_icon: TextureRect
+const CHARACTERS = [preload("uid://g5uolnel4uxi"), preload("uid://bqtfgybdb62ii"), preload("uid://dxo8r01jfv732"), preload("uid://bqespucwulfmw"), preload("uid://csm24w6smr5el"), preload("uid://bfhs5fhykn6gh"), preload("uid://do1ff61351e6m"), preload("uid://b04nqm8h3tp3d"), preload("uid://cvdnq21bbca5y"), preload("uid://bv8sxa08ijcwd"), preload("uid://dkqkwyrvnweoh"), preload("uid://chvc1xoqtxsvu"), preload("uid://p36grdb32qvf"), preload("uid://ea5qdolkk2cj"), preload("uid://denysl5ehngra"), preload("uid://cdq0y0wa5rbnn"), preload("uid://bbwtteq8ug363"), preload("uid://dd7s8qfypli7q"), preload("uid://cw8gra34102cq"), preload("uid://bty34xwymtpyw")]
 func make_new_request():
 	has_mission = true
+	client_icon.texture = CHARACTERS.pick_random()
 	var request_text = INIT_TEXT.pick_random()
 	request_text += "Servez-moi une boisson "
 	var bonus_text = ""

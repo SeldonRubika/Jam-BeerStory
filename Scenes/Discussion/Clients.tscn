@@ -6,9 +6,10 @@
 [ext_resource type="FontFile" uid="uid://dinmnkta5iosd" path="res://Assets/font/MorrisRoman-Black.ttf" id="4_0mkcy"]
 [ext_resource type="Script" uid="uid://leehmvr1x5lu" path="res://addons/AutoSizeText/ui/AutoSizeRichTextLabel.gd" id="4_fgo02"]
 [ext_resource type="Texture2D" uid="uid://xxdocj8o0hyt" path="res://Assets/Icons/Placeholder_vendre.png" id="5_uoul6"]
+[ext_resource type="Texture2D" uid="uid://y3csw0q1l5k5" path="res://Assets/Icons/Decor_bar.png" id="6_0mkcy"]
 [ext_resource type="Texture2D" uid="uid://dkqkwyrvnweoh" path="res://Assets/Characters/Dragon-farfadet_happy.png" id="6_uoul6"]
 
-[node name="Clients" type="Control" unique_id=912534386 node_paths=PackedStringArray("proposition", "drink_name", "drink_price_range", "dialog_text", "dialog")]
+[node name="Clients" type="Control" unique_id=912534386 node_paths=PackedStringArray("proposition", "drink_name", "drink_price_range", "dialog_text", "dialog", "client_icon")]
 layout_mode = 3
 anchor_left = 0.025
 anchor_top = 0.05
@@ -20,6 +21,7 @@ drink_name = NodePath("HBoxContainer/Proposition/DrinkName")
 drink_price_range = NodePath("HBoxContainer/Proposition/DrinkPriceRange")
 dialog_text = NodePath("Dialog/dialog_text")
 dialog = NodePath("Dialog")
+client_icon = NodePath("Dialog/client_icon")
 id = "Clients"
 metadata/_custom_type_script = "uid://et742jqp0c57"
 
@@ -81,7 +83,6 @@ offset_right = 4.967987
 offset_bottom = 7.4359894
 mouse_filter = 2
 disabled = true
-resource = null
 metadata/_edit_use_anchors_ = true
 
 [node name="DrinkName" type="Label" parent="HBoxContainer/Proposition" unique_id=1779299299]
@@ -165,12 +166,35 @@ offset_bottom = -0.24081421
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureRect" type="TextureRect" parent="Dialog" unique_id=1327150082]
+[node name="TextureRect2" type="TextureRect" parent="Dialog" unique_id=753473839]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = -0.04819277
-anchor_right = 1.0
-anchor_bottom = 0.61044174
+anchor_left = 0.294
+anchor_top = -0.048
+anchor_right = 0.70600003
+anchor_bottom = 0.61
+offset_left = 0.10600281
+offset_top = -0.048000336
+offset_right = -0.10601807
+offset_bottom = 0.11000061
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_0mkcy")
+stretch_mode = 5
+
+[node name="client_icon" type="TextureRect" parent="Dialog" unique_id=1327150082]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.294
+anchor_top = -0.048
+anchor_right = 0.70600003
+anchor_bottom = 0.43329316
+offset_left = 0.10600281
+offset_top = -0.048000336
+offset_right = -0.10601807
+offset_bottom = 0.11000061
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("6_uoul6")
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true

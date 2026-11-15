@@ -14,7 +14,7 @@ bg_color = Color(0, 0, 0, 0.5882353)
 color = Color(0.60784316, 0.16078432, 0.08235294, 1)
 thickness = 4
 
-[node name="IngredientBase" type="Button" unique_id=1564469009 node_paths=PackedStringArray("name_label", "ingredient_icon", "hover", "bitternessHover", "sweetnessHover", "hover_name_label", "booleansHover", "hover_icon", "focus", "focus_name_label", "bitternessFocus", "sweetnessFocus", "booleansFocus", "description", "focus_icon")]
+[node name="IngredientBase" type="Button" unique_id=1564469009 node_paths=PackedStringArray("name_label", "ingredient_icon", "hover", "bitternessHover", "sweetnessHover", "hover_name_label", "booleansHover", "hover_icon", "focus", "focus_name_label", "bitternessFocus", "sweetnessFocus", "booleansFocus", "description", "focus_icon", "background")]
 custom_minimum_size = Vector2(80, 80)
 custom_maximum_size = Vector2(128, 128)
 anchors_preset = -1
@@ -30,6 +30,7 @@ grow_horizontal = 2
 grow_vertical = 2
 flat = true
 script = ExtResource("1_kwxqb")
+resource = null
 name_label = NodePath("Panel/NameLabel")
 ingredient_icon = NodePath("IngredientsIcon")
 hover = NodePath("Hover")
@@ -45,6 +46,7 @@ sweetnessFocus = NodePath("Focus/stuff/AllStatsHolder/StatContainer3/Sweetness")
 booleansFocus = NodePath("Focus/stuff/Booleans")
 description = NodePath("Focus/stuff/Description")
 focus_icon = NodePath("Focus/stuff/HBoxContainer/FocusIcon")
+background = NodePath("Background")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1182245460]
 layout_mode = 1
@@ -90,11 +92,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("6_f6dkj")
-theme_override_font_sizes/normal_font_size = 15
-theme_override_font_sizes/bold_font_size = 15
-theme_override_font_sizes/bold_italics_font_size = 15
-theme_override_font_sizes/italics_font_size = 15
-theme_override_font_sizes/mono_font_size = 15
+theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
+theme_override_font_sizes/bold_italics_font_size = 16
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/mono_font_size = 16
 bbcode_enabled = true
 text = "[color=yellow]Classic Beer"
 scroll_active = false

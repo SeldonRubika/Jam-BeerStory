@@ -15,3 +15,7 @@ func animate(duration:float):
 	hide()
 	var tween = create_tween()
 	tween.tween_property(clients,"modulate",Color(1.0,1.0,1.0,1.0),.5)
+
+
+func _on_mute_pressed() -> void:
+	pass # Replace with function body.

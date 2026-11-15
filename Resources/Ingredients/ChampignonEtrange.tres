@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://i3v88dxy6e5u"]
 
+[ext_resource type="Texture2D" uid="uid://bq5dnxqi7tkir" path="res://Assets/SpecificIcons/Mushroom.png" id="1_acuid"]
 [ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_q1ftp"]
 
 [resource]
 script = ExtResource("2_q1ftp")
 ingredient_name = "Champignon étrange"
 base = "Champignon étrange"
+icon = ExtResource("1_acuid")
 desc = "Trouvé en forêt, aspect lugubre. Il ravira vos mélanges les plus... forestiers (la légende racconte qu'il vous permet de voir vos grands morts)."
 type = 4
 bitterness = 90

@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://b2xf8e3nms2xb"]
+
+[ext_resource type="Script" uid="uid://bhi8qsrb1uekc" path="res://Scenes/DrinkSubMenu/jardin.gd" id="1_75jpx"]
+[ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://addons/AutoSizeText/ui/AutoSizeLabel.gd" id="2_v4mei"]
+[ext_resource type="PackedScene" uid="uid://fkjn5x638hlm" path="res://Scenes/ingredients/ingredient_base.tscn" id="3_4hguy"]
+
+[node name="Jardin" type="Control" unique_id=912534386 node_paths=PackedStringArray("result_3", "result_2", "result", "result_4")]
+layout_mode = 3
+anchor_left = 0.025
+anchor_top = 0.05
+anchor_right = 0.46
+anchor_bottom = 0.95000005
+mouse_filter = 1
+script = ExtResource("1_75jpx")
+result_3 = NodePath("HBoxContainer/Result3")
+result_2 = NodePath("HBoxContainer/Result2")
+result = NodePath("HBoxContainer/Result")
+result_4 = NodePath("HBoxContainer/Result4")
+metadata/_custom_type_script = "uid://et742jqp0c57"
+
+[node name="AutoSizeLabel" type="Label" parent="." unique_id=2081047654]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.29517877
+anchor_top = 0.04286694
+anchor_right = 0.7048212
+anchor_bottom = 0.12791497
+offset_bottom = 1.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Jardin"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_v4mei")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+
+[node name="HBoxContainer" type="Control" parent="." unique_id=1179704318]
+layout_mode = 1
+anchor_left = 0.07822477
+anchor_top = 0.19478737
+anchor_right = 0.9217752
+anchor_bottom = 0.92352533
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Result3" type="TextureButton" parent="HBoxContainer" unique_id=1363454366]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.035484485
+anchor_top = 0.11723526
+anchor_right = 0.29051557
+anchor_bottom = 0.4542353
+offset_top = 0.17501831
+offset_right = 0.19328308
+offset_bottom = -0.049987793
+size_flags_horizontal = 3
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="IngredientBase" parent="HBoxContainer/Result3" unique_id=1564469009 instance=ExtResource("3_4hguy")]
+layout_mode = 1
+anchor_left = 0.036000002
+anchor_top = 0.052
+anchor_right = 0.96400005
+anchor_bottom = 0.9480001
+offset_left = -4.9680004
+offset_top = -7.4360003
+offset_right = 4.967987
+offset_bottom = 7.4359894
+mouse_filter = 2
+disabled = true
+
+[node name="Timer" type="Timer" parent="HBoxContainer/Result3" unique_id=1307710764]
+wait_time = 5.0
+autostart = true
+
+[node name="Result2" type="TextureButton" parent="HBoxContainer" unique_id=1021442863]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6552801
+anchor_top = 0.11788234
+anchor_right = 0.9812377
+anchor_bottom = 0.45388237
+offset_top = -0.099990845
+offset_right = 0.21121216
+offset_bottom = 0.1000061
+size_flags_horizontal = 3
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="IngredientBase" parent="HBoxContainer/Result2" unique_id=1140041615 instance=ExtResource("3_4hguy")]
+layout_mode = 1
+anchor_left = 0.036000002
+anchor_top = 0.052
+anchor_right = 0.96400005
+anchor_bottom = 0.9480001
+offset_left = -4.9680004
+offset_top = -7.4360003
+offset_right = 4.967987
+offset_bottom = 7.4359894
+mouse_filter = 2
+disabled = true
+
+[node name="Timer" type="Timer" parent="HBoxContainer/Result2" unique_id=2024805613]
+wait_time = 5.0
+autostart = true
+
+[node name="Result" type="TextureButton" parent="HBoxContainer" unique_id=976862074]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.035484485
+anchor_top = 0.7437647
+anchor_right = 0.2904731
+anchor_bottom = 1.0797648
+offset_top = -0.099990845
+offset_right = 0.21121216
+offset_bottom = 0.1000061
+size_flags_horizontal = 3
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Result" parent="HBoxContainer/Result" unique_id=103853650 instance=ExtResource("3_4hguy")]
+layout_mode = 1
+anchor_left = 0.036000002
+anchor_top = 0.052
+anchor_right = 0.96400005
+anchor_bottom = 0.9480001
+offset_left = -4.9680004
+offset_top = -7.4360003
+offset_right = 4.967987
+offset_bottom = 7.4359894
+mouse_filter = 2
+disabled = true
+
+[node name="Timer" type="Timer" parent="HBoxContainer/Result" unique_id=735322190]
+wait_time = 5.0
+autostart = true
+
+[node name="Result4" type="TextureButton" parent="HBoxContainer" unique_id=2112808099]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6552801
+anchor_top = 0.72258824
+anchor_right = 0.9812377
+anchor_bottom = 1.0585883
+offset_top = -0.099990845
+offset_right = 0.21121216
+offset_bottom = 0.1000061
+size_flags_horizontal = 3
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Result" parent="HBoxContainer/Result4" unique_id=465122315 instance=ExtResource("3_4hguy")]
+layout_mode = 1
+anchor_left = 0.036000002
+anchor_top = 0.052
+anchor_right = 0.96400005
+anchor_bottom = 0.9480001
+offset_left = -4.9680004
+offset_top = -7.4360003
+offset_right = 4.967987
+offset_bottom = 7.4359894
+mouse_filter = 2
+disabled = true
+
+[node name="Timer" type="Timer" parent="HBoxContainer/Result4" unique_id=1990438877]
+wait_time = 5.0
+autostart = true
+
+[connection signal="pressed" from="HBoxContainer/Result3" to="." method="_on_slot_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/Result3" to="." method="_on_result_3_pressed"]
+[connection signal="timeout" from="HBoxContainer/Result3/Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="HBoxContainer/Result2" to="." method="_on_result_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Result2" to="." method="_on_slot_2_pressed"]
+[connection signal="timeout" from="HBoxContainer/Result2/Timer" to="." method="_on_timer_timeout2"]
+[connection signal="pressed" from="HBoxContainer/Result" to="." method="_on_result_pressed"]
+[connection signal="pressed" from="HBoxContainer/Result" to="." method="_on_result1_pressed"]
+[connection signal="timeout" from="HBoxContainer/Result/Timer" to="." method="_on_timer_timeout3"]
+[connection signal="pressed" from="HBoxContainer/Result4" to="." method="_on_result_pressed"]
+[connection signal="pressed" from="HBoxContainer/Result4" to="." method="_on_result_4_pressed"]
+[connection signal="timeout" from="HBoxContainer/Result4/Timer" to="." method="_on_timer_timeout4"]
