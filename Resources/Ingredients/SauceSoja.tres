@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://dvui40isjd02s"]
+
+[ext_resource type="Texture2D" uid="uid://xqms77xxsh7u" path="res://Assets/Icons/Soja.png" id="1_ytexp"]
+[ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_ecgmp"]
+
+[resource]
+script = ExtResource("2_ecgmp")
+ingredient_name = "Sauce Soja"
+base = "Sauce Soja"
+icon = ExtResource("1_ytexp")
+desc = "ARIGATO GOZAIMASU !"
+type = null
+bitterness = 40
+sweetness = 50
+metadata/_custom_type_script = "uid://renlxgu8rtkv"

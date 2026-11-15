@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://cmgvvyjcyg0kn"]
+
+[ext_resource type="Texture2D" uid="uid://dmqngffrlb1w" path="res://Assets/SpecificIcons/corne_minotaure.png" id="1_hjnkl"]
+[ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_v40ca"]
+
+[resource]
+script = ExtResource("2_v40ca")
+ingredient_name = "Corne de Minotaure"
+base = "Corne de Minotaure"
+icon = ExtResource("1_hjnkl")
+desc = "C'est pas une dévianceuh."
+type = null
+metadata/_custom_type_script = "uid://renlxgu8rtkv"

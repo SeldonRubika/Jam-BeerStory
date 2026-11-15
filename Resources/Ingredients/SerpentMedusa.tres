@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://ila7su03q42o"]
+
+[ext_resource type="Texture2D" uid="uid://brvwsep427jjm" path="res://Assets/SpecificIcons/Serpent_medusa.png" id="1_kwc88"]
+[ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_rvrnc"]
+
+[resource]
+script = ExtResource("2_rvrnc")
+ingredient_name = "Serpent de Médusa"
+base = "Serpent de Médusa"
+icon = ExtResource("1_kwc88")
+desc = "Evite de le regarder dans les yeux, c'est relou sinon."
+type = null
+metadata/_custom_type_script = "uid://renlxgu8rtkv"
