@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DiscussionBase" format=3 uid="uid://bh1rry2vm1vaj"]
+
+[ext_resource type="Script" uid="uid://cbbee7mqifuky" path="res://Resources/Discussions/AADiscussionsBase.gd" id="1_e1xx3"]
+
+[resource]
+script = ExtResource("1_e1xx3")
+dialogs = Array[Array]([["Frédérique", "Bonjour"]])
+metadata/_custom_type_script = "uid://cbbee7mqifuky"
