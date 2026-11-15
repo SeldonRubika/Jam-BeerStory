@@ -166,6 +166,8 @@ func _on_sell_pressed() -> void:
 	if !has_mission:
 		return
 	var child := proposition.get_child(0)
+	if !child.resource:
+		return
 	complete_request(child.resource)
 	child.resource = null
 	child.set_self_ui()
