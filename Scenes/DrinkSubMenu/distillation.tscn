@@ -5,6 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://fkjn5x638hlm" path="res://Scenes/ingredients/ingredient_base.tscn" id="3_2xtaj"]
 [ext_resource type="PackedScene" uid="uid://b7scmvja60cy4" path="res://Scenes/DrinkSubMenu/fermentation_bar.tscn" id="4_q076r"]
 [ext_resource type="FontFile" uid="uid://dinmnkta5iosd" path="res://Assets/font/MorrisRoman-Black.ttf" id="5_5k7kb"]
+[ext_resource type="Texture2D" uid="uid://wvbhdtl80o1k" path="res://Assets/Icons/Intero.png" id="6_5y205"]
+[ext_resource type="Script" uid="uid://mlc52s6vgql4" path="res://Scenes/Discussion/guide.gd" id="7_xiecx"]
+[ext_resource type="Script" uid="uid://leehmvr1x5lu" path="res://addons/AutoSizeText/ui/AutoSizeRichTextLabel.gd" id="8_na0aq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2w5k"]
+bg_color = Color(0, 0, 0, 0.6666667)
 
 [node name="Distillation" type="Control" unique_id=912534386 node_paths=PackedStringArray("alambic_1", "alambic_2")]
 layout_mode = 3
@@ -77,7 +83,6 @@ offset_right = 4.967987
 offset_bottom = 7.4359894
 mouse_filter = 2
 disabled = true
-resource = null
 
 [node name="FermentationBar" parent="HBoxContainer/Alambic" unique_id=134217211 instance=ExtResource("4_q076r")]
 layout_mode = 1
@@ -99,7 +104,7 @@ offset_top = 0.039001465
 offset_right = 0.95999146
 offset_bottom = 0.02600193
 theme_override_fonts/font = ExtResource("5_5k7kb")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 22
 text = "Boisson Uniquement"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -136,7 +141,6 @@ offset_right = 4.967987
 offset_bottom = 7.4359894
 mouse_filter = 2
 disabled = true
-resource = null
 
 [node name="FermentationBar" parent="HBoxContainer/Alambic2" unique_id=150732093 instance=ExtResource("4_q076r")]
 layout_mode = 1
@@ -158,7 +162,7 @@ offset_top = 0.039001465
 offset_right = -0.040023804
 offset_bottom = 0.02600193
 theme_override_fonts/font = ExtResource("5_5k7kb")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 22
 text = "Boisson Uniquement"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -168,7 +172,84 @@ text_overrun_behavior = 3
 script = ExtResource("2_5k7kb")
 metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 
+[node name="Guide" type="TextureButton" parent="." unique_id=659615027 node_paths=PackedStringArray("panel")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.05107599
+anchor_top = 0.13648833
+anchor_right = 0.03392401
+anchor_bottom = 0.20548834
+texture_normal = ExtResource("6_5y205")
+script = ExtResource("7_xiecx")
+panel = NodePath("Panel")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Guide" unique_id=1822888142]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.4133046
+anchor_top = -1.689827
+anchor_right = 11.710051
+anchor_bottom = 8.697623
+offset_right = 0.0031051636
+offset_bottom = 0.00063705444
+theme_override_styles/panel = SubResource("StyleBoxFlat_s2w5k")
+metadata/_edit_use_anchors_ = true
+
+[node name="AutoSizeLabel" type="Label" parent="Guide/Panel" unique_id=1595632193]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15200001
+anchor_top = 0.14602388
+anchor_right = 0.79003036
+anchor_bottom = 0.25397614
+offset_left = -0.19200516
+offset_top = -0.03800583
+offset_right = 0.14797974
+offset_bottom = -0.16203308
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 38
+text = "Distillation"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("2_5k7kb")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+metadata/_edit_use_anchors_ = true
+
+[node name="AHHHJHHHBHHNHH" type="RichTextLabel" parent="Guide/Panel" unique_id=1632201747]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08825252
+anchor_top = 0.2515455
+anchor_right = 0.8941379
+anchor_bottom = 0.9612616
+offset_left = 0.052000046
+offset_top = -0.14601898
+offset_right = -0.07861328
+offset_bottom = 0.19262695
+theme_override_fonts/normal_font = ExtResource("5_5k7kb")
+theme_override_font_sizes/normal_font_size = 38
+theme_override_font_sizes/bold_font_size = 38
+theme_override_font_sizes/bold_italics_font_size = 38
+theme_override_font_sizes/italics_font_size = 38
+theme_override_font_sizes/mono_font_size = 38
+text = "Permet de distiller vos boissons alcoolisés
+Fruité --> Eau de Vie
+Non Fruité --> Spiritueux"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("8_na0aq")
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="HBoxContainer/Alambic" to="." method="_on_alambic_pressed"]
 [connection signal="pressed" from="HBoxContainer/Alambic" to="." method="_on_tonneau_pressed"]
 [connection signal="pressed" from="HBoxContainer/Alambic2" to="." method="_on_alambic_2_pressed"]
 [connection signal="pressed" from="HBoxContainer/Alambic2" to="." method="_on_tonneau_2_pressed"]
+[connection signal="pressed" from="Guide" to="Guide" method="_on_pressed"]

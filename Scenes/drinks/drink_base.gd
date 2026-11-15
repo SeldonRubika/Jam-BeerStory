@@ -40,6 +40,8 @@ func _on_pressed() -> void:
 			"Distillation":
 				if resource.type != Global.IngredientsTypes.Liquid:
 					return
+				if (resource.types==Global.DrinkTypes.Softs):
+					return
 				Global.selected_ingredients = self
 				Global.active_drink_submenu.ingredient_selected()
 			"Clients":
