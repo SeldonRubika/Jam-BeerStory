@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_a7du7")
 ingredient_name = "Assucrite"
+base = "ERROR"
 icon = ExtResource("1_3q03f")
 desc = "Pierre magique supprimant le sucre d'une mixture."
 type = 4

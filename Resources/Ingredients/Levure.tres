@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://chranlp01be07"]
+
+[ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="1_wiewy"]
+
+[resource]
+script = ExtResource("1_wiewy")
+ingredient_name = "Levure"
+desc = "Champi champignon, besoin d'un dealer sur Valenciennes svp"
+type = null
+bitterness = 2
+gazeous = true
+metadata/_custom_type_script = "uid://renlxgu8rtkv"

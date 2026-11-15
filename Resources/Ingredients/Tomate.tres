@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("2_mowjp")
 ingredient_name = "Tomate"
+base = "Tomate"
 icon = ExtResource("1_0axor")
 desc = "uwu je suis rouge comme une tomate ~~ Nathan-chan je crois que... uwu je vais tomber dans les pommes"
 type = 3

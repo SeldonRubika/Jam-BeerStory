@@ -6,8 +6,10 @@
 [resource]
 script = ExtResource("2_wokyo")
 ingredient_name = "Orange"
+base = "Orange"
 icon = ExtResource("1_k12hx")
 desc = "Oasis be fruit."
+type = null
 sweetness = 20
 fruity = true
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

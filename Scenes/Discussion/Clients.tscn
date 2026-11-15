@@ -1,21 +1,26 @@
 [gd_scene format=3 uid="uid://b3l5kx4e7cy1b"]
 
-[ext_resource type="Script" uid="uid://b7tgpj1iau5dj" path="res://Scenes/DrinkSubMenu/broyage.gd" id="1_fgo02"]
+[ext_resource type="Script" uid="uid://dwqkh8gkumbxn" path="res://Scenes/Discussion/clients.gd" id="1_kr571"]
 [ext_resource type="Script" uid="uid://d11kfgsd6jgt" path="res://addons/AutoSizeText/ui/AutoSizeLabel.gd" id="2_3oal6"]
 [ext_resource type="PackedScene" uid="uid://fkjn5x638hlm" path="res://Scenes/ingredients/ingredient_base.tscn" id="3_uoul6"]
-[ext_resource type="Texture2D" uid="uid://cajghehxih2tc" path="res://Assets/PlaceHolders/Placeholder_broyer.png" id="5_hr08k"]
+[ext_resource type="FontFile" uid="uid://dinmnkta5iosd" path="res://Assets/font/MorrisRoman-Black.ttf" id="4_0mkcy"]
+[ext_resource type="Script" uid="uid://leehmvr1x5lu" path="res://addons/AutoSizeText/ui/AutoSizeRichTextLabel.gd" id="4_fgo02"]
+[ext_resource type="Texture2D" uid="uid://xxdocj8o0hyt" path="res://Assets/Icons/Placeholder_vendre.png" id="5_uoul6"]
+[ext_resource type="Texture2D" uid="uid://dkqkwyrvnweoh" path="res://Assets/Characters/Dragon-farfadet_happy.png" id="6_uoul6"]
 
-[node name="Broyage" type="Control" unique_id=912534386 node_paths=PackedStringArray("pilon", "broyage_progress", "byproduct")]
+[node name="Clients" type="Control" unique_id=912534386 node_paths=PackedStringArray("proposition", "drink_name", "drink_price_range", "dialog_text", "dialog")]
 layout_mode = 3
 anchor_left = 0.025
 anchor_top = 0.05
 anchor_right = 0.46
 anchor_bottom = 0.95000005
-script = ExtResource("1_fgo02")
-pilon = NodePath("HBoxContainer/Proposition")
-broyage_progress = NodePath("")
-byproduct = NodePath("")
-id = "Broyage"
+script = ExtResource("1_kr571")
+proposition = NodePath("HBoxContainer/Proposition")
+drink_name = NodePath("HBoxContainer/Proposition/DrinkName")
+drink_price_range = NodePath("HBoxContainer/Proposition/DrinkPriceRange")
+dialog_text = NodePath("Dialog/dialog_text")
+dialog = NodePath("Dialog")
+id = "Clients"
 metadata/_custom_type_script = "uid://et742jqp0c57"
 
 [node name="AutoSizeLabel" type="Label" parent="." unique_id=2081047654]
@@ -41,7 +46,7 @@ metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 [node name="HBoxContainer" type="Control" parent="." unique_id=1179704318]
 layout_mode = 1
 anchor_left = 0.07822477
-anchor_top = 0.19478737
+anchor_top = 0.29766804
 anchor_right = 0.9217752
 anchor_bottom = 0.92352533
 grow_horizontal = 2
@@ -52,10 +57,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Proposition" type="TextureButton" parent="HBoxContainer" unique_id=976862074]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.03075322
-anchor_top = 0.3837647
-anchor_right = 0.35671082
-anchor_bottom = 0.71976477
+anchor_left = 0.0804315
+anchor_top = 0.44964707
+anchor_right = 0.3259576
+anchor_bottom = 0.6538824
 offset_top = -0.099990845
 offset_right = 0.21121216
 offset_bottom = 0.1000061
@@ -79,40 +84,58 @@ disabled = true
 resource = null
 metadata/_edit_use_anchors_ = true
 
-[node name="AutoSizeLabel" type="Label" parent="HBoxContainer/Proposition" unique_id=1779299299]
+[node name="DrinkName" type="Label" parent="HBoxContainer/Proposition" unique_id=1779299299]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.014
-anchor_top = 0.07
-anchor_right = 2.0140002
-anchor_bottom = 0.282
-offset_left = 0.067993164
-offset_top = -0.010000229
-offset_right = 0.06796265
-offset_bottom = -0.0099983215
-theme_override_font_sizes/font_size = 28
-text = "Drink Name"
-horizontal_alignment = 1
+anchor_top = 0.034
+anchor_right = 2.0288463
+anchor_bottom = 0.317
+theme_override_font_sizes/font_size = 22
+text = "No Drinks"
 autowrap_mode = 3
 clip_text = true
 text_overrun_behavior = 3
 script = ExtResource("2_3oal6")
+max_font_size = 64
 metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+metadata/_edit_use_anchors_ = true
+
+[node name="DrinkPriceRange" type="RichTextLabel" parent="HBoxContainer/Proposition" unique_id=1618775510]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0961539
+anchor_top = 0.5482421
+anchor_right = 1.8513843
+anchor_bottom = 0.91654086
+theme_override_font_sizes/normal_font_size = 9
+theme_override_font_sizes/bold_font_size = 9
+theme_override_font_sizes/bold_italics_font_size = 9
+theme_override_font_sizes/italics_font_size = 9
+theme_override_font_sizes/mono_font_size = 9
+bbcode_enabled = true
+text = "0-0 [img=32]uid://sgw4lkj675vg[/img]"
+scroll_active = false
+vertical_alignment = 1
+script = ExtResource("4_fgo02")
+max_font_size = 64
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+metadata/_edit_use_anchors_ = true
 
 [node name="Sell" type="TextureButton" parent="HBoxContainer" unique_id=2121668]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.40230972
-anchor_top = 0.7011765
-anchor_right = 0.84030974
-anchor_bottom = 1.1461178
+anchor_left = 0.60102284
+anchor_top = 0.43561643
+anchor_right = 1.0390228
+anchor_bottom = 0.86173415
 offset_left = -0.06434631
 offset_top = 1.0
 offset_right = 0.064331055
 offset_bottom = 0.8999634
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("5_hr08k")
+texture_normal = ExtResource("5_uoul6")
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
@@ -121,7 +144,7 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.21200001
-theme_override_font_sizes/font_size = 38
+theme_override_font_sizes/font_size = 34
 text = "Vendre"
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -130,4 +153,50 @@ text_overrun_behavior = 3
 script = ExtResource("2_3oal6")
 metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 
-[connection signal="pressed" from="HBoxContainer/Proposition" to="." method="_on_pilon_pressed"]
+[node name="Dialog" type="Button" parent="." unique_id=1118895371]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10616219
+anchor_top = 0.12962963
+anchor_right = 0.90654856
+anchor_bottom = 0.5569973
+offset_right = -0.08959961
+offset_bottom = -0.24081421
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Dialog" unique_id=1327150082]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.04819277
+anchor_right = 1.0
+anchor_bottom = 0.61044174
+texture = ExtResource("6_uoul6")
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="dialog_text" type="RichTextLabel" parent="Dialog" unique_id=576092654]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.6067751
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.087005615
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("4_0mkcy")
+theme_override_font_sizes/normal_font_size = 38
+theme_override_font_sizes/bold_font_size = 38
+theme_override_font_sizes/bold_italics_font_size = 38
+theme_override_font_sizes/italics_font_size = 38
+theme_override_font_sizes/mono_font_size = 38
+text = "Bonjour , je voudrais bla bla"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_fgo02")
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="HBoxContainer/Proposition" to="." method="_on_proposition_pressed"]
+[connection signal="pressed" from="HBoxContainer/Sell" to="." method="_on_sell_pressed"]

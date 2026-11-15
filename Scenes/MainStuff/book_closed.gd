@@ -3,7 +3,7 @@ extends Control
 @export var book_open: Control
 @export var textures : Array[Texture2D] = []
 @export var couverture: TextureRect
-@export var inventory_page: Control
+@export var clients: DrinkSubMenu
 
 
 
@@ -14,4 +14,4 @@ func animate(duration:float):
 	book_open.show()
 	hide()
 	var tween = create_tween()
-	tween.tween_property(inventory_page,"modulate",Color(1.0,1.0,1.0,1.0),.5)
+	tween.tween_property(clients,"modulate",Color(1.0,1.0,1.0,1.0),.5)

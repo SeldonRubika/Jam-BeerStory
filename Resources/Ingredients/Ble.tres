@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("2_m24ub")
 ingredient_name = "Blé"
+base = "Blé"
 icon = ExtResource("1_62tts")
 desc = "Récupéré sur un navire pas loin de Rome. Peut être utilisé pour fabriqué de l'alcool pur."
 type = 1

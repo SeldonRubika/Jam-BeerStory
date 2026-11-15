@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("2_8gcjk")
 ingredient_name = "Carotte"
+base = "Carotte"
 icon = ExtResource("1_0mjif")
 desc = "Quoi de neuf docteur ?"
 type = 3

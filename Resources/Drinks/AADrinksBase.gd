@@ -11,7 +11,7 @@ class_name DrinkResource
 func GetDistilledResource():
 	var new = DrinkResource.new()
 	new.base = base
-	if fruity :
+	if fruity and not Global.DrinkTypes.Softs :
 		if new.base[0] in "AEIOUY" : 
 			new.ingredient_name = "Eau-de-vie d'" + new.base
 			new.desc = "Eau-de-vie très nutritive fait à partir d'" + new.base + "."
@@ -39,7 +39,33 @@ func GetCombinedResource(ingredient : IngredientResource):
 	var new = DrinkResource.new()
 	new.type = Global.IngredientsTypes.Liquid
 	
-	if ingredient.ingredient_name == "Sucre" :
+	if ingredient.ingredient_name == "Sucre" and ingredient_name.contains("macéré"):
+		new.base = base
+		# Si c'est une Liqueur (liquide + ingrédient pas liquide)
+		if new.base[0] in "AEIOUY" :
+			new.base = base
+			new.ingredient_name = "Liqueur d'" + base
+			new.desc = "Liqueur faite à partir d'" + base + "."
+		else :
+			new.base = base
+			new.ingredient_name = "Liqueur de " + base
+			new.desc = "Liqueur faite à partir de " + base + "."
+		
+		new.types = Global.DrinkTypes.Liquor
+		new.sweetness = min(100,(sweetness * 0.8) + (ingredient.sweetness * 0.2)) 
+		new.bitterness = min(100,(bitterness * 0.8) + (ingredient.bitterness * 0.2)) 
+		new.degrees = degrees
+		new.fruity = (fruity or ingredient.fruity)
+		new.gazeous = (gazeous or ingredient.gazeous)
+		if new.mix_level >= 4 :
+			new.shitty = true
+		else :
+			new.shitty = shitty
+			if ingredient.type == Global.IngredientsTypes.Liquid:
+				new.shitty = shitty or ingredient.shitty
+		return new
+		
+	elif ingredient.ingredient_name == "Sucre" and not ingredient_name.contains("macéré"):
 		new.degrees = degrees
 		new.base = base
 		new.ingredient_name = ingredient_name + " sucré"
@@ -56,7 +82,7 @@ func GetCombinedResource(ingredient : IngredientResource):
 			new.shitty = (shitty or ingredient.shitty)
 		return new
 		
-	elif ingredient.ingredient_name == "Alcool pur" : 
+	if ingredient.ingredient_name == "Alcool pur" : 
 		new.degrees = min(100,(degrees + 96) * 0.5)
 		new.base = base
 		new.ingredient_name = ingredient_name + " fort"
@@ -112,18 +138,18 @@ func GetCombinedResource(ingredient : IngredientResource):
 		
 	else :
 		
-		new.base = base
+		new.base = ingredient.base
 		
-		if ingredient.type != Global.IngredientsTypes.Liquid :
+		if ingredient.type != Global.IngredientsTypes.Liquid and ingredient_name == "Alcool pur":
 			# Si c'est une Liqueur (liquide + ingrédient pas liquide)
 			if new.base[0] in "AEIOUY" :
 				new.base = ingredient.ingredient_name
-				new.ingredient_name = "Liqueur d'" + ingredient.ingredient_name
-				new.desc = "Liqueur très nutritive fait à partir d'" + ingredient.ingredient_name + "."
+				new.ingredient_name =  ingredient.ingredient_name + " macéré"
+				new.desc = "Base de liqueur faite à partir d'" + ingredient.ingredient_name + ". Il manque du sucre."
 			else :
 				new.base = ingredient.ingredient_name
-				new.ingredient_name = "Liqueur de " + ingredient.ingredient_name
-				new.desc = "Liqueur très nutritive fait à partir de " + ingredient.ingredient_name + "."
+				new.ingredient_name = ingredient.ingredient_name + " macéré"
+				new.desc = "Base de liqueur faite à partir de " + ingredient.ingredient_name + ". Il manque du sucre."
 			
 			new.types = Global.DrinkTypes.Liquor
 			new.sweetness = min(100,(sweetness * 0.8) + (ingredient.sweetness * 0.2)) 
@@ -131,13 +157,9 @@ func GetCombinedResource(ingredient : IngredientResource):
 			new.degrees = degrees
 			new.fruity = (fruity or ingredient.fruity)
 			new.gazeous = (gazeous or ingredient.gazeous)
-			if new.mix_level >= 4 :
-				new.shitty = true
-			else :
-				new.shitty = shitty
-				if ingredient.type == Global.IngredientsTypes.Liquid:
-					new.shitty = shitty or ingredient.shitty
+			new.shitty = true
 			return new
+			
 		else :
 			# Si c'est un Cocktail (liquide + liquide)
 			new.ingredient_name = "Cocktail " + new.base + " " + ingredient.base

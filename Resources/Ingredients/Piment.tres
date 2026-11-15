@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("2_gj7ed")
 ingredient_name = "Piment"
+base = "Piment"
 icon = ExtResource("1_tl83r")
 desc = "AAAAAAAH ÇA BRULE AAAAAAAAH"
 type = 3

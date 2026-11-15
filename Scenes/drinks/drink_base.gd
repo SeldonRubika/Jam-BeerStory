@@ -42,3 +42,8 @@ func _on_pressed() -> void:
 					return
 				Global.selected_ingredients = self
 				Global.active_drink_submenu.ingredient_selected()
+			"Clients":
+				if resource.type != Global.IngredientsTypes.Liquid:
+					return
+				Global.selected_ingredients = self
+				Global.active_drink_submenu.ingredient_selected()
