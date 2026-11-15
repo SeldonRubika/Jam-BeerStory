@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DiscussionBase" format=3 uid="uid://cn1hqnfalnfyr"]
+
+[ext_resource type="Script" uid="uid://cbbee7mqifuky" path="res://Resources/Discussions/AADiscussionsBase.gd" id="1_1a04e"]
+
+[resource]
+script = ExtResource("1_1a04e")
+discussion_name = "Dialogues Vampire"
+characters = Array[String](["Vampire"])
+dialogs = Array[Array]([["Vampire", "Blah blah blah ! Je suis un vampire suceur de sang ! Malheuresement, je suis au régime. Servez moi donc un vin un peu sucré."], ["Vampire", "Nous, les vampires, préfèront boire le sang. Mais je dois avouer être tenté par ce que vous appelés \"eau-de-vie\". Servez en moi une à base de cerise, sinon je vous suce (le sang hein)."], ["Vampire", "J'ai l'impression de boire du sang. Vous êtes doué !"], ["Vampire", "Serieusement ? Quel est cet horrible liquide dans mon verre ?"]])
+required_type = null
+metadata/_custom_type_script = "uid://cbbee7mqifuky"
