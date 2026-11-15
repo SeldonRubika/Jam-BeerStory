@@ -6,8 +6,10 @@
 [resource]
 script = ExtResource("2_o8d8b")
 ingredient_name = "Raisin"
+base = "Raisin"
 icon = ExtResource("1_eyray")
 desc = "Utilisé pour faire du vin. Faut l'écraser avec ses gros pieds bien crades."
+type = null
 bitterness = 10
 sweetness = 80
 fruity = true

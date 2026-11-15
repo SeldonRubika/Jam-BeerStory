@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("2_4dg62")
 ingredient_name = "Cactus"
+base = "Cactus"
 icon = ExtResource("1_w8cwn")
 desc = "Ouch ! Je me suis piqué... Et si je le mangeais ? "
 type = 1

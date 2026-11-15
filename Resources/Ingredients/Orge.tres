@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("2_guak2")
 ingredient_name = "Orge"
+base = "Orge"
 icon = ExtResource("1_q2i33")
 desc = "Ne surtout pas rajouter un \"i\" avant le \"e\"."
 type = 1

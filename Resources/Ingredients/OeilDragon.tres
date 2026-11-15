@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("2_qo22f")
 ingredient_name = "Oeil de Dragon"
+base = "Oeil de Dragon"
 icon = ExtResource("1_37t8i")
 desc = "Un ingrédient légendaire provenant d'une créature mythique. Personne ne sait avec certitude à quoi ressemblera une boisson faite avec ce dernier."
 type = 4

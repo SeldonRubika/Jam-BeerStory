@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("2_mytos")
 ingredient_name = "Menthe"
+base = "Menthe"
 icon = ExtResource("1_4tx3i")
 desc = "Récolté dans la vallée, terre du comte Menthe-et-Cristaux."
 type = 1

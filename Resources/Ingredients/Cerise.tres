@@ -6,8 +6,10 @@
 [resource]
 script = ExtResource("2_slt8d")
 ingredient_name = "Cerise"
+base = "Cerise"
 icon = ExtResource("1_0se53")
 desc = "Je crois c'est un truc sexuel sur Fruitz"
+type = null
 sweetness = 50
 fruity = true
 metadata/_custom_type_script = "uid://renlxgu8rtkv"

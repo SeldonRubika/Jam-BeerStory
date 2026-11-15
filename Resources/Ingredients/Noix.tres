@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("2_808uh")
 ingredient_name = "Noix"
+base = "Noix"
 icon = ExtResource("1_lq2vg")
 desc = "C'est boring une noix frère, qu'est-ce tu veux savoir sur une noix toi aussi ? Tu sais pas ce que sait ou quoi ? Trop la honte."
 type = 1

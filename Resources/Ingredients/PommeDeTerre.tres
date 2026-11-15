@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("2_q7kmd")
 ingredient_name = "Pomme de terre"
+base = "Pomme de terre"
 icon = ExtResource("1_gg6bl")
 desc = "1917, Révolution Bolchévique, les moyens de production sont saisis des mains des bourgeois. Gloire au régime !"
 type = 3

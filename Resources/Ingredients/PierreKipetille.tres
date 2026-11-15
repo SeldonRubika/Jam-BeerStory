@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("2_ls5dr")
 ingredient_name = "Pierre Kipétille"
+base = "Pierre Kipétille"
 icon = ExtResource("1_irmtb")
 desc = "Cette pierre volcanique est utilisée dans la région afin de rendre n'importe quel breuvage pétillant."
 type = 4

@@ -6,8 +6,10 @@
 [resource]
 script = ExtResource("2_lc4l3")
 ingredient_name = "Citron"
+base = "Citron"
 icon = ExtResource("1_bdno1")
 desc = "Jcrois c'est un brainrot là."
+type = null
 bitterness = 30
 sweetness = 10
 metadata/_custom_type_script = "uid://renlxgu8rtkv"
