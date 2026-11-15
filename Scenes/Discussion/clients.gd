@@ -12,8 +12,10 @@ const INIT_TEXT := ["Je reviens d'un donjon et je suis assoifé.\n","Je sais ce 
 @export var gold_text: AutoSizeRichTextLabel
 var days = 1
 var gold = 0
+var has_mission := false
 
 func make_new_request():
+	has_mission = true
 	var request_text = INIT_TEXT.pick_random()
 	request_text += "Servez-moi une boisson "
 	var bonus_text = ""
@@ -126,6 +128,7 @@ func _ready() -> void:
 	make_new_request()
 
 func complete_request(drink:DrinkResource):
+	has_mission = false
 	var reward = request.GetReward(drink)
 	var success_rate = request.GetSuccess(drink)
 	if success_rate < 10:
@@ -160,6 +163,8 @@ func ingredient_selected():
 
 
 func _on_sell_pressed() -> void:
+	if !has_mission:
+		return
 	var child := proposition.get_child(0)
 	complete_request(child.resource)
 	child.resource = null
