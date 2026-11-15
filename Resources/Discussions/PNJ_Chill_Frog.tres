@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DiscussionBase" format=3 uid="uid://b1kb56i7r34y1"]
+
+[ext_resource type="Script" uid="uid://cbbee7mqifuky" path="res://Resources/Discussions/AADiscussionsBase.gd" id="1_l60by"]
+
+[resource]
+script = ExtResource("1_l60by")
+discussion_name = "Dialogues Chill Frog"
+characters = Array[String](["Chill Frog"])
+dialogs = Array[Array]([["Chill Frog", "Bien le bonjour l'ami ! Je passais dans le coin et j'ai soudainement eu envie de me désaltérer ^^. Pourriez vous me servir une boisson non alcoolisée, fruitée et non pétillante s'il vous plait ?"], ["Chill Frog", "Salutations, monsieur le tavernier ^^ ! Je souhaiterais déguster l'un de vos formidables breuvages à la pomme, malheuresement, je ne tiens guère l'alcool ... Serait-il possible  à la place d'avoir d'avoir quelque chose qui pétille ?"], ["Chill Frog", "Un véritable délice ! je vous remercie !"], ["Chill Frog", "Hmmm ... ce n'est pas ce que je voulais"]])
+required_type = null
+metadata/_custom_type_script = "uid://cbbee7mqifuky"

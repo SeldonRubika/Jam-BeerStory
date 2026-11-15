@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DiscussionBase" format=3 uid="uid://cotdkw8755b7c"]
+
+[ext_resource type="Script" uid="uid://cbbee7mqifuky" path="res://Resources/Discussions/AADiscussionsBase.gd" id="1_spiui"]
+
+[resource]
+script = ExtResource("1_spiui")
+discussion_name = "Dialogues Crazy Frog"
+characters = Array[String](["Crazy Frog"])
+dialogs = Array[Array]([["Crazy Frog", "BAHAHAH SERS MOI DE LA GNOLE MON GARS ALLEZ ! JVEUX CE QUE T'AS DE PLUS FORT ! PAR CONTRE COMMENCE PAS À METTRE DES FRUITS SINON JE CHIE SUR LE COMPTOIR."], ["Crazy Frog", "BAHAHAH SALUT LE TAVERNIER ! JSUIS EN PLEINE COURSE POURSUITE AVEC LES GARDES LÀ, Y M'FAUT UN TRUC POUR FAIRE LE PLEIN D'ENERGIE. ET RAJOUTE LE PLUS D'ALCOOL POSSIBLE HEIN ????"], ["Crazy Frog", "OH PU**** OUAIS C'EST ÇA QUI M'FALLAIT !"], ["Crazy Frog", "MAIS ?! OK ... TU L'AURAS VOULU ! *chie sur le comptoir*"]])
+required_type = null
+metadata/_custom_type_script = "uid://cbbee7mqifuky"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DiscussionBase" format=3 uid="uid://csjf5vlc06bfo"]
+
+[ext_resource type="Script" uid="uid://cbbee7mqifuky" path="res://Resources/Discussions/AADiscussionsBase.gd" id="1_rjh0q"]
+
+[resource]
+script = ExtResource("1_rjh0q")
+discussion_name = "Dialogues Dragon"
+characters = Array[String](["Dragon"])
+dialogs = Array[Array]([["Dragon", "Humain. Sers moi donc ta bière la plus forte. J'ai entendu dire que cette boisson était particulièrement appréciée dans ce royaume. JE DÉSIRE Y GOÛTER."], ["Dragon", "N'ait pas peur, fragile être humain. Je suis à la recherche de la boisson parfaite, une eau-de-vie si sucrée  que je pourrais la manger. ALLEZ DÉPÊCHE-TOI !"], ["Dragon", "Ce n'est pas trop tôt ! Fais plus vite la prochaine fois !"], ["Dragon", "ARRGHH NE M'OBLIGE PAS À DÉTRUIRE CETTE TAVERNE !"]])
+required_type = null
+metadata/_custom_type_script = "uid://cbbee7mqifuky"

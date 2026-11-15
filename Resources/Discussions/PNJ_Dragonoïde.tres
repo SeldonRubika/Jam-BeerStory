@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DiscussionBase" format=3 uid="uid://cnmxk3emp0vq1"]
+
+[ext_resource type="Script" uid="uid://cbbee7mqifuky" path="res://Resources/Discussions/AADiscussionsBase.gd" id="1_41507"]
+
+[resource]
+script = ExtResource("1_41507")
+discussion_name = "Dialogues Dragonoïde"
+characters = Array[String](["Dragonoïde"])
+dialogs = Array[Array]([["Dragonoïde", "Bonsoir ! Comme vous pouvez le voir, je sors d'un profond sommeil et j'aimerais quelque chose d'immonde et pétillant pour me requinquer"], ["Dragonoïde", "Bonsoir ! J'ai entendu parler d'alcool faits à partir de cactus dans des terres arides au sud d'ici. Je dois avouer être intrigué, pourriez vous me préparer une bière au cactus ?"], ["Dragonoïde", "Bonsoir ! J'ai un peu de mal à cracher des flammes ces derniers temps. Peut-être qu'une boisson très alcoolisée au piment pourrait m'aider ?"], ["Dragonoïde", "Hmmmm ! Vraiment pas mal ! Merci !"], ["Dragonoïde", "Grrrrrr ça ne va pas du tout !"]])
+required_type = null
+metadata/_custom_type_script = "uid://cbbee7mqifuky"
