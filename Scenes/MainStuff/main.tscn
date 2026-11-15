@@ -270,6 +270,45 @@ script = ExtResource("5_acqp8")
 metadata/_custom_type_script = "uid://d11kfgsd6jgt"
 metadata/_edit_use_anchors_ = true
 
+[node name="Days" type="Label" parent="Book_Open/InventoryPage" unique_id=708863591]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.40538195
+anchor_top = 0.08024691
+anchor_right = 0.48725694
+anchor_bottom = 0.14224692
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+theme_override_font_sizes/font_size = 38
+text = "Jour 1"
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3
+script = ExtResource("5_acqp8")
+metadata/_custom_type_script = "uid://d11kfgsd6jgt"
+metadata/_edit_use_anchors_ = true
+
+[node name="Gold" type="RichTextLabel" parent="Book_Open/InventoryPage" unique_id=1526150682]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5217014
+anchor_top = 0.08024691
+anchor_right = 0.60357636
+anchor_bottom = 0.14224692
+offset_right = -0.32000732
+offset_bottom = -0.1760025
+theme_override_font_sizes/normal_font_size = 38
+theme_override_font_sizes/bold_font_size = 38
+theme_override_font_sizes/bold_italics_font_size = 38
+theme_override_font_sizes/italics_font_size = 38
+theme_override_font_sizes/mono_font_size = 38
+bbcode_enabled = true
+text = "0 [img=32]uid://sgw4lkj675vg[/img]"
+scroll_active = false
+script = ExtResource("3_xsi4l")
+metadata/_custom_type_script = "uid://leehmvr1x5lu"
+metadata/_edit_use_anchors_ = true
+
 [node name="ScrollContainer" type="ScrollContainer" parent="Book_Open/InventoryPage" unique_id=1601354172]
 layout_mode = 1
 anchors_preset = -1
@@ -454,7 +493,7 @@ resource = ExtResource("5_4e1qo")
 layout_mode = 2
 resource = ExtResource("5_4e1qo")
 
-[node name="Clients" parent="Book_Open" unique_id=912534386 instance=ExtResource("57_y00sy")]
+[node name="Clients" parent="Book_Open" unique_id=912534386 node_paths=PackedStringArray("days_text", "gold_text") instance=ExtResource("57_y00sy")]
 visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
@@ -462,6 +501,8 @@ anchor_left = 0.08506945
 anchor_top = 0.030864198
 anchor_right = 0.4921875
 anchor_bottom = 1.0925926
+days_text = NodePath("../InventoryPage/Days")
+gold_text = NodePath("../InventoryPage/Gold")
 metadata/_edit_use_anchors_ = true
 
 [node name="Fermentation" parent="Book_Open" unique_id=2132085580 instance=ExtResource("4_n07qj")]

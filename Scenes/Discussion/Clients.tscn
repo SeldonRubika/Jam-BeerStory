@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://fkjn5x638hlm" path="res://Scenes/ingredients/ingredient_base.tscn" id="3_uoul6"]
 [ext_resource type="FontFile" uid="uid://dinmnkta5iosd" path="res://Assets/font/MorrisRoman-Black.ttf" id="4_0mkcy"]
 [ext_resource type="Script" uid="uid://leehmvr1x5lu" path="res://addons/AutoSizeText/ui/AutoSizeRichTextLabel.gd" id="4_fgo02"]
-[ext_resource type="Texture2D" uid="uid://cajghehxih2tc" path="res://Assets/PlaceHolders/Placeholder_broyer.png" id="5_hr08k"]
+[ext_resource type="Texture2D" uid="uid://xxdocj8o0hyt" path="res://Assets/Icons/Placeholder_vendre.png" id="5_uoul6"]
 [ext_resource type="Texture2D" uid="uid://dkqkwyrvnweoh" path="res://Assets/Characters/Dragon-farfadet_happy.png" id="6_uoul6"]
 
 [node name="Clients" type="Control" unique_id=912534386 node_paths=PackedStringArray("proposition", "drink_name", "drink_price_range", "dialog_text", "dialog")]
@@ -135,7 +135,7 @@ offset_right = 0.064331055
 offset_bottom = 0.8999634
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("5_hr08k")
+texture_normal = ExtResource("5_uoul6")
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 

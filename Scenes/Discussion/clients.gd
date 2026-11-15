@@ -8,6 +8,10 @@ var proposition_awaiting := false
 const INIT_TEXT := ["Je reviens d'un donjon et je suis assoifé.\n","Je sais ce que je veux.\n","Je meurs de soif !\n","JE VEUX À BOIRE !\n","Hé ! Tavernier ! Par ici !\n","Voyons voir ce que tu sais faire.\n","C'est sympa par ici !\n"]
 @export var dialog_text: AutoSizeRichTextLabel
 @export var dialog: Button
+@export var days_text: AutoSizeLabel
+@export var gold_text: AutoSizeRichTextLabel
+var days = 1
+var gold = 0
 
 func make_new_request():
 	var request_text = INIT_TEXT.pick_random()
@@ -140,7 +144,13 @@ func complete_request(drink:DrinkResource):
 		dialog_text.text = "*Gémit de bonheur et pleure sur le poulet*"
 	dialog_text.text +=" tient, %s d'or"%int(reward)
 	dialog_text.do_resize_text()
+	gold += reward
+	gold_text.text = "%s [img=32]uid://sgw4lkj675vg[/img]"%int(gold)
+	gold_text.do_resize_text()
 	await dialog.pressed
+	days += 1
+	days_text.text = "Jour %s"%days
+	days_text.do_resize_text()
 	make_new_request()
 
 func ingredient_selected():
