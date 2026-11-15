@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://i3v88dxy6e5u"]
 
-[ext_resource type="Texture2D" uid="uid://bq5dnxqi7tkir" path="res://Assets/SpecificIcons/Mushroom.png" id="1_acuid"]
+[ext_resource type="Texture2D" uid="uid://dqlyda4q4v3qj" path="res://Assets/Characters/MushroomEtrange.png" id="1_acuid"]
 [ext_resource type="Script" uid="uid://renlxgu8rtkv" path="res://Resources/Ingredients/AAIngredientsBase.gd" id="2_q1ftp"]
 
 [resource]
